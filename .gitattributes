@@ -4,3 +4,4 @@
 20230611_143038000_iOS.MOV filter=lfs diff=lfs merge=lfs -text
 20230611_020239000_iOS.MOV filter=lfs diff=lfs merge=lfs -text
 City[[:space:]]Commute[[:space:]]Kingsong[[:space:]]16X[[:space:]](Fast[[:space:]]Electric[[:space:]]Unicycle).mp4 filter=lfs diff=lfs merge=lfs -text
+formalcharge.mp4 filter=lfs diff=lfs merge=lfs -text
