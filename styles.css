@@ -34,21 +34,39 @@
   width: 302.84px;
   height: 250px;
 }
+/*Fourth Width*/
 .shs4 {
   width: 266.1px;
   height: 250px;
+}
+/*Second Width*/
+.shs2 {
+  width: 538px;
+  height: 420px;
+}
+.los2 {
+  width: 538px;
+  height: 480px;
 }
 .sho2 {
   width: 609px;
   height: 500px;
 }
-.lone{
-  width: 280.99px;
-  height: 460px;
+.str{
+  width: 100%;
+  height: 436px;
+}
+.lone {
+  width: 100%;
+  height: 410px;
 }
 .shoer{
-  width: 330px;
+  width: 100%;
   height: 250px;
+}
+.shoe{
+  width: 100%;
+  height: 300px;
 }
 
 .imagei{
