@@ -1,94 +1,5 @@
 
-
-.whyy{
-  border:1px solid black;
-  width:150border: 3px solid;
-  padding: 10px; px;
-  
-  top:0;
-  
-  text-align:center;
-  background-color:rgb(111, 48, 89);
-}
-
-.spe4{
-  width: 302.84px;
-}
-.lon4{
-  width: 302.84px;
-  height: 480px;
-}
-.los4 {
-  width: 24.701041221%;
-  height: 490px;
-}
-.lon5{
-  width: 241.47px;
-  height: 480px;
-}
-.lon2{
-  width: 609px;
-  height: 965px;
-}
-.sho4{
-  width: 302.84px;
-  height: 250px;
-}
-/*Fourth Width*/
-.shs4 {
-  width: 266.1px;
-  height: 250px;
-}
-/*Second Width*/
-.shs2 {
-  width: 538px;
-  height: 420px;
-}
-.los2 {
-  width: 538px;
-  height: 480px;
-}
-.sho2 {
-  width: 609px;
-  height: 500px;
-}
-.str{
-  width: 100%;
-  height: 436px;
-}
-.lone {
-  width: 100%;
-  height: 410px;
-}
-.lone4 {
-  width: 24.701041221%;
-  height: 490px;
-}
-.shoer{
-  width: 100%;
-  height: 250px;
-}
-.shoe{
-  width: 100%;
-  height: 300px;
-}
-.shoe2 {
-  width: 49.759710311%;
-  height: 300px;
-}
-.shor{
-  width: 49.44254417%;
-  height: 300px;
-}
-.longr{
-  width: 49.44254417%;
-  height: 375px;
-}
-.shoe4{
-  width: 24.701041221%;
-  height: 200px;
-}
-
+/*image expand*/
 .imagei{
   width: 52%;
   height: 52%;
@@ -101,76 +12,7 @@
 }
 
 
-.sud{
-  background-color: rgb(200, 200, 200);
-  border: 2px solid black;
-  padding: 10px;
-}
-
-.characteristics{
-  border:2px solid black;
-  background-color: rgb(200, 200, 200);
-  
-}
-
-.ch{
-  position: relative;
-  left: 50px;
-  
-  
-}
- 
- 
- .impe{
-   border: 3px solid;
-   padding: 10px; 
- } 
-  
-/* NOTE: others */
-.norm{
-  text-decoration: none;
-  color: black;
-}
-/* NOTE: others */
-
-
-
-
-.workplease{
-  border:2px solid black;
-  background-color: rgb(200, 200, 200);
-}
-
-.notes{
-  border:2px solid black;
-  background-color: rgb(200, 200, 200);
-  padding: 10px;
-  
-}
-
-/* NOTE: SOMIN */
-
-
-.talesbefore{
-  background-image: linear-gradient(rgb(28, 89, 84),rgb(47, 28, 84));
-  background-repeat: no-repeat;
-}
-.tale{
-  background-color: rgb(148, 177, 159);
-  padding:5px;
-  border: 5px double rgb(198, 76, 150); 
-}
-.talo{
-  background-color: rgb(156, 148, 177);
-  padding:5px;
-  border: 5px double rgb(198, 148, 76); 
-}
-.tala{
-  background-color: rgb(255, 237, 143);
-  padding:5px;
-  border: 5px double rgb(105, 171, 101); 
-}
-
+/*Dropdowns*/
 .dropdown{
   position: relative;
   display: inline-block;
@@ -305,89 +147,6 @@
 }
 
 
-
-.thinborder{
-  border: 1px solid black;
-  padding: 9px;
-}
-
-
-
-.rela{
-  border:2px solid black;
-  background-color: rgb(200, 200, 200);
-  padding:10px
-  
-}
-
-.mb{
-   border:1px solid black;
-}
-
-.catchf{
-  width: ;
-  height: ;
-  border: 2px solid black;
-  background-color: rgb(200, 200, 200);
-  padding: 10px;
-  
-}
-
-.Timeline{
-  background-image:linear-gradient(rgb(171, 172, 120),rgb(129, 136, 124)); width:130px;
-  border:4px inset grey;
-  padding-left:10px;
-  padding-right:10px;
-}
-.Timeline:hover{
-  background-image:linear-gradient(rgb(129, 136, 124),rgb(171, 172, 120)); width:130px;
-  border:4px outset grey;
-  padding-left:10px;
-  padding-right:10px;
-}
-
-.mahis{
-  opacity: 0;
-  width: 10px;
-  height: 10px;
-  position:relative;
-  left: 1300px;
-  top: -100px;
-}
-.mahis:hover{
-  opacity: 1;
-  border: 2px solid black;
-  padding: 40px;
-  margin: 10px;
-  width: 1144.5px;
-  height: 700px;
-}
-
-.sorry{
-  background-image: linear-gradient(white,black);
-  background-repeat: no-repeat;
-}
-
-.sory{
-  background-image: linear-gradient(#F5F5DC,rgb(255, 255, 255));
-  background-repeat: no-repeat;
-}
-.talesofinstance{
-  border: 
-}
-.lom{
-  background-image: linear-gradient(#ffe17e,rgb(255, 255, 255));
-  background-repeat: no-repeat;
-}
-
-.secret{
-  color: white;
-  background-color: black;
-  
-}
-.center{
-  align-items: center;
-}
 .anevent{
   border: 2.5px solid black;
   padding:9px;
@@ -398,70 +157,12 @@
   padding: 9px;
 }
 
-.finalthoughts{
-  border: 7px black;
-  border-style: dashed double;
-  padding: 9px;
-  border-right-width: 16px;
-  border-left-width: 16px;
-}
-
-.pads7{
-  padding-left: 7px;
-  padding-right: 7px;
-}
-
-.pad5{
-  padding:5px;
-}
-pad10{
-  padding:10px;
-}
-
-.lorebox{
-  border: 2.5px solid black;
-  padding: 10px;
-}
-
-.yellowt{
-  color:yellow;
-}
-
-.anomalyr{
-  border: 4px;
-  border-color: rgb(98, 10, 10);
-  border-style: outset;
-  background-color: rgb(187, 162, 162);
-  padding-left:10px;
-  padding-right:10px;
-}
-.anomalya{
-  border: 4px;
-  border-color: rgb(10, 33, 98);
-  border-style: outset;
-  background-color: rgb(162, 168, 187);
-  padding-left:10px;
-  padding-right:10px;
-}
-.loreblue{
-  color: rgb(19, 37, 80);
-}
-.lorered{
-  color: rgb(80, 19, 19);
-}
-.black{
-  color: black;
-}
-.white{
-  color: white;
-}
 .duh{
   opacity: 0;
 }
 .duh:hover{
   opacity:1;
 }
-
 
 .de{
   border-top: 2px solid black;
@@ -488,26 +189,21 @@ pad10{
 }
 
 
- 
- 
-.events{
+/*The Control Pad*/
+
+.ni {
+  background-color: rgb(158, 158, 158);
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
 }
 
-
-.students{
-  border: 1px solid black;
-  background-color:rgba(134, 171, 165, 0.99);
-  
+.ni:hover {
+  background-color: black;
+  border: 2px solid white;
+  text-decoration: none;
+  color: rgb(158, 158, 158);
 }
-
-
-.neim{
-  border: 3px solid black;
-  background-color: rgb(200, 200, 200);
-}
-
-
-
 
 .mother{
   background-color:rgba(134, 171, 165, 0.99);
@@ -548,222 +244,6 @@ pad10{
   padding: 7px;
   width:94px;
 }
-.bae {
-  background-color: rgb(0, 0, 0);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  border: 2px solid rgb(0, 0, 0);
-}
-.bae:hover {
-  background-color: white;
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px solid rgb(255, 255, 255);
-}
-
-
-
-
-.rea{
-  background-color: rgb(219, 208, 134);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px inset rgb(87, 87, 87);
-}
-.rea:hover{
-  background-color: rgb(170, 161, 103);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px outset rgb(87, 87, 87);
-}
-.qu2{
-  background-color: rgb(222, 166, 166);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px inset rgb(87, 87, 87);
-}
-.qu2:hover{
-  background-color: rgb(184, 139, 139);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px outset rgb(87, 87, 87);
-}
-.qu1{
-  background-color: rgb(178, 212, 231);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px inset rgb(87, 87, 87);
-}
-.qu1:hover{
-  background-color: rgb(146, 173, 189);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px outset rgb(87, 87, 87);
-}
-.wea{
-  background-image:linear-gradient(rgb(138, 107, 158),rgba(109, 157, 127)); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px inset rgb(87, 87, 87);
-}
-.wea:hover{
-  background-image:linear-gradient(rgba(109, 157, 127), rgb(138, 107, 158)); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px outset rgb(87, 87, 87);
-}
-.wea2{
-  background-image:linear-gradient(rgb(138, 107, 158),rgba(109, 157, 127, 0.99)); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px inset rgb(87, 87, 87);
-}
-.wea2:hover{
-  background-image:linear-gradient(rgba(109, 157, 127, 0.99),rgb(138, 107, 158)); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px outset rgb(87, 87, 87);
-}
-.bre{
-  background-color: rgb(42, 41, 46); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: rgb(111, 113, 124);
-  border: 2px inset rgb(87, 87, 87);
-}
-.bre:hover{
-  background-color: rgb(31, 30, 33); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: rgb(111, 113, 124);
-  border: 2px outset rgb(87, 87, 87);
-}
-
-.bre3 {
-  background-color: rgb(206, 254, 255);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color:rgb(107, 106, 62);
-  border: 2px solid rgb(107, 106, 62);
-}
-
-.bre3:hover {
-  background-color: rgb(107, 106, 62);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: rgb(206, 254, 255);
-  border: 2px outset rgb(107, 106, 62);
-}
-
-
-.ist{
-  background-image: linear-gradient(to bottom right, rgb(255, 102, 0), rgb(157, 119, 11), rgb(159, 135, 179), rgb(139, 86, 119)); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: white;
-  border: 2px inset rgb(0, 255, 0);
-}
-.ist:hover{
-  background-image: linear-gradient(to top left, rgb(255, 102, 0), rgb(157, 119, 11), rgb(159, 135, 179), rgb(139, 86, 119)); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px outset rgb(255, 0, 0);
-}
-.bre2{
-  background-image: linear-gradient(to right, rgb(157, 119, 11), white, rgb(157, 119, 11));
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px inset rgb(87, 87, 87);
-}
-.bre2:hover{
-  background-image: linear-gradient(to right, white, rgb(157, 119, 11), white);
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: black;
-  border: 2px outset rgb(87, 87, 87);
-}
-
-.tac{
-  background-image: linear-gradient(to right, rgb(201, 201, 201), rgb(194, 103, 97));
-  border: 2px inset rgb(87, 87, 87);
-  text-decoration: none;
-  background-repeat: no-repeat;
-  color: #0000EE;
-}
-
-.tac:hover{
-  background-image: linear-gradient(to right,  rgb(194, 103, 97), rgb(201, 201, 201));
-  border: 2px outset rgb(87, 87, 87);
-  color: #284019;
-  text-decoration: none;
-}
-
-.psc{
-  background-image:linear-gradient(rgb(50, 56, 93), rgb(50, 56, 93), rgb(50, 56, 93));
-  border: 2px solid rgb(186, 227, 185);
-  text-decoration: none;
-  background-repeat: no-repeat;
-  color: white;
-}
-
-.psc:hover{
-  background-image:linear-gradient(black, rgb(50, 56, 93), rgb(50, 56, 93));
-  border: 2px solid black;
-  text-decoration: none;
-  color: rgb(186, 227, 185);
-}
-
-
-
-.ibb{
-  background-image:linear-gradient(rgb(255, 125, 29), rgb(255, 125, 29), rgb(255, 0, 0)); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: rgb(92, 44, 0);
-  border-style: ridge groove groove ridge;
-  border-width: 2px;
-  border-color: rgb(92, 44, 0);
-}
-.ibb:hover{
-  background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0), rgb(255, 125, 29)); 
-  background-repeat: no-repeat;
-  text-decoration: none;
-  color: rgb(252, 228, 206);
-  border-style: groove ridge ridge groove;
-  border-width: 2px;
-  border-color: rgb(92, 44, 0);
-}
-
-
-
-
-
-
-
-
-
-
-.pad3{
-  padding-top:3.5px ;
-  padding-bottom:3.5px ;
-  padding-right:1px;
-  padding-left: 1;px
-}
-
 
 .expandb:hover{
   height: 115px;
@@ -775,23 +255,6 @@ pad10{
   font-size: 15px;
 }
 
-
-/* NOTE: 
-.expandation{
-  display: none;
-  opacity: 0;
-  height: 150px;
-  width: 400px;
-}
-
-.expandb:hover .expandation{
-  display: block;
-  opacity: 1;
-  background-color: black;
-}
- */
-
-
 .other{
   background-color:rgba(134, 171, 165, 0.99);
   border-left:3px outset rgb(29, 65, 83) ;
@@ -802,60 +265,11 @@ pad10{
   width:310px;
 }
 
-.classes{
-  border: 1px solid black;
-  background-color:rgb(96, 159, 152);
-  padding: 10px;
-}
-
-.backtot{
-  width: 800px;
-}
-
-
-.padding10{
-  padding: 10px;
-}
-.greyi{
-  background-color: grey;
-}
-
-.the{
-  font-size: 30px;
-  font: monospace;
-}
-.the2{
-  border: 4px;
-}
-
-.cuas{
-  padding: 60px;
-  border:1px solid black;
-  width: 200px;
-}
-.cuos{
-  padding: 60px;
-  border:1px solid black;
-  width: 100px;
-}
-.cues{
-  border:1px solid black;
-  width: 100px;
-  padding-left:15px;
-  padding-right:15px;
-}
-.mb1{
-  border: 3px outset rgb(53, 62, 53);
-  background-color: rgb(149, 180, 204);
-  padding: 5px;
-}
 .fixing{
   position: sticky;
   top: 0;
   z-index: 3000;
 }
-
-
 
 .fixer{
   position: relative;
@@ -871,248 +285,7 @@ pad10{
 }
 
 
-
-
-
-  
-.nit{
-  background-color: rgb(111, 217, 82);
-  border: 2px solid black;
-  text-decoration:none;
-  color:rgb(0, 0, 0); 
-}
-
-.nit:hover{
-  background-color: rgb(217, 210, 82);
-  border: 2px solid white;
-  text-decoration:none;
-  color:rgb(77, 77, 77); 
-}
-
- 
-.ni{
-  background-color: rgb(158, 158, 158);
-  border: 2px solid black;
-  text-decoration:none;
-  color: black; 
-}
-
-.ni:hover{
-  background-color: black ;
-  border: 2px solid white;
-  text-decoration:none;
-  color:rgb(158, 158, 158) ; 
-}
-
-#BTTB{
-  background-color: rgb(0, 22, 103);
-  color: rgb(219, 255, 218);
-}
-
-#TTG{
-  background-color: rgb(255, 255, 126);
-  color: rgb(82, 95, 255);
-}
-
-#WWC{
-  background-color: rgb(5, 77, 0);
-  color: rgb(233, 175, 194);
-}
-
-#DMG{
-  background-color: rgb(139, 204, 117)
-}
-
-#TGS{
-  background-color: rgb(92, 198, 112)
-  
-}
-
-.gr{
-  width: 150px;
-}
- 
- .ger{
-   background-color: rgb(228, 222, 220);
-   border: 2px groove black;
-   
- }
- 
- .greyb{
-   background-color: rgb(200, 200, 200);
-   border: 2px solid black;
-   padding: 20px;
- }
- 
- .gre{
-   background-color: rgb(200, 200, 200);
-   border: 2px solid black;
- }
- 
- 
- 
- .lik{
-   font-size: 18px;
-   
-   
- }
- 
- 
- 
- .lidi{
-   border: 2px solid black;
-   padding: 10px;
-   background-color: rgb(200, 200, 200);
-   
- }
- 
- 
- 
-.Hiss{
-  background: rgb(200, 200, 200);
-  border: 2px solid black;
-  
-}
- 
- 
-.Quous{
-  background: rgb(200, 200, 200);
-  border: 2px solid black;
-}
- 
- 
- .mafren{
-   background-color: rgb(131, 150, 78);
-   border: 4px solid black;
-   border-style: groove;
-   height: 100px;
-   overflow: hidden;
- }
- 
- 
- 
- 
- .mafren:hover{
-   background-color:rgba(1, 252, 84, 0.39) ;
-   border:4px solid black;
-   height: 200px;
-   overflow: hidden;
-}
-
-.tragic{
-  border: 2px rgb(242, 239, 150);
-  border-style: ridge groove groove ridge;
-  display: inline-block;
-}
-
-.tragedy{
-  border: 7px groove rgb(242, 239, 150);
-  color: rgb(251, 196, 87);
-  background-color: rgb(0, 65, 99);
-  padding: 13px;
-  font-size: 19px;
-  width: 700px;
-  height: 80px;
-  overflow: hidden;
-  transition: 1s linear;
-}
-.tragic:hover .tragedy{
-  border: 7px groove rgb(242, 239, 150);
-  color: rgb(251, 196, 87);
-  background-color: rgb(0, 65, 99);
-  padding: 19px;
-  font-size: 32px;
-  width: 1070.1px;
-  height: 5349px;
-  transition: 200s linear;
-}
-
-
-.justin{
-  opacity: 0;
-}
-
-.justin:hover{
-  opacity: 1;
-}
- 
- /* NOTE: -------------------------------------------------------------------------------------DROPDOWN TOWN DROWN FROWN TUTORIAL------------------------------------------------------------------------------------------------------------------------------------------------ */
- 
- 
-
- 
- 
-.mayflower > ul{ /* NOTE: This just contains all the lists */
-  background-color: rgb(87, 33, 4);
-  color: white;
-  
-}
-
-.mayflower > ul > li{ /* NOTE: this affects all the <li> that are inside the <ul> which are inside the mayflower */
-  display: inline-block;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  position: relative;
-  width: 50px;
-  
-}
-
-.mayflower > ul > li:hover { /* NOTE: this also affects all the <li> that are inside the <ul> which are inside the mayflower. But it controls how it looks like when you hover over it. */
-  background-color: green;
-  
-}
-
-
-ul.tmwo{ /* NOTE: this controls the list that is inside the ul when not hovered, the opacity 0 makes it invisible  */
-  position: absolute;
-  background-color: rgb(87, 33, 4);
-  width: 125px;
-  padding-left: 0px;
-  opacity: 0;
-  margin-left:-25px;
-  display: none;
-  
-}
-
-
-ul.tmwo li{ /* NOTE: this controls all the li inside the tmwo inside the ul */
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-decoration: none;
-  list-style-type: none;
-  
-
-}
-
-.mayflower li:hover .tmwo{ /* NOTE: this controls how the tmwo which is part of a list which is part of the mayflower looks when it is hovered. It is saying "when I hover over li I want the tmwo to change"in this case it turns visible */
-  opacity: 1;
-  display: block;
-}
-
-.tmwo li:hover{  /* NOTE: when you hover over tmwo it turns pink thanks to this */
-  background-color: rgb(184, 108, 167);
-  
-}
-
-
-ul.tmwo{ /* NOTE: this I put to just adjust the width of the tmwo in ul */
-  width: 100px;
-}
-/* NOTE: ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-
-
-
-.sametime{
-  border: 3px dotted black;
-}
-
-
-
-
-
+/*media*/
 .itg{
   text-align: center;
   color: black;
@@ -1124,6 +297,8 @@ ul.tmwo{ /* NOTE: this I put to just adjust the width of the tmwo in ul */
   border-style:ridge groove groove ridge ;
   background-color: rgba(170,171,168,255);
 }
+
+/*sizes*/
 .si5{
   height: 5%;
   width: 5%;
@@ -1462,111 +637,15 @@ ul.tmwo{ /* NOTE: this I put to just adjust the width of the tmwo in ul */
   height: 100%;
   width: 100%;
 }
-.test{
-  background-repeat: repeat;
-}
+
+
+
+
 .rotate{
   transform: rotate(-90deg);
 }
 
-.itgl{
-  text-align: center;
-  color: black;
-  text-decoration: none;
-  padding: 3.79px;
-}
-.imgl{  
-  border:12px solid rgb(255, 208, 208);
-  border-style:ridge groove groove ridge ;
-  background-color: rgb(157, 95, 95);
-}
-.ingl{
-  height: 100%;
-  width: 100%;
-}
 
-.ihg{
-  height: 25%;
-  width: 25%;
-}
-.idg{
-  height: 49.639%;
-  width: 49.639%;
-}
-.icdg{
-  height: 49.5582559%;
-  width: 49.5582559%;
-}
-
-
-.dpad{
-  padding: 10px;
-}
-.white{
-  color: white;
-}
-
-
-.textwhite{
-  color:white;
-}
-
-
-
-.colorsec:hover{
-  background-color: rgb(65, 117, 131);
-}
-
-.colorsec2:hover{
-  background-color: rgb(87, 97, 29);
-}
-
-.achieve{
-  background-color: rgb(210, 201, 149);
-  color:rgb(75, 58, 33);
-  padding-left:34px;
-  padding-right:34px;
-  padding-top:15.1px;
-  padding-bottom:15.6px;
-  border: 2px solid black;
-}
-
-.achieve:hover{
-  background-color:rgb(75, 58, 33);
-  color:rgb(210, 201, 149);
-}
-
-
-
-.nodec{
-  text-decoration: none;
-}
-
-.uasclassof2024{
-  aspect: ratio 1px / 1px;;
-  width: auto;
-  height: 246.177px;
-}
-.textthatiscool{
-  text-align: center;
-  font-size: large;
-}
-
-.inock{
-  display: inline-block;
-}
-
-.mostandall{
-  aspect: ratio 1px;
-  height: 494.5px;
-  width: auto;
-}
-
-.royalty{
-  aspect: ratio 1px;
-  height: 299.4px;
-  width: auto;
-}
 
 .slupi {
   aspect: ratio 1px;
