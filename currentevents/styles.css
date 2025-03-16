@@ -97,7 +97,7 @@
 }
 
 .groupdown{
-  
+  border: 0px solid white;
 }
 .groupdown-content{
   display: none;
@@ -235,7 +235,6 @@
 }
 
 .tother{
-  border: ;
   background-color:rgba(69, 135, 187, 0.99);
   border-left:3px outset rgb(29, 65, 83) ;
   border-top:3px outset rgb(29, 65, 83) ;
@@ -647,10 +646,5 @@
 
 
 
-.slupi {
-  aspect: ratio 1px;
-  height: 290.7px;
-  width: auto;
-}
 
 
