@@ -4,14 +4,6 @@
 
 
 
-@media (max-width: 600px) {
-  .pagebutton {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
 .box{
   float: left;
   margin: 10px;
@@ -194,9 +186,14 @@
 
 
 
-.da{
-  border: 2px solid black;
+.chapter{
+  border:2px solid black;
   padding: 40px;
+}
+@media (mac-width: 877px) {
+  .chapter{
+    width: 100%;
+  }
 }
 
 
@@ -271,7 +268,7 @@
   font-size: 15px;
 }
 
-.other{
+.controlP{
   background-color:rgba(134, 171, 165, 0.99);
   border-left:3px outset rgb(29, 65, 83) ;
   border-top:3px outset rgb(29, 65, 83) ;
@@ -281,25 +278,35 @@
   width:310px;
 }
 
-.fixing{
+.header{
   position: sticky;
   top: 0;
   z-index: 3000;
 }
 
-.fixer{
+.navcontainer{
   position: relative;
   transition: 0.1s linear;
   left: -480px;
 }
 
-.fixing:hover .fixer{
+.header:hover .navcontainer{
   position: relative;
   top: 0;
   z-index: 3000;
   left: 0px;
 }
 
+#toggleButton{
+  display: none;
+}
+
+.only-phones{
+  display: none;
+}
+.only-computers{
+  display: block;
+}
 
 /*media*/
 .itg{
@@ -665,3 +672,75 @@
 
 
 
+@media (max-width: 877px) {
+  .only-phones {
+    display: block;
+  }
+
+  .ni {
+    background-color: rgb(158, 158, 158);
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+  }
+
+  .ni:hover {
+    background-color: black;
+    border: 2px solid white;
+    text-decoration: none;
+    color: rgb(158, 158, 158);
+    font-size: 30px;
+  }
+
+  .only-computers {
+    display: none;
+  }
+
+  #toggleButton {
+    display: block;
+    background-color: rgba(134, 171, 165, 0.99);
+    border-left: 3px outset rgb(29, 65, 83);
+    border-top: 3px outset rgb(29, 65, 83);
+    border-bottom: 0px;
+    border-right: 3px inset rgb(29, 65, 83);
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .controlP {
+    background-color: rgba(134, 171, 165, 0.99);
+    border-left: 3px outset rgb(29, 65, 83);
+    border-top: 3px outset rgb(29, 65, 83);
+    border-bottom: 3px inset rgb(29, 65, 83);
+    border-right: 3px inset rgb(29, 65, 83);
+    padding: 7px;
+    width: 100%;
+  }
+  
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 3000;
+  }
+
+  .navcontainer {
+    position: relative;
+    transition: 0.1s linear;
+    left: -700px;
+  }
+
+  .header:hover .navcontainer {
+    position: relative;
+    top: 0;
+    z-index: 3000;
+    left: -480px;
+  }
+
+  .moved-navcontainer {
+    left: 0px;
+    position: relative;
+    transition: 0.1s linear;
+  }
+}

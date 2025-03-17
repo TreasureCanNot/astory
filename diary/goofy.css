@@ -1,0 +1,14 @@
+@keyframes flash {
+    0% {
+        font-size: 27px;
+    }
+    100% {
+        font-size: 30px;
+    }
+}
+
+#flashtext {
+    font-size: 24px;
+    font-weight: bold;
+    animation: flash 0.5s infinite alternate;
+}

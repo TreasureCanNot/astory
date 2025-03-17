@@ -2,16 +2,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta name="viewport" content="width=device-width>
+    <meta name="viewport" content="width=device-width">
     <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpg" href="img/awesome.jpg">
-    <header class="fixing" >
-      <div class="fixer">
+    <header class="header" >
+      <div style="height: 5px;" class="only-computers"></div>
+      <br class="only-phones">
+      <button id="toggleButton" onclick="controlPad()">Show</button>
+      <div id="navContainer" class="navcontainer">
         <nav class="mother">
           <p><b>Control Pad</b></p>
           <a class="ni" href="after.html">After</a>
-          <a class="ni" href="currentevents.html">Timothy's Diary</a>
+          <a class="ni" href="page1.html">Timothy's Diary</a>
           <a class="ni" href="individuals.html">Individuals</a>
           <a class="ni" href="gallery.html">Gallery</a>
           <a class="ni" href="quotes.html">Quotes</a>
@@ -63,8 +66,10 @@
       </div>
     </header>
     <style>
-      @media (max-width: 600px){
-
+      @media (max-width: 877px){
+        .chapter{
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -72,7 +77,7 @@
     <center><h1>Page 1</h1></center>
     <a href="events5.html"><button type="button" style="width:20%; height:20%;">Page 1</button></a>
     <a href="events7.html"><button type="button" style="width:20%; height:20%; float:right;">Page 2</button></a>
-    <div class="da" style="background-image:linear-gradient(white, white);color:black;border-color:rgb(255, 232, 115);">
+    <div class="chapter" style="background-image:linear-gradient(white, white);color:black;border-color:rgb(255, 232, 115);">
       <h2>What's the story?</h2>
       <br>
       <p>I don't know if you read the previous story, my incredible chronicle. I am pretty proud of it. Sometimes I made have done some mistakes, innacuracies, or assumptions, but overall I feel like it was accurate. But I am done trying to be accurate, I am going to write a chronicle from my own perspective, a new story.</p>
@@ -120,7 +125,7 @@
           <p>After that we did some activities where we kind of got into groups and explained why we chose our medicinal carriers and they made us right post its and stuff. It was okay, I was the only pharmacist of my group. After it finished we headed outside. On the way out I decided to ask two of my fellow companions how to do the empadronamiento, I kind of already knew how to do it but it was better to have some help and also I need to make friends. Their names were <a href="individuals.html#pili">Pilar</a> and <a href="individuals.html#mica">Mica</a>. Pili is from the interior of argentina but I don't remember from where exactly, she has a cat, she took english classes for a while so she probably knows english, and she is overall really nice, she is taking biochemistry meaning she might be in my class.</p>
           <p>So i did the empadronamiento and I took the photo and stuff, very cool. I aquired a new friend, pilar, and also a new aquaintance, mica. Before leaving Pilar gave me her phone number.</p>
           <p>Then I went to eat something with my mom in a shopping. I also bought several clothes, like a new sweater, new pants, and new shoes. Then I went to my apartment and I immediately slept, I had a dream.</p>
-          <div style="padding: 10px; background-color: pink;border: 4px dotted darkred; width: 750px;">
+          <div style="padding: 10px; background-color: pink;border: 4px dotted darkred; width: 60%;">
             <h2>Timo vs The Shapeshifter and Something Strange</h2>
             <p>There was an award show where Sebs' entire family was invited, including his newly aquired girlfriend. I was there so I sat down with him and we were having fun. We were in this huge building and the host was anouncing the best people on earth, he jokingly anounced Drake, Mr Beast, Donald Trump, and a penguin, before anouncing the actualy best person which was Kendrick Lamar. Kendrick Lamar and Drake where both sat on the same table arguing about music right next to us, it was real funny.</p>
             <p>But then some woman approaches me and kisses me?! without my consent. And I am proper pissed but she ran away. So I go to another place with sebs mocking me for being kissed, I am in a window and in the distant shore, I see a strange fish crawl out of the ocean. And then I look away to Sebs to discuss the random situation and I look back and I see the fish entering this building.</p>
@@ -295,9 +300,6 @@
           <br>
           <p></p>
         </li>
-        <br>
-        <br>
-        <br>
       </ul>
     </div>
     <a href="events4.html"><button type="button" name="buttonWW" style="width:20%; height:20%;">Page 5</button></a>
