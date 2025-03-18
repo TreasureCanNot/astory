@@ -670,7 +670,15 @@
 
 
 
-
+#timeskip{
+  background-color: rgb(69, 99, 0);
+  color: rgb(212, 255, 249);
+  border: 3px inset rgb(223, 253, 153);
+  display: inline-block;
+  padding: 10px;
+  font-size: large;
+  width: 80%;
+}
 
 @media (max-width: 877px) {
   .only-phones {

@@ -1,3 +1,4 @@
+/* push animation
 @keyframes flash {
     0% {
         font-size: 27px;
@@ -6,9 +7,144 @@
         font-size: 30px;
     }
 }
+*/
+
+@keyframes flash {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
 
 #flashtext {
     font-size: 24px;
     font-weight: bold;
     animation: flash 0.5s infinite alternate;
+    display: inline-block;
+    transform-origin: center left;
+}
+
+@keyframes checkitout {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;;
+    }
+}
+
+#checkitout {
+    font-size: 24px;
+    font-weight: bold;
+    animation: checkitout 0.1s infinite alternate;
+    color: pink;
+    text-decoration: none;
+}
+/*
+@keyframes math{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.math1{
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 3;
+}
+.math2 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 4;
+}
+.math3 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 5;
+}
+.math4 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 6;
+}
+.math5 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 7;
+}
+.math6 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 8;
+}
+.math7 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 9;
+}
+.math8 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 10;
+}
+.math9 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 11;
+}
+.math10 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 12;
+}
+.math11 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 13;
+}
+.math12 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 14;
+}
+.math13 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 15;
+}
+.math14 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 16;
+}
+.math15 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 17;
+}
+.math16 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 18;
+}
+.math17 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 19;
+}
+.math18 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 20;
+}
+.math19 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 21;
+}
+.math20 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 22;
+}
+.math21 {
+    animation: math 0.5s infinite steps(1) alternate;
+    animation-delay: 23;
+}
+*/
+
+#text {
+    font-family: monospace;
+    white-space: nowrap;
+    font-size: 37px;
 }
