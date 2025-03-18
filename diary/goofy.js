@@ -16,12 +16,12 @@ function typeText() {
     if (index < text.length) {
         // Append the next character to the <p> element's text content
         textElement.textContent += text[index];
-
+        //same as saying textElement.textContent = textElement.textContent + text[index]
         // Move to the next character
         index++;
 
         // Call this function again after a short delay (100ms)
-        setTimeout(typeText, 100);
+        setTimeout(typeText, 350);
     }
 }
 
