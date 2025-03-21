@@ -3,7 +3,6 @@
   <head>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="goofy.css">
     <link rel="icon" type="image/jpg" href="img/awesome.jpg">
     <meta charset="utf-8">
     <title>Please just work</title>
@@ -27,13 +26,52 @@
       
     </header>
     <style>
+      @keyframes flash {
+          0% {
+              transform: scale(1);
+          }
+
+          100% {
+              transform: scale(1.5);
+          }
+      }
+      #flashtext {
+          font-size: 24px;
+          font-weight: bold;
+          animation: flash 0.5s infinite alternate;
+          display: inline-block;
+          transform-origin: center left;
+      }
+      @keyframes checkitout {
+          0% {
+              opacity: 0%;
+          }
+
+          100% {
+              opacity: 100%;;
+          }
+      }
+
+      #checkitout {
+          font-size: 24px;
+          font-weight: bold;
+          animation: checkitout 0.1s infinite alternate;
+          color: pink;
+          text-decoration: none;
+      }
+      #text {
+          font-family: monospace;
+          white-space: nowrap;
+          font-size: 37px;
+      }
+
     </style>
   </head>
   <body style="background-color:grey">
     <center>
-        <h1 style="color: blanchedalmond;">What happened after</h1>
+        <h1 style="color: blanchedalmond;">after/intro</h1>
         <br>
-        <button id="changethething" onclick="appearItAll()">Show</button>
+        <button id="changethething" class="gbuttons" onclick="appearItAll()">Show</button>
     </center>
     <span id="showhide" style="display: none;">
         <div style="

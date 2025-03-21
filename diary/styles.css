@@ -661,6 +661,7 @@
   width: 100%;
 }
 
+/*quotes*/
 
 
 
@@ -673,7 +674,7 @@
   height: 20%;
 }
 
-.Gbuttons{
+.gbuttons{
   width: 20%;
   height: 20%;
 }
@@ -764,4 +765,8 @@
     width: 40%;
     height: 40%;
   }
+  .gbuttons{
+  width: 50%;
+  height: 50%;
+}
 }
