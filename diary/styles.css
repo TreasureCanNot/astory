@@ -274,8 +274,9 @@
   border-top:3px outset rgb(29, 65, 83) ;
   border-bottom:3px inset rgb(29, 65, 83) ;
   border-right:3px inset rgb(29, 65, 83) ;
+  color: black;
   padding: 7px;
-  width:310px;
+  width:350px;
 }
 
 .header{
@@ -687,6 +688,11 @@
   padding: 10px;
   font-size: large;
   width: 80%;
+}
+.timeskip{
+  background-color: rgb(69, 99, 0);
+  color: rgb(212, 255, 249);
+  border: 3px inset rgb(223, 253, 153);
 }
 
 @media (max-width: 877px) {
