@@ -4,17 +4,16 @@
     
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/jpg" href="img/awesome.jpg">
-    
+    <meta name="viewport" content="width=device-width">
     <meta charset="utf-8">
     <title>after/voiceBag</title>
     <header class="header" >
       <div style="height: 5px;" class="only-computers"></div>
       <br class="only-phones">
-      <button id="toggleButton" onclick="controlPad()">Show</button>
-      <div id="navContainer" class="navcontainer">
+      <button id="toggleButton" onclick="controlPad()">Hide</button>
+      <div id="navContainer" class="moved-navcontainer">
         <nav class="controlP">
           <p><b>Control Pad</b></p>
-          <a class="ni" style="background-color:rgb(255, 255, 255);" href="sorry.html">Sorry</a>
           <a class="ni" href="after.html">After</a>
           <a class="ni" href="page1.html">Timothy's Diary</a>
           <a class="ni" href="individuals.html">Individuals</a>
@@ -30,21 +29,23 @@
         }
         table{
             border: 6px double rgb(86, 75, 69);
-            width: 50%;
+            width: 100%;
         }
-        .cuas{
-        padding: 50px;
-        
+        td{
+            padding: 50px;
         }
-        .cuos{
-        padding: 50px;
-        
+        @media (max-width: 877px) {
+            td{
+                padding: 10px;
+            }
+            audio{
+                width: 100%;
+            }
+            .cuas{
+                width: 100%;
+            }
         }
-        .cues{
-        width: 100px;
-        padding-left:15px;
-        padding-right:15px;
-        }
+
       </style>
     </header>
   </head>
@@ -54,15 +55,83 @@
         <p>A bag with voices inside</p>
     </center>
     <br>
-    <table style="float: left;">
+    <table style="float: left;" class="only-computers">
         <tr style="background-color: rgb(86, 75, 69);color:bisque;;">
-            <th class="cuos">Title and Info</th>
-            <th class="cuas">Voice</th>
+            <th>Title and Info</th>
+            <th>Voice</th>
+            <th>Title and Info</th>
+            <th>Voice</th>
         </tr>
         <tr style="background-color: rgb(246, 255, 226);">
             <td class="cuos">
                 <h3>voiceBag Origins</h3>
-                <p><a href="others.html#timo">Timo </a>During the Timeskip</p>
+                <p><a href="others.html#timo">Timo </a>During the Timeskip (25/06/2024)</p>
+            </td>
+            <td class="cuas">
+                <audio controls>
+                    <source src="voiceBag/voice-bag-origins.mp3" type="audio/mp3">
+                </audio>
+            </td>
+            <td class="cuos">
+                <h3>Bastard</h3>
+                <p><a href="others.html#ethan">Ethan </a>during the Timeskip (07/02/2025)</p>
+            </td>
+            <td class="cuas">
+                <audio controls>
+                    <source src="voiceBag/bastard.mp3" type="audio/mp3">
+                </audio>
+            </td>
+        </tr>
+        <tr style="background-color: rgb(246, 255, 226);">
+            <td class="cuos">
+                <h3>Mr Goonicide</h3>
+                <p><a href="others.html#sebs">Sebs </a>during the Timeskip (24/01/2025)</p>
+            </td>
+            <td class="cuas">
+                <audio controls>
+                    <source src="voiceBag/mr-goonicide.mp3" type="audio/mp3">
+                </audio>
+            </td>
+            <td class="cuos">
+                <h3>Sebs is pissed</h3>
+                <p><a href="others.html#sebs">Sebs </a>during the Timeskip (25/06/2024)</p>
+            </td>
+            <td class="cuas">
+                <audio controls>
+                    <source src="voiceBag/no-real-friends.mp3" type="audio/mp3">
+                </audio>
+            </td>
+        </tr>
+        <tr style="background-color: rgb(246, 255, 226);">
+            <td class="cuos">
+                <h3>Harmonic Adventures</h3>
+                <p><a href="others.html#timo">Timo </a>during the Timeskip (24/01/2025)</p>
+            </td>
+            <td class="cuas">
+                <audio controls>
+                    <source src="voiceBag/harmonica.mp3" type="audio/mp3">
+                </audio>
+            </td>
+            <td class="cuos">
+                <h3>It's Sofe</h3>
+                <p><a href="others.html#sofe">Sofe </a>during the Timeskip (24/01/2025)</p>
+            </td>
+            <td class="cuas">
+                <audio controls>
+                    <source src="voiceBag/it_s-sofe.mp3" type="audio/mp3">
+                </audio>
+            </td>
+        </tr>
+    </table>
+    <table class="only-phones" >
+        <tr style="background-color: rgb(86, 75, 69);color:bisque;;">
+            <th>Title and Info</th>
+            <th>Voice</th>
+        </tr>
+        <tr style="background-color: rgb(246, 255, 226);">
+            <td class="cuos">
+                <h3>voiceBag Origins</h3>
+                <p><a href="others.html#timo">Timo </a>During the Timeskip (25/06/2024)</p>
             </td>
             <td class="cuas">
                 <audio controls>
@@ -72,8 +141,19 @@
         </tr>
         <tr style="background-color: rgb(246, 255, 226);">
             <td class="cuos">
+                <h3>Bastard</h3>
+                <p><a href="others.html#ethan">Ethan </a>during the Timeskip (07/02/2025)</p>
+            </td>
+            <td class="cuas">
+                <audio controls>
+                    <source src="voiceBag/bastard.mp3" type="audio/mp3">
+                </audio>
+            </td>
+        </tr>
+        <tr style="background-color: rgb(246, 255, 226);">
+            <td class="cuos">
                 <h3>Mr Goonicide</h3>
-                <p><a href="others.html#sebs">Sebs </a>during the Timeskip</p>
+                <p><a href="others.html#sebs">Sebs </a>during the Timeskip (24/01/2025)</p>
             </td>
             <td class="cuas">
                 <audio controls>
@@ -84,7 +164,7 @@
         <tr style="background-color: rgb(246, 255, 226);">
             <td class="cuos">
                 <h3>Harmonic Adventures</h3>
-                <p><a href="others.html#timo">Timo </a>during the Timeskip</p>
+                <p><a href="others.html#timo">Timo </a>during the Timeskip (24/01/2025)</p>
             </td>
             <td class="cuas">
                 <audio controls>
@@ -95,7 +175,7 @@
         <tr style="background-color: rgb(246, 255, 226);">
             <td class="cuos">
                 <h3>It's Sofe</h3>
-                <p><a href="others.html#sofe">Sofe </a>during the Timeskip</p>
+                <p><a href="others.html#sofe">Sofe </a>during the Timeskip (24/01/2025)</p>
             </td>
             <td class="cuas">
                 <audio controls>
@@ -103,23 +183,10 @@
                 </audio>
             </td>
         </tr>
-    </table>
-    <table style="float: right;">
-        <tr style="background-color: rgb(246, 255, 226);">
-            <td class="cuos">
-                <h3>Bastard</h3>
-                <p><a href="others.html#ethan">Ethan </a>during the Timeskip</p>
-            </td>
-            <td class="cuas">
-                <audio controls>
-                    <source src="voiceBag/bastard.mp3" type="audio/mp3">
-                </audio>
-            </td>
-        </tr>
         <tr style="background-color: rgb(246, 255, 226);">
             <td class="cuos">
                 <h3>Sebs is pissed</h3>
-                <p><a href="others.html#sebs">Sebs </a>during the Timeskip</p>
+                <p><a href="others.html#sebs">Sebs </a>during the Timeskip (25/06/2024)</p>
             </td>
             <td class="cuas">
                 <audio controls>
@@ -129,4 +196,5 @@
         </tr>
     </table>
   </body>
+  <script src="script.js"></script>
 </html>

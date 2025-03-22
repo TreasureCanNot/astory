@@ -9,23 +9,23 @@
     <header class="header">
       <div style="height: 5px;" class="only-computers"></div>
       <br class="only-phones">
-      <button id="toggleButton" onclick="controlPad()">Show</button>
-      <div id="navContainer" class="navcontainer">
+      <button id="toggleButton" onclick="controlPad()">Hide</button>
+      <div id="navContainer" class="moved-navcontainer">
         <nav class="controlP">
           <p><b>Control Pad</b></p>
-          <a class="ni" style="background-color:rgb(255, 255, 255);" href="sorry.html">Sorry</a>
           <a class="ni" href="after.html">After</a>
           <a class="ni" href="page1.html">Timothy's Diary</a>
           <a class="ni" href="individuals.html">Individuals</a>
           <a class="ni" href="voiceBag.html">voiceBag</a>
-          <a class="ni" href="quotes.html"></a>
-          <a class="ni" href="groups.html"></a>
-          <a class="ni" href="items.html"></a>
         </nav>
       </div>
-      
     </header>
     <style>
+      @media (mac-width: 877px) {
+        .boxy{
+          width: 100%;
+        }
+      }
       @keyframes flash {
           0% {
               transform: scale(1);
@@ -71,7 +71,7 @@
     <center>
         <h1 style="color: blanchedalmond;">after</h1>
         <br>
-        <button id="changethething" class="gbuttons" onclick="appearItAll()">Show</button>
+        <button id="changethething" class="gbuttons" onclick="appearItAll()">Click This!!!</button>
     </center>
     <span id="showhide" style="display: none;">
         <div style="
@@ -106,7 +106,7 @@
     <br>
     <br>
     
-    <div class="boxy" style="background-color: grey; border: 15px dashed yellow; padding: 9px; width: 100%;">
+    <div class="boxy" style="background-color: grey; border: 15px dashed yellow; padding: 9px; width: 80%;">
       <button id="startButton" style="background: none; font-size: 26px; float: left;">Oh wow</button><span>. click this</span>
       <p id="text" style="word-wrap: break-word; white-space: normal;"></p>
     </div>
@@ -166,8 +166,7 @@
     <br>
     <br>
     <br>
-    <button onclick="changethatShit()"></button>
-    <p id="texst">Lookatthis beach</p>
+   
     <!--<center>
       <h1>title</h1>
       <br>
@@ -177,8 +176,43 @@
       <p>This text changes</p>
     </span>
     <h1>Please just work</h1>
+
+
+    <button onclick="changethatShit()"></button>
+    <p id="texst">Lookatthis beach</p>
     <br>-->
   </body>
   <script src="goofy.js"></script>
+  <script>
+    function appearItAll() {
+        document.getElementById('showhide').style.display = 'block';
+        document.getElementById('changethething').innerHTML = "Hide";
+        var element = document.getElementById('showhide');
+        element.id = "hideshow";
+        document.getElementById('changethething').onclick = disappearItAll;
+      }
+
+      function disappearItAll() {
+        document.getElementById('hideshow').style.display = 'none';
+        document.getElementById('changethething').innerHTML = "Show";
+        var element = document.getElementById('hideshow');
+        element.id = "showhide";
+        document.getElementById('changethething').onclick = appearItAll;
+      }
+
+      function toggleText() {
+        let textElement = document.getElementById('sh');
+        let button = document.getElementById('change');
+
+        if (textElement.style.display === "none") {
+          textElement.style.display = "block";
+          button.innerHTML = "Hide";
+        }
+        else {
+          textElement.style.display = "none";
+          button.innerHTML = "Show";
+        }
+      }
+  </script>
   <script src="script.js"></script>
 </html>
