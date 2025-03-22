@@ -164,6 +164,7 @@
 .mevent{
   border: 1px solid black;
   padding: 9px;
+  box-sizing: border-box;
 }
 
 .duh{
@@ -196,6 +197,9 @@
   }
 }
 
+.event-list{
+  list-style: none;
+}
 
 .border1p{
   border: 2px solid black;
@@ -285,13 +289,13 @@
   z-index: 3000;
 }
 
-.navcontainer{
+.moved-navcontainer{
   position: relative;
   transition: 0.1s linear;
   left: -480px;
 }
 
-.header:hover .navcontainer{
+.header:hover .moved-navcontainer{
   position: relative;
   top: 0;
   z-index: 3000;
