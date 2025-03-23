@@ -1,9 +1,13 @@
 
 
+
+
+
 .whyy{
   border:1px solid black;
-  width:150border: 3px solid;
-  padding: 10px; px;
+  width:150px;
+  border: 3px solid;
+  padding: 10px;
   
   top:0;
   
@@ -325,8 +329,6 @@
 }
 
 .catchf{
-  width: ;
-  height: ;
   border: 2px solid black;
   background-color: rgb(200, 200, 200);
   padding: 10px;
@@ -373,7 +375,6 @@
   background-repeat: no-repeat;
 }
 .talesofinstance{
-  border: 
 }
 .lom{
   background-image: linear-gradient(#ffe17e,rgb(255, 255, 255));
@@ -539,7 +540,6 @@ pad10{
 }
 
 .tother{
-  border: ;
   background-color:rgba(69, 135, 187, 0.99);
   border-left:3px outset rgb(29, 65, 83) ;
   border-top:3px outset rgb(29, 65, 83) ;
@@ -761,14 +761,15 @@ pad10{
   padding-top:3.5px ;
   padding-bottom:3.5px ;
   padding-right:1px;
-  padding-left: 1;px
+  padding-left: 1px;
 }
 
 
-.expandb:hover{
+.expandb:hover {
   height: 115px;
   width: 615px;
 }
+
 .expandb:hover .expandation{
   display: contents;
   opacity: 1;
