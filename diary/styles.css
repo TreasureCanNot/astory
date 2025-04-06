@@ -139,7 +139,9 @@
 
  */
 
-
+.mb{
+  border: 1px solid black;
+}
 
 .border1{
   border: 2px solid black;
@@ -668,6 +670,35 @@
   height: 100%;
   width: 100%;
 }
+
+/*with dependents*/
+
+.quarter{
+  width: 24.701041%;
+}
+.fifth {
+  width: 19.70485%;
+}
+
+/*specific sizez*/
+/*verticaly short phone*/
+.iphone3x4{
+  aspect-ratio: 3/4;
+}
+/*verticaly long phone*/
+.iphone9x16 {
+
+}
+
+.iphone4x3 {
+
+}
+
+/*verticaly long phone*/
+.iphone16x9 {
+
+}
+
 
 /*quotes*/
 
