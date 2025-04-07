@@ -172,6 +172,21 @@
   overflow: auto;
 }
 
+@media (max-width: 768px) {
+  .mevent {
+      border: 1px solid black;
+      padding: 9px;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+    .anevent{
+      border: 2.5px solid black;
+      padding:9px;
+      overflow: auto;
+      box-sizing: border-box;
+    }
+}
+
 .duh{
   opacity: 0;
 }
@@ -196,9 +211,12 @@
   border:2px solid black;
   padding: 40px;
 }
-@media (mac-width: 877px) {
+@media (max-width: 768px ) {
   .chapter{
-    width: 100%;
+    width: auto;
+    padding: 0px;
+    margin: 0;
+    font-size: 15px;
   }
 }
 
@@ -672,7 +690,17 @@
 }
 
 /*with dependents*/
+.oneth {
+  width: 100%;
+}
 
+.half {
+
+}
+
+.third{
+  width: 33.087095%;
+}
 .quarter{
   width: 24.701041%;
 }
@@ -680,19 +708,46 @@
   width: 19.70485%;
 }
 
+
+@media (max-width: 768px) {
+  .oneth{
+    width: 100%;
+  }
+  .half{
+
+  }
+  .third{
+    width:32.5%;
+  }  
+  .quarter {
+      width: 23.9%;
+    }
+  .fifth {
+    width: 19%;
+  }
+
+
+  .fullphone{
+    width: 100%;
+  }
+}
+
 /*specific sizez*/
 /*verticaly short phone*/
-.iphone3x4{
+.iphone3o4{
   aspect-ratio: 3/4;
 }
+
+.iphone4o3 {
+
+}
+
 /*verticaly long phone*/
-.iphone9x16 {
+.iphone9o16 {
 
 }
 
-.iphone4x3 {
 
-}
 
 /*verticaly long phone*/
 .iphone16x9 {
@@ -736,7 +791,7 @@
   display: inline-block;
 }
 
-@media (max-width: 877px) {
+@media (max-width: 768px) {
   .only-phones {
     display: block;
   }
