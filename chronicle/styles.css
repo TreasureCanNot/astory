@@ -257,6 +257,11 @@
   opacity:1;
   display: block;
 }
+.vuhj:hover .vu {
+  opacity: 1;
+  display: none;
+}
+
 
 .groupdown{
   

@@ -44,6 +44,18 @@
     color: pink;
     text-decoration: none;
 }
+
+@keyframes anounce {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+        ;
+    }
+}
+
 /*
 @keyframes math{
     0%{
