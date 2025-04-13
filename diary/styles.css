@@ -722,36 +722,81 @@
 }
 
 .half {
-
+  display: flex;
 }
 
-.third{
-  width: 33.087095%;
+.half img {
+  width: 50%;
+  object-fit: cover;
+  display: block;
 }
-.quarter{
-  width: 24.701041%;
+
+.half video {
+  width: 50%;
+  object-fit: cover;
+  display: block;
 }
+
+.third {
+  display: flex;
+}
+.third img {
+  width: 33.3333%;
+  object-fit: cover;
+  display: block;
+}
+
+.third video {
+  width: 33.3333%;
+  object-fit: cover;
+  display: block;
+}
+
+.quarter {
+  display: flex;
+}
+
+.quarter img {
+  width: 25%;
+  object-fit: cover;
+  display: block;
+}
+
 .fifth {
-  width: 19.70485%;
+  display: flex;
 }
 
+.fifth img {
+  width: 20%;
+  object-fit: cover;
+  display: block;
+}
+.fifth video {
+  width: 20%;
+  object-fit: cover;
+  display: block;
+}
 
 @media (max-width: 768px) {
-  .oneth{
-    width: 100%;
-  }
-  .half{
-
-  }
-  .third{
-    width:32.5%;
-  }  
-  .quarter {
+  /*
+  .oneth {
+      width: 100%;
+    }
+  
+    .half {}
+  
+    .third {
+      width: 32.5%;
+    }
+  
+    .quarter {
       width: 23.9%;
     }
-  .fifth {
-    width: 19%;
-  }
+  
+    .fifth {
+      width: 19%;
+    }
+  */
 
 
   .fullphone{
@@ -766,20 +811,16 @@
 }
 
 .iphone4o3 {
-
+  aspect-ratio: 4/3;
 }
 
 /*verticaly long phone*/
 .iphone9o16 {
-
+  aspect-ratio: 9/16;
 }
 
 
 
-/*verticaly long phone*/
-.iphone16x9 {
-
-}
 
 
 /*quotes*/
