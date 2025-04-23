@@ -717,9 +717,24 @@
 }
 
 /*with dependents*/
-.oneth {
-  width: 100%;
+
+.half {
+  display: flex;
 }
+
+.oneth img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.oneth video {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
 
 .half {
   display: flex;
