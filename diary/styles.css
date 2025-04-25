@@ -734,6 +734,17 @@
   display: block;
 }
 
+.oneth embed {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.oneth iframe {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
 
 
 .half {
@@ -748,7 +759,6 @@
 
 .half video {
   width: 50%;
-  object-fit: cover;
   display: block;
 }
 
@@ -763,7 +773,6 @@
 
 .third video {
   width: 33.3333%;
-  object-fit: cover;
   display: block;
 }
 
@@ -788,7 +797,6 @@
 }
 .fifth video {
   width: 20%;
-  object-fit: cover;
   display: block;
 }
 
