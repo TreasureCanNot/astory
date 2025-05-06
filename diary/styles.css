@@ -362,9 +362,9 @@
   padding: 9px;
 }
 .info i {
-  font-size: 17.7px;
+  font-size: 18.7px;
   color: black;
-  text-decoration: underline white;
+  text-decoration:wavy;
 }
 
 .cave{
@@ -792,7 +792,7 @@
 
 .fifth img {
   width: 20%;
-  object-fit: cover;
+  object-fit:scale-down;
   display: block;
 }
 .fifth video {
@@ -843,7 +843,16 @@
 }
 
 
-
+.neatherlavasauce{
+  color:rgb(255, 224, 87);
+  background-color: rgb(117, 18, 18);
+  padding: 10px;
+  border-radius: 22px;
+  display: inline-block;
+}
+.neatherlavasauce i{
+  color: rgb(255, 224, 87);
+}
 
 
 /*quotes*/
