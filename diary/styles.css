@@ -762,6 +762,11 @@
   display: block;
 }
 
+.half iframe{
+  width: 50%;
+  display: block;
+}
+
 .third {
   display: flex;
 }
@@ -772,6 +777,10 @@
 }
 
 .third video {
+  width: 33.3333%;
+  display: block;
+}
+.third iframe {
   width: 33.3333%;
   display: block;
 }
