@@ -50,3 +50,74 @@ function changethatShit(){
 
     console.log(test);
 }
+
+
+let chapterSelectOngoing = false;
+function chapterSelect() {
+    if (chapterSelectOngoing == true) { return; }
+    //stop it you bitch
+    chapterSelectOngoing = true; //it's true, so nothing can run until it ain't true
+
+    let pad = document.getElementById('controlP')
+    const links = document.querySelectorAll('.ni')
+    const Hlinks = document.querySelectorAll('.NOni')
+    let selector = document.getElementById('selector')
+
+    if (pad.classList.contains('controlP')) {
+        pad.classList.remove('controlP')
+        pad.classList.add('controlP-chapterMode')
+    } else {
+        pad.classList.remove('controlP-chapterMode')
+        pad.classList.add('controlP')
+    }
+
+    if (selector.classList.contains('chapter-select')) {
+        selector.classList.remove('chapter-select')
+        selector.classList.add('chapter-selecting')
+    } else {
+        selector.classList.remove('chapter-selecting')
+        selector.classList.add('chapter-select')
+    }
+
+    let tracker = [];
+
+    links.forEach(element => {
+        let condition = new Promise(function (done) {
+            if (element.classList.contains('ni')) {
+                element.classList.remove('ni');
+                element.classList.add('NOni'); // This happens immediately
+            }
+            setTimeout(function () { done(); }, 1000);
+        }).then(function () {
+            element.classList.add('vanished');
+        });
+        tracker.push(condition)
+    });
+
+    Hlinks.forEach(function (element) {
+        let condition = new Promise(function (done) {
+            new Promise(function (vanishFirst) {
+                if (element.classList.contains('vanished')) {
+                    element.classList.remove('vanished');
+                }
+                vanishFirst()
+            }).then(function () {
+                setTimeout(function () {
+                    if (element.classList.contains('NOni')) {
+                        element.classList.remove('NOni');
+                        element.classList.add('ni');
+                    }
+                    // Now i'm sure that the elements will vanish before their class is ni
+                }, 1000);
+            })
+            done();
+        });
+        tracker.push(condition)
+    });
+
+    Promise.all(tracker).then(function () {
+        chapterSelectOngoing = false;
+    });
+}
+
+

@@ -12,8 +12,15 @@
       <br class="only-phones">
       <button id="toggleButton" onclick="controlPad()">Hide</button>
       <div id="navContainer" class="moved-navcontainer">
-        <nav class="controlP">
-          <p><b>Control Pad</b></p>
+        <nav id="controlP" class="controlP" style="">
+          <b>Control Pad</b>
+          <div class="chapter-select only-computers" id="selector" onmouseenter="chapterSelect()"><p>↔</p></div>
+          <button onclick="chapterSelect()" id="selector-phone" class="chapter-select only-phones">↔</button>
+          <br>
+          <br>
+          <table >
+
+          </table>
           <a class="ni" href="after.html">After</a>
           <a class="ni" style="background-color: #FFF8E7;" href="page1.html">Timothy's Diary</a>
           <a class="ni" href="individuals.html">Individuals</a>
@@ -24,6 +31,23 @@
     <style>
       .boxy{
         width: 900px;
+      }
+      @media (max-width: 768px) {
+        
+      .controlP {
+        width: 90% !important;
+      }
+
+      .controlP-chapterMode {
+        width: 90% !important; 
+      }
+      }
+      .controlP {
+        width: 360px;
+      }
+
+      .controlP-chapterMode {
+        width: 360px;
       }
     </style>
   </head>
@@ -1840,13 +1864,15 @@
         <br>
         <div class="mevent">
           <div class="info">
-            <p><b>Date:</b> <i>26/05/2025</i></p>
+            <p><b>Date:</b> <i>27/05/2025</i></p>
             <p><b>Climate:</b> <i>Rainy</i></p>
             <p><b>Location:</b> <i>Italian Hospital</i></p>
             <p><b>Title:</b> <i>Kinda lost</i></p>
           </div>
           <p>I woke up and prepared, and now its raining. That's cool cause I could sleep quite well but also bad because I think that I am too tall for umbrellas to work properly. Also i've now completely understood all about the physics problem in the test. I've been progressively losing hope about getting some higher marks in the exam. THey are just way too strict with it. I bet that they put most of the points in the first question, which is the one I got the most wrong. Now I have to do a Chemistry exam about acids, bases, and equilibrium, a test about colligative properties, and now to add to that I need to re-take this physics exam. I got this. Also I forgot to print my Trabajo Practico, and I forgot to shave.</p>
-          <p>Also I slept bad and I tried to sleep in class but the teacher didn't let me. We learned about groups 13, 14, and 15, their properties, and some special elements, also the acids that they form and such. During break I got a brownie</p>
+          <p>Also I slept bad and I tried to sleep in class but the teacher didn't let me. We learned about groups 13, 14, and 15, their properties, and some special elements, also the acids that they form and such. During break I got a brownie with Fernando while he talked to me about getting a girlfriend.</p>
+          <p>Not much happened after that</p>
+          <p>When I got home, I sent an</p>
           <p></p>
           <div class="info">
             <p><b>Rating from -10 to 10:</b> <i></i></p>
@@ -1855,27 +1881,138 @@
         <br>
         <div class="mevent">
           <div class="info">
-            <p><b>Date:</b> <i>26/05/2025</i></p>
-            <p><b>Climate:</b> <i></i></p>
-            <p><b>Location:</b> <i></i></p>
-            <p><b>Title:</b> <i></i></p>
+            <p><b>Date:</b> <i>28/05/2025</i></p>
+            <p><b>Climate:</b> <i>Cold</i></p>
+            <p><b>Location:</b> <i>Italian Hospital</i></p>
+            <p><b>Title:</b> <i>Physics never happened</i></p>
           </div>
-          <p></p>
+          <p>During math, people practice math, but I wasn't interested in that. I was waiting until physics so that I could ask the teacher how the hell they gave me a four. I re-did all the problems again. In the three question, I only did three mistakes,and one of them was a unit conversion issue. I seriously believe that the grading was unneceseirly harsh. However the physics teacher today didn't come, it seems that they are avoiding me.  A student came by to tell us that the professor wasn't going to be arriving any time soon. He was sick or something.</p>
+          <p>So I went home, but I wasn't about to let this stop me from sent an email with my corrections, arguing that my grade should have been higher, and now its time to wait for the response of the teacher.</p>
           <div class="info">
-            <p><b>Rating from -10 to 10:</b> <i></i></p>
+            <p><b>Rating from -10 to 10:</b> <i>0</i></p>
+            <p>I couldn't do math</p>
           </div>
         </div>
         <br>
         <div class="mevent">
           <div class="info">
-            <p><b>Date:</b> <i>26/05/2025</i></p>
-            <p><b>Climate:</b> <i></i></p>
-            <p><b>Location:</b> <i></i></p>
-            <p><b>Title:</b> <i></i></p>
+            <p><b>Date:</b> <i>29/05/2025</i></p>
+            <p><b>Climate:</b> <i>Actually good(I like the cold by the way)</i></p>
+            <p><b>Location:</b> <i>Italian Hosptial - Apartment</i></p>
+            <p><b>Title:</b> <i>Doing some nice chemistry</i></p>
           </div>
-          <p></p>
+          <p>Today we did some nice chemistry.</p>
+          <p>Firstly, we did some stoichiometry practice problems that were pretty interesting, but nothing I haven't done before.</p>
+          <p>In the lab, we absolutely destroyed copper using nitric acid. In the first non-concentrated solution, the copper started bubbling, but in the concentrated solution, the liquid turned green and the air turned yellow. We had to seal it otherwise the toxic air would harm us. I did the work with this new person that i have never met or talked to, but she seemed nice, too abd I never asked her for her name.</p>
+          <p>When I went back to the apartment, I decided I would go to Uruguay tomorrow to visit my friends and to try to make my cedula again. I was struggling in making the decision of weather to go to Uruguay today or tomorrow, since I had the date to make my cedula tomorrow, and if I leave tomorrow I won't have time to make it. However I decided it wasn't worth it missing an entire biology class just for my cedula, i could get it later. Plus I'll still try to get it the day after, maybe they'll still let me. Thing is, decisions like these all the time stress me out, i'm never sure of anything, and all this uncertainty is constantly killing me. I feel so stressed all the time.</p>
+          <p>I tried to study, but I am way tired.</p>
+          <p>Instead what I did this lab-hospital safety course that I apparently had to do, they just forgot to add that class into my website. I basically speedran the entire thing and I got it all right which is quite epic.</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>-1</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>30/05/2025</i></p>
+            <p><b>Climate:</b> <i>Perfect</i></p>
+            <p><b>Location:</b> <i>Italian Hospital - Apartment - Uruguay</i></p>
+            <p><b>Title:</b> <i>pidgeons</i></p>
+          </div>>
+          <p>For the first time ever, after getting on the bus to the Italian hospital, I met Mica. This is rare because Mica probably sleeps and wakes up at the right times meaning that she takes the bus way earlier than me. But today she said she slept sub-optimally. We didn't talk that much in the bus. But on the way to the Italian she informed me that there was still a chance I could promote biology if I manage to do well on a lab write up and the next exam. I also told her that I got a 4 in biophysics which I was not expecting. I haven't gotten a response from the physics teacher about my regrading, I have the feeling that I won't be able to make it happen, but I do intend to most definately get answers and explanations to how the hell they managed to substract that large amount of points from my exam.</p>
+          <p>And then something really funny comes up, Buenos Aires isa city, and like all cities, it contains pidgeons. An animal domesticated and shortly after abandoned by humans who used to use them to send messages, and thus now they remain on the cities. It's actually really cool how the pidgeons natural habitat has become the city, I find it quite amazing. Mica doesn't find it amazing because apparently she is terrified of pidgeons??? I ask her if its because of the diseases they might carry but she says that it doesn't have much to do with that, she just doesn't like how they don't get scared when humans go near. This leads me to believe she might be afraid of any animal. I scare the pidgeons away so that Mica can pass, they are actually quite persistant and they refuse to fly away, it's easier to scare them away in Uruguay.</p>
+          <p>So in class, 2 higher level graduate students teach their first class to us, I feel so special. They delineat the topic of the energetics of cells. ATP created through anaerobic and aerobic methods. It was actually a good presentation. at break I get a coffee.</p>
+          <p>For the lab, we have to figure out a set of reactions that is happening in some chemical system that the teacher has set up. He put yeast and sugar in a tank, and a basic solution with phenolphthalein in another thing. Then he captured any gas produced in the yeast tank and bubbled it to the basic solution. Now you might not know this if you haven't read the chronicle, but my IB internal assesment was all about measuring the correlation between hidronium concentration and the pressure of CO2 gas exerted on water. Thus I immediately figured out most of the key reactions which was the creation of carbonic acid and the carbonate and bicarbonate ions. It felt good.</p>
+          <p>After, a teacher reviews our Biology project, we are mostly good, we just need to revise figures and sources.</p>
+          <p>Once I got home, I ate some empanadas and I doubted upon weather I should leave to Uruguay or not, but I decided to leave at the end. I promised myself that I would work on math.</p>
           <div class="info">
             <p><b>Rating from -10 to 10:</b> <i></i></p>
+          </div>
+        </div>
+        <br>
+        <p>It's a lot, the Italian, the Math, I can't write that much lately, it's been hard to keep track of it all.</p>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>16/06/2025</i></p>
+            <p><b>Climate:</b> <i>Cold</i></p>
+            <p><b>Location:</b> <i>Boat</i></p>
+            <p><b>Title:</b> <i>Apologies and summary</i></p>
+          </div>
+          <p>Unfortunately, things have been getting out of hand, i've been far too occupied, and I've also gotten sick. Nothing much happened though. Lucas, Luca, and Dani are in Uruguay now, and I've hanged out with them a little. I also went to the afterprom of the current UAS seniors, it was not that good, but it was fun cause I saw chad, nata, sofya, and cuki. You might not know some of those. Honestly im sorry. I fell off, I was doing quite well but now I have a lot to do. Maybe now I'll pick up the pace again.</p>
+          <p>Yesterday I hanged out with Sebs and Lucas, Sebs told me about a cool dream where Lupi tried hacking his computer in Digital Society, but as a result, all the computers turned into dog computers and they sucked me, dani, and Lupi in them. Later that day, Sebs, Luca, Alex, San, and Chad had a dream about how to get us out. They had to find a fast flying car that was capable of quickly going to a restaurant in latahona where they can throw the hardrive into a hole. So they do that, except that on the way there with the car they finded me, apparently I managed to escape, but i was quite rouphed up from everything and I was walking by the side of the street. Once in the restaurant, Sebs encounters several people from his past schools. While burying the hard drive Luca gets sucked into another dimension where some non-human beings try to take the hardrive out of him, but he escapes that dimension somehow. Alex burries the hard drive, Lupi and Dani get out. And everyone is happy, except Sebs who wakes up with a star of david the next day.</p>
+          <p>Cool story, we ate chivitos, we walked around, and then we went to Obra where we stayed for a while.</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>No clue what this even is.</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="anevent">
+          <div class="info">
+            <p><b>Date:</b> <i>29/06/2025</i></p>
+            <p><b>Climate:</b> <i>Cold</i></p>
+            <p><b>Location:</b> <i>My Home - Crepes</i></p>
+            <p><b>Title:</b> <i>Math End</i></p>
+          </div>
+          <p>I woke up nerveous, because today i will take the test to decide weather or not I go to Groningen or not. Also, my family is leaving to Chile at the moment, I will join them tomorrow since I can't go with them today because I need to take the test, also my grandmother is here. Finally, Sebs just came back from snowboarding in Chile with his girlfriend. You should be all caught up now. I am really stressed about it all.</p>
+          <p>Eventually I took the test, it was really hard, there were questions I didn't know how to do, it wasn't like the last one, it had very little calculus and a lot of geometry based problems that I didn't know about. I expected much more calculus than what there was, there wasn't a single quotient function problem which were the ones that I practiced the most. Overall I think I did really poorly, which is unfortunate.</p>
+          <p>After the test, I got to pick up Sebs and eat creps, I complain about the test on the way to creps. In creps we talk about how I saw The Eternaut, a new Argentine series that I really liked. I convinced Sebs to watch the Eternaut, and also coherence although he probably won't watch any of them. When we went to order, the guy from creps said hi to us since apparently we have been there enouph times for him to recognize us with a smile which was really cool and wholesome. I ordered a dulce de leche crepe with oreos. Sebs also talked about how he wanted to isolate himself from google because there was a new pewdiepie video about how he isolated himself from google. We also talked about our favourite movies, mines were coherence, the minecraft movie, and Bullet Train. Sebs' were Coco, The minecraft movie, and La Haine. We then talked about the cow in La Haine and what it could possible represent.</p>
+          <p>Then we talked about how its stupid for a man to say he hates all women and its stupid for a woman to say she hates all men. It's overall stupid to say you hate an entire group of people, since in that group there will always be bad people and good people, and saying that you hate all of the group just because of a few rotten apples is fallacious. Using this logic Sebs probably shouldn't hate the juice as much as he does. Sebs also watched interstellar and he said he was kinda dissapointed, but at this point that movie has been overhyped, I liked it too but at this point it's kinda too much.</p>
+          <p>Then we walked for a bit, but Sebs was too cold so I started driving him back home. We talked about music, and this series or movie called Gummo. Apparently Sebs had told Milla to watch Gummo, and then Milla, a while later after moving to finland, sent sebs a picture of her watching gummo. It's about a town that got destroyed by a hurricane or something.</p>
+          <p>Finally, we talked about our future, I'll probably stay in Argentina, all comfortable and good right here. Sebs is forced to go back to Germany, his girlfriend really hates long distance relationships though, and she is also ready to have kids and all since she is much older than Sebs. But Sebs isn't worried, or maybe he is but he doesn't show it. He just says "at this point, it's up to god". He said this was the case with me too, although after that test, i'm not sure even god could help me here.</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>0</i></p>
+            <p>Somehow, i'm not as sat as I thought I'd be about not going to the neatherlands. Maybe I have something better here. I need to find a way to make a move</p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>30/06/2025</i></p>
+            <p><b>Climate:</b> <i>Unkown</i></p>
+            <p><b>Location:</b> <i>From Uruguay to Chile</i></p>
+            <p><b>Title:</b> <i>Expected Outcomes</i></p>
+          </div>
+          <p>I couldn't sleep like that because I was sad about the test. So I woke up really tired, but I managed to get to the airport somehow. My family is going to Chile to ski, and I must join them now. I bought some almond MnMs at the freeshop for sustenance. I also ate a chicken sandwich so I wouldn't die from malnutrition. In the plain, I saw that I got a 32% in the Math exam, thats unfortunate.</p>
+          <p> Eventually I got to Chile, it was pretty cool, I reunited with my family at the airport. My sister bought this pilot plushie for her boyfriend and she is going to take pictures of it throughout our adventures, his name is Ramon. It's my first time being in Santiago de Chile, I was supposed to go for SAAC Volleyball but Volleyball Coach Sebas(different person than Sebs) decided not to take me since I didn't have a specific position at the time.</p>
+          <p>Apart from the smog, the place was really cool, I liked how you can see mountains all around, unless you were truly far from the since the smog would start to take effect and prevent the visible light photons reflected by the mountains from reaching your eyes. Smog probably gets trapped by all the mountains.</p>
+          <p>We try to get our car, but it turns out that my mom reserved the car at 2AM instead of 2PM which is the current time. Now it turns out that chileans are actually the best people in the world because they don't use the stupid 12 hour AM PM system everyone uses, and they instead use the much more sensibleSo we reach the hotel, and then we go to decathlon which is like a sport store. We buy all the equipment that will protect us against the cold. I recently watched the series "The Eternaut" an Argentine series based on an Argentine comic about a sudden appearence of snow that kills you when you touch it. Since the snow kills you, the characters had to be very well protected in order to go  outside, and with all the layers of clothing we had, we looked like the main character from the series. So me and my sister quoted the series a lot, actually it was only me because my sister didn't really like the series. My favourite quote is "The Compass is fine, it's the world that's broken"(In spanish its "la brujula anda bien, lo que se rompio es el mundo".</p>
+          <p>I eventually did get quite tired, we did some more shopping, I drank a chocolate milk with mint(worst beverage i've ever tried) and some matcha cookie(i don't like matcha I don't know why I did that to myself).</p>
+          <p>Then we went to the hotel and all, we slept.</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>1</i></p>
+            <p>The MnMs were pretty good, the rest kinda canceled out.</p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>01/07/2025</i></p>
+            <p><b>Climate:</b> <i>Cold</i></p>
+            <p><b>Location:</b> <i>Santiago de Chile → Valle Nevado</i></p>
+            <p><b>Title:</b> <i>The Snow</i></p>
+          </div>
+          <p>We woke up, and we headed to valle nevado, it was a long ride, but we got there eventually. There was a section of the trajectory that was particularly complex since a large amount of people decided to park in places they weren't supposed to park, which resulted in several drivers(us included) having a very narrow space to go through, to make matters worst, it was a two-way street. But we made it through this adversity.</p>
+          <p>We reached our rented apartment and we settled in, not much else to say. My sister started watching this series called adolescence which is about a boy that allegedly(it seems to me that he definately did) killed a girl. It had a very deep and meaningful scene where the boy is confronted by a therapist and it reveals a lot of problems that our current society has through the use of uncomfortable, sad, abd emotional interactions between the therapist and the boy. I watched squid game season three, a series were a bunch of people join the squid game and they play the squid game.</p>
+          <p>I tried going to sleep afterwards, but I couldn't, because insomnia struck me once again. So I decided to watch all episodes available in youtube of this series called "Metal Family", I am tired of explaining series I don't know if you figured it out after the amazing squid game description I just gave you, but I'll make one last effort.</p>
+          <p>Metal family, is a series, about this family.. that's metal. The father has some psychological problems pertaining to his past with his family, the mother is strong but dumb, the kid is dumb but talented at music, and the other kid is smart but not talented in music. They are all poor and they live in a world as the outcasts that they are.</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>1</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>02/07/2025</i></p>
+            <p><b>Climate:</b> <i>Snowing</i></p>
+            <p><b>Location:</b> <i>Valle Nevado (Chilean ski resort close to santiago de chile)</i></p>
+            <p><b>Title:</b> <i>Skiing but I am tired.</i></p>
+          </div>
+          <p>I slept terribly last night, I had some cool dreams, but those cool dreams didn't give me the necesary energy I need function properly. Still, I gathered energy from unkown sources and I managed to get out of bed and go to ski with my family. It was quite great, I can still ski quite fine. We ate some nice soup with meat. However, there is a detriment to gathering energy from secret origins, I don't actually have any energy so I took any opportunity I had to just hit this pose and try to get some seconds of sleep in order to continue this epic adventure.</p>
+          <p>After that epic adventure, I watched squid game season 3 some more. Also, I talked to this chilean guy that I had met during SAAC Fine Arts 2024 in Uruguay, apparently he was Chilean which I didn't know until now. He was a pretty cool dude, and hopefully, he still is.</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>3</i></p>
+            <p>I was jaded, but it was really funny because I kinda felt drunk</p>
           </div>
         </div>
         <br>

@@ -1,7 +1,48 @@
+.chronicle-button {
+  display: inline-block;
+  background-color: #a4a07e;
+  /* light yellow */
+  color: rgb(60, 60, 60);
+  /* grey text */
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 50px;
+}
 
+.diary-button {
+  display: inline-block;
+  background-color: #654d2e;
+  /* light yellow */
+  color: rgb(188, 232, 226);
+  /* grey text */
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 50px;
+}
 
+.diary-button:hover {
+  background-color: #f3c48a;
+  /* slightly darker yellow on hover */
+  color: #3e1736;
+  /* darker grey text */
+}
 
-
+.chronicle-button:hover {
+  background-color: #f0e68c;
+  /* slightly darker yellow on hover */
+  color: #444;
+  /* darker grey text */
+}
 
 
 .box{
