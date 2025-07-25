@@ -27,7 +27,7 @@ function controlPad(){
 let chapterSelectOngoing = false;
 
 function chapterSelect() {
-    if (chapterSelectOngoing) {
+    if (chapterSelectOngoing==true) {
         return;
     }
     chapterSelectOngoing = true;
@@ -37,6 +37,16 @@ function chapterSelect() {
     const Hlinks = document.querySelectorAll('.NOni')
     let selector = document.getElementById('selector')
     let selectorPhone = document.getElementById('selector-phone')
+    let selectionTable = document.getElementById('selection-table')
+
+    if (selectionTable.classList.contains('vanished')) {
+        setTimeout(function () {
+            selectionTable.classList.remove('vanished');
+        }, 100)
+    } else {
+        selectionTable.classList.remove('vanished')
+        selectionTable.classList.add('vanished')
+    }
 
     if (pad.classList.contains('controlP')) {
         pad.classList.remove('controlP')
@@ -62,11 +72,13 @@ function chapterSelect() {
         selectorPhone.classList.add('chapter-select')
     }
 
-    let animationPromises = [];
+
+
+    let animationTracker = [];
 
     // Handle links
     links.forEach(function(element) {
-        animationPromises.push(new Promise(resolve => {
+        animationTracker.push(new Promise(resolve => {
             if (element.classList.contains('ni')) {
                 element.classList.remove('ni');
                 element.classList.add('NOni');
@@ -74,13 +86,13 @@ function chapterSelect() {
             setTimeout(() => {
                 element.classList.add('vanished');
                 resolve();
-            }, 1000);
+            }, 100);
         }));
     });
 
     // Handle Hlinks
     Hlinks.forEach(function(element) {
-        animationPromises.push(new Promise(resolve => {
+        animationTracker.push(new Promise(resolve => {
             if (element.classList.contains('vanished')) {
                 element.classList.remove('vanished');
             }
@@ -90,12 +102,17 @@ function chapterSelect() {
                     element.classList.add('ni');
                 }
                 resolve();
-            }, 1000);
+            }, 100);
         }));
     });
 
     // When all animations are done
-    Promise.all(animationPromises).then(function() {
+    Promise.allSettled(animationTracker).then(function() {
         chapterSelectOngoing = false;
+    }).catch(function (error) {
+        // If any animation fails:
+        console.error("Animation error occurred:", error);
+        chapterSelectOngoing = false;  // Still make sure to unlock
+        throw error;                   // Re-throw to maintain error propagation
     });
 }

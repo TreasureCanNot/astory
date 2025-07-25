@@ -1,6 +1,17 @@
+.tube{
+  background-color: #0060bf;
+  color: white;
+  border-top: 7px dotted #b22d5d;
+  border-bottom: 7px dotted #b22d5d;
+  margin-left: -9px;
+  margin-right: -9px;
+  padding: 9px;
+}
 
-
-
+.tube i {
+  font-size: 18.7px;
+  text-decoration: wavy;
+}
 
 
 
@@ -104,6 +115,8 @@
   opacity:1;
   display: block;
 }
+
+
 
 .groupdown{
   border: 0px solid white;
@@ -239,7 +252,7 @@
   border: 2px solid black;
   text-decoration: none;
   color: black;
-  transition: 1s linear;
+  transition: 0.1s linear;
 }
 
 .ni:hover {
@@ -247,6 +260,7 @@
   border: 2px solid white;
   text-decoration: none;
   color: rgb(158, 158, 158);
+  transition: 0.1s linear;
 }
 
 
@@ -254,7 +268,7 @@
   width: 0px;
   height: 0px;
   opacity: 0;
-  transition: 1s linear;
+  transition: 0.1s linear;
   background-color: rgb(158, 158, 158);
   border: 2px solid black;
   text-decoration: none;
@@ -320,7 +334,7 @@
   padding: 7px;
   padding-top: 2%;
   width:350px;
-  transition: 1s linear;
+  transition: 0.1s linear;
 }
 
 .controlP-chapterMode {
@@ -334,7 +348,7 @@
   padding-top: 2%;
   width: 350px;
   height: 54px;
-  transition: 1s linear;
+  transition: 0.1s linear;
 }
 
 .chapter-select {
@@ -388,6 +402,23 @@
 
 .vanished{
   display: none;
+}
+
+.selection-table{
+  transition: 0.1s linear;
+}
+
+.und{
+  background-image: linear-gradient(rgb(155, 200, 216), rgb(117, 135, 135));
+  border: 2px solid rgb(195, 191, 245);
+  color: black;
+  text-decoration: none;
+}
+.und:hover {
+  background-image: linear-gradient(rgb(117, 135, 135), rgb(155, 200, 216));
+  border: 2px dotted rgb(195, 191, 245);
+  color: black;
+  text-decoration: none;
 }
 
 /*End of control pad*/
@@ -854,7 +885,7 @@
 
 .quarter img {
   width: 25%;
-  object-fit: cover;
+  object-fit:contain;
   display: block;
 }
 

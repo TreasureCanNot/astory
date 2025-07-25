@@ -18,8 +18,17 @@
           <button onclick="chapterSelect()" id="selector-phone" class="chapter-select only-phones">↔</button>
           <br>
           <br>
-          <table >
+          <table id="selection-table" class="selection-table vanished">
+            <tr>
+              <td>
+                <a href="page1.html" class="und">Unspecified Direction</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
 
+              </td>
+            </tr>
           </table>
           <a class="ni" href="after.html">After</a>
           <a class="ni" style="background-color: #FFF8E7;" href="page1.html">Timothy's Diary</a>
@@ -51,18 +60,19 @@
       }
     </style>
   </head>
-  <body class="chapter" style="background-color: #a2d2ff; border: 2px solid rgb(255, 226, 110);">
+  <body class="chapter" style="background-image: linear-gradient(rgb(117, 135, 135), rgb(155, 200, 216)); border: 2px solid rgb(255, 226, 110);">
     <center><h1>Page 1</h1></center>
     <a href="events5.html"><button type="button" class="pagebutton">Page 1</button></a>
     <a href="events7.html"><button type="button" class="pagebutton" style="float: right;">Page 2</button></a>
     <div>
         <div style="padding:7px;">
-          <h1>Argentina</h1>
+          <h1>Unspecified Direction</h1>
           <p>I don't know if you read the previous story, my amazing chronicle. I may have done some mistakes or assumptions in the chronicle, but overall I feel like it was quite accurate. But I am done trying to be accurate, I am going to write a story from my own subjective perspective, now starts my diary.</p>
           <p>A lot has happened ever since the end of my first chronicle and my "diary" that I am doing right now. <a href="individuals.html#alex">Alex</a> is now in canada, <a href="individuals.html#milla">Milla</a> works at a graveyard, <a href="individuals.html#sebs">Sebs</a> has a girlfriend, me and <a href="individuals.html#sofe">Sofe</a> went to french classes, and many more things that I am not going to go over.</p>
           <div id="timeskip">
           <span>Just know that the "TimeSkip" is period of time between the last event in my previous chronicle(14/06/2024) and the first event in my diary(09/03/2025). A lot of things happened in-between these dates, but I didn't write them down.</span>
         </div>
+        <p>This chapter's name comes from the fact that I don't know where I'm going. Maybe I'll leave to the neatherlands, maybe I'll stay in Argentina. I don't know, but I have to do a lot of math to do for the neatherlands university applications. And I have to somehow balance it with all the university work. This will keep me with many options available. </p>
         </div>
         <br>
         <div class="mevent">
@@ -422,7 +432,7 @@
           <p><b>Title:</b>Tennis (You thought)</p>
           <p>So sebs and I plan to go to the Lon Tennis to play some spectacular tennis. I go there, all is good, everything is going to plan. I even meet Lara Berman's brother, Fede Berman, who says hi to me. I also meet this other small dude from UAS whom I don't remember the name of, but he was a nice kid. Eventually sebs shows up.</p>
           <p>I teach him the basics of tennis, basically in paddle you are always wanting to hit the ball with a downwards motion while in tennis you hit it with an upwards motion. So we go to the tennis court place where the guy assigns us a tennis court. Unfortunately my shoes are not allowed in tennis courts built with brick powder (the only tennis courts the carrasco lon tennis has to offer)</p>
-          <p>So we go to my house, we think about playing paddle, but we only think about it. We actually just watch a bunch of episodes of breaking bad. It's a good series, I really like how well Janes death was made. It was Walter's fault and it was so sad. Very well executed, her birthday was the fourth of the fourth, that's Linda Rasheed's and Carla Antonia Rivas' birthday aswell. I hate the number 4, but it's also the day that the minecraft movie comes out which I am really looking forward to watching.</p>
+          <p>So we go to my house, we think about playing paddle, but we only think about it. We actually just watch a bunch of episodes of breaking bad. It's a good series, I really like how well Janes death was made. It was Walter's fault and it was so sad. Very well executed, her birthday was the fourth of the fourth, that's Linda Rasheed's and Carla Antonia Rivas' birthday aswell in case you didn't know. It's also the day that the minecraft movie comes out which I am really looking forward to watching.</p>
           <p>After we watched breaking bad, sebs stayed to eat. And then he learned how to play Truco Argentino. Sebs and I won against my sister and my mother which was epic.</p>
           <p>Also I obtained the translation for my spanish documents proof of ADHD documents. I send them to Jannette. Jannette also got back to me saying that typically this process lasts 5 buisness days, meaning I am kinda screwed if I want to take the exam this weekend. I might have to take it without extra time.</p>
         </div>
@@ -587,10 +597,10 @@
           <p>Then Ethan sent us a message saying he was at the movies. I was about to tell him that we are at Mc Donalds but Sebs told me to wait a little bit so we could meet him at the movies. It made sense instead of him coming to Mc Donalds and then going back to the movies.</p>
           <div class="img ">
             <div class="quarter">
-              <img src="days/04,04,2025/20250405_002917047_iOS.jpg">
+              <img src="days/04,04,2025/20250405_002917047_iOS.jpg" class="iphone4o3">
               <img src="days/04,04,2025/20250405_002958868_iOS.jpg">
               <img src="days/04,04,2025/20250405_003003539_iOS.jpg">
-              <img src="days/04,04,2025/20250405_003512347_iOS.jpg">
+              <img src="days/04,04,2025/20250405_003512347_iOS.jpg" class="iphone4o3">
             </div>
             <p class="itg">Mc Donalds Minecraft</p>
           </div>
@@ -1256,10 +1266,16 @@
           <p>We went to sit at Obra, which is a place that has like a pizzeria with refuerzos, a pokebowl place, and a good cafe. We talked a lot about a lot of things there. From the juice, to Ethan, to Dani. We also kind of slandered sofe for not hanging out with us and always saying no to hanging out with us. Turns out our complaints were not justified.</p>
           <p>We talk about how epic its going to be when Mono and Dani get to Uruguay. It's going to be truly legendary.</p>
           <p>Sebs also gets a call because he has to figure how he is going to get health insurance, because currently he has no insurance. That's touph. Sebs also told me about the time where he got disrespected by someone in one of his job meetings.</p>
-          <p>I told him my dream from the other day since he obviously didn't listen to that atrocious incomprehensible audio. But you are going to have to listen to it because I ain't writing it down.</p>
+          <p>I told him my dream from the other day since he obviously didn't listen to that atrocious incomprehensible audio.</p>
           <p>I also talked about how I talked to Dani last night and that's why I was so tired right now. We spent a good 4 hours talking, we exhausted pretty much every topic of conversation. 4 hours earlier I had asked Sofe if she was able to come to do something with us. And after 4 hours of waiting for a response, she says that maybe she can. At this point we have headed towards Chivito Arocena, a nice bar with exceptional Chivitos.</p>
           <p> You see, every time I've gone to chivito arocena, we had to go to the counter to order and to pay because the waiter would just never come to us, I don't know why, but I decided that today was the day when that changed. It took an hour, but the waiter eventually did get to us.</p>
           <p>So during that whole process, I asked sofe why she took 4 hours to respond and she said she was taking a shower... and watching the lion king. Then she asked if we were on a hurry because she wanted to arrive kinda late. I told her that Sebs was leaving tomorrow so he couldn't stay really late. She then decided to come rather quickly.</p>
+          <div class="img si30">
+            <div class="oneth">
+              <img src="days/01,05,2025/20250501_215706824_iOS.jpg">
+            </div>
+            <p class="itg">We sent this to sofe</p>
+          </div>
           <p>We complain a little more about Sofe's insane response time, but eventually she comes and tells us a little story.</p>
           <b>Sofe's Circumstances</b>
           <p>Ever since I've known sofe, she had a boyfriend, until she broke up with him because he was terrible to her father. So then he got back with his previous Ex from switzerland(Lorenz "The Wind Tunnel Man"), and I guess things went pretty well until they didn't, because apparently long distance is really hard for people that aren't as talented as Nata and Alex. So Sofe came to the realisation that she had to break up with him.</p>
@@ -1661,12 +1677,18 @@
             <p><b>Title:</b> <i>Proteins or something(no clue)</i></p>
           </div>
           <p>So today we studied proteins or something. We studied how they denaturalise and stuff. Except that I got late to class because I couldn't find any socks, im supposed to have a shit ton of socks, I don't know where they all went.</p>
+          <div class="img si30">
+            <div class="oneth">
+              <img src="days/dayslost/20250516_142943927_iOS.jpg">
+            </div>
+            <p class="itg">i won't pretend to understand what this even meant</p>
+          </div>
           <p>So I only got to class in time for the lab. In the lab we basically denaturalised proteins in several different ways. But I can't say I understood much of what was going on. It all seemed kinda random.</p>
           <p>I was also really tired all throughout, and the worst part is that I have a boat ride today.</p>
           <p>When I got to Uruguay, I met up with Sebs. Sebs tried to get Dani and Lucas to join aswell but he was unsuccesful. Sebs and I walked to Chiara's house and then to Dani's house, we took this picture</p>
           <div class="img si30">
             <div class="oneth">
-              <img src="days">
+              <img src="days/17,05,2025/20250517_013406293_iOS.jpg">
             </div>
             <p class="itg"></p>
           </div>
@@ -1828,9 +1850,16 @@
             <p><b>Title:</b> <i>Math again</i></p>
           </div>
           <p>I studied math all day</p>
-          <p>At night I played minecraft with Ethan</p>
+          <p>At night I played minecraft with Ethan, I also ate the meal of the gods</p>
+          <div class="img si30">
+            <div class="oneth">
+              <img src="days/dayslost/20250524_231034732_iOS.jpg">
+            </div>
+            <p class="itg">The meal of the gods</p>
+          </div>
           <div class="info">
-            <p><b>Rating from -10 to 10:</b> <i></i></p>
+            <p><b>Rating from -10 to 10:</b> <i>0.5</i></p>
+            <p>That meal was pretty good</p>
           </div>
         </div>
         <br>
@@ -1947,6 +1976,23 @@
           </div>
         </div>
         <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>20/06/2025</i></p>
+            <p><b>Climate:</b> <i>okay</i></p>
+            <p><b>Location:</b> <i>Rudy and La Pasiva in Arocena</i></p>
+            <p><b>Title:</b> <i>The football match</i></p>
+          </div>
+          <p>So Lucas invited me, Luca, Sebs, and Dani to watch a football match and eat Rudy burgers, the best burgers ever. Dani said he would come, but now, he told Sebs he won't because he is in the gym????? it's lik 19:30 right now. So I try to use some persuasive techniques to get him to come, like saying that Sebs is leaving tomorrow, not specifying that he is leaving to chile to snowboard with his girlfriend and he will be coming back in a week.</p>
+          <p>Then Sebs sends him messages, and Luca too. Dani says that he will come if someone picks him up. Luca tells him to go fuck himself or order an uber. So dani arrives uberwise. We all kinda dislike how much he didn't want to come here, but the fact that he came despite that is till really appreciatable.</p>
+          <p>We go to La Pasiva, they eat panchos, Sebs eats chaja, they have fun, we watch the match. I was honestly jaded so i don't remember much, but it was fun.</p>
+          <p>Also, I want to add that I had ordered a Salchichon de chocolate that came very late, and that was pretty funny.</p>
+          <div class="info">
+            <p><b>Rating</b> <i></i></p>
+          </div>
+        </div>
+        <br>
+        <br>
         <div class="anevent">
           <div class="info">
             <p><b>Date:</b> <i>29/06/2025</i></p>
@@ -1976,9 +2022,23 @@
           <p>I couldn't sleep like that because I was sad about the test. So I woke up really tired, but I managed to get to the airport somehow. My family is going to Chile to ski, and I must join them now. I bought some almond MnMs at the freeshop for sustenance. I also ate a chicken sandwich so I wouldn't die from malnutrition. In the plain, I saw that I got a 32% in the Math exam, thats unfortunate.</p>
           <p> Eventually I got to Chile, it was pretty cool, I reunited with my family at the airport. My sister bought this pilot plushie for her boyfriend and she is going to take pictures of it throughout our adventures, his name is Ramon. It's my first time being in Santiago de Chile, I was supposed to go for SAAC Volleyball but Volleyball Coach Sebas(different person than Sebs) decided not to take me since I didn't have a specific position at the time.</p>
           <p>Apart from the smog, the place was really cool, I liked how you can see mountains all around, unless you were truly far from the since the smog would start to take effect and prevent the visible light photons reflected by the mountains from reaching your eyes. Smog probably gets trapped by all the mountains.</p>
+          <div class="img si30">
+            <div class="oneth">
+              <img src="days/dayslost/chile.jpg">
+            </div>
+            <p class="itg">A photo of chile</p>
+          </div>
           <p>We try to get our car, but it turns out that my mom reserved the car at 2AM instead of 2PM which is the current time. Now it turns out that chileans are actually the best people in the world because they don't use the stupid 12 hour AM PM system everyone uses, and they instead use the much more sensibleSo we reach the hotel, and then we go to decathlon which is like a sport store. We buy all the equipment that will protect us against the cold. I recently watched the series "The Eternaut" an Argentine series based on an Argentine comic about a sudden appearence of snow that kills you when you touch it. Since the snow kills you, the characters had to be very well protected in order to go  outside, and with all the layers of clothing we had, we looked like the main character from the series. So me and my sister quoted the series a lot, actually it was only me because my sister didn't really like the series. My favourite quote is "The Compass is fine, it's the world that's broken"(In spanish its "la brujula anda bien, lo que se rompio es el mundo".</p>
           <p>I eventually did get quite tired, we did some more shopping, I drank a chocolate milk with mint(worst beverage i've ever tried) and some matcha cookie(i don't like matcha I don't know why I did that to myself).</p>
           <p>Then we went to the hotel and all, we slept.</p>
+          <div class="img si70">
+            <div class="third">
+              <img src="days/dayslost/20250630_194945361_iOS.jpg">
+              <img src="days/dayslost/20250630_212016606_iOS.jpg">
+              <img src="days/dayslost/20250630_214725916_iOS.jpg">
+            </div>
+            <p class="itg">pictures of today</p>
+          </div>
           <div class="info">
             <p><b>Rating from -10 to 10:</b> <i>1</i></p>
             <p>The MnMs were pretty good, the rest kinda canceled out.</p>
@@ -1996,6 +2056,14 @@
           <p>We reached our rented apartment and we settled in, not much else to say. My sister started watching this series called adolescence which is about a boy that allegedly(it seems to me that he definately did) killed a girl. It had a very deep and meaningful scene where the boy is confronted by a therapist and it reveals a lot of problems that our current society has through the use of uncomfortable, sad, abd emotional interactions between the therapist and the boy. I watched squid game season three, a series were a bunch of people join the squid game and they play the squid game.</p>
           <p>I tried going to sleep afterwards, but I couldn't, because insomnia struck me once again. So I decided to watch all episodes available in youtube of this series called "Metal Family", I am tired of explaining series I don't know if you figured it out after the amazing squid game description I just gave you, but I'll make one last effort.</p>
           <p>Metal family, is a series, about this family.. that's metal. The father has some psychological problems pertaining to his past with his family, the mother is strong but dumb, the kid is dumb but talented at music, and the other kid is smart but not talented in music. They are all poor and they live in a world as the outcasts that they are.</p>
+          <div class="img si30">
+            <div class="oneth">
+              <video controls>
+                <source src="days/25,06,2025/20250625_034416000_iOS.mov" type="video/mp4">
+              </video>
+            </div>
+            <p class="itg">Also look at this epic video, sebs is so cool</p>
+          </div>
           <div class="info">
             <p><b>Rating from -10 to 10:</b> <i>1</i></p>
           </div>
@@ -2010,11 +2078,401 @@
           </div>
           <p>I slept terribly last night, I had some cool dreams, but those cool dreams didn't give me the necesary energy I need function properly. Still, I gathered energy from unkown sources and I managed to get out of bed and go to ski with my family. It was quite great, I can still ski quite fine. We ate some nice soup with meat. However, there is a detriment to gathering energy from secret origins, I don't actually have any energy so I took any opportunity I had to just hit this pose and try to get some seconds of sleep in order to continue this epic adventure.</p>
           <p>After that epic adventure, I watched squid game season 3 some more. Also, I talked to this chilean guy that I had met during SAAC Fine Arts 2024 in Uruguay, apparently he was Chilean which I didn't know until now. He was a pretty cool dude, and hopefully, he still is.</p>
+          <div class="img si80">
+            <div class="third">
+              <img src="days/dayslost/20250702_164007320_iOS.jpg">
+              <img src="days/dayslost/20250702_174723945_iOS.jpg">
+              <img src="days/dayslost/20250702_175746597_iOS.jpg">
+            </div>
+            <p class="itg">I have been thinking about deltarune so much, when I saw Royal Guard I immediately thought of undyne</p>
+          </div>
           <div class="info">
             <p><b>Rating from -10 to 10:</b> <i>3</i></p>
             <p>I was jaded, but it was really funny because I kinda felt drunk</p>
           </div>
         </div>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>03/07/2025</i></p>
+            <p><b>Climate:</b> <i>Actually pretty hot</i></p>
+            <p><b>Location:</b> <i>Valle Nevado</i></p>
+            <p><b>Title:</b> <i>Rest</i></p>
+          </div>
+          <p>So I actually woke up too tired today, and I decided not to go to ski. Instead I spent some time working on this amazing website. I will soon add a second chapter</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>0</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent" style="background-image: linear-gradient(rgb(237, 193, 193), rgb(187, 187, 232));">
+          <div class="info">
+            <p><b>Date:</b> <i>04/07/2025</i></p>
+            <p><b>Climate:</b> <i>its technically cold, but it's quite hot given that we are in the mountains</i></p>
+            <p><b>Location:</b> <i>Valle Nevado</i></p>
+            <p><b>Title:</b> <i>Ski back</i></p>
+          </div>
+          <p>I woke up late, and I went to ski pretty late. It was pretty cool that I got a text from Sebs about how he dreamt about jesus, can't wait to see what that's about. Also my grandmother texted me. So I made two eggs, and some vegetables. And then I went to meet up with my family to go to ski</p>
+          <p>I discovered this new path that we can take in order to avoid having to take a bus, our future days in valle nevado will be more efficient.</p>
+          <p>We skid, and my sister fell pretty hard against the snow. A lot of snow penetrated her layers of clothing so she was clothed, but eventually she warmed up and we went to a food truck. There was a pretty good hamburger, but our mother didn't let us drink chocolate milk.</p>
+          <p>Then we skeed more. The rides that took us up closed at 17, we tried to get one ride before the mediums closed, but we failed.</p>
+          <p>After that, we went home. My sister and I took an alternative route that used our skiing instead of the bus. And it turned out to be faster, although there is a part that requires us to use our feet, so it was sometimes more exhausting.</p>
+          <p>Also, just an update, it would seem to me that the neatherlands options are completely gone. I mean I could technically still go to the Maastricht University's Maastricht Science Programme, but to be honest with you...I ain't feeling it. I kinda like the life that i've been offered in the Italian Hospital, and I wouldn't mind continuing my study here. On the other hand, I could apply for AUC again next year, but I might feel like that's too much time lost, unless I can somehow skip some classes with what i've learned in the Italian. I don't know, I actually don't know, maybe I should just stay here, it's simpler. But I want to get to know another country too. I don't know. I guess theres a reason why the chapter's name is what it is. Who knows, maybe I will actually end up going to maastrich afterall. ONly god knows.</p>
+          <div class="img si70">
+            <div class="half">
+              <img src="days/dayslost/20250703_164616745_iOS.png">
+              <img src="days/dayslost/20250703_175439382_iOS.jpg">
+            </div>
+            <p class="itg">The place we ate at</p>
+          </div>
+          <p>Also, i am going to introduce a new segment to this epic diary journal thing.</p>
+          <div class="tube">
+            <h3>Table Tube Gang Segment</h3>
+            <p>You might have read this in some entry of this diary, but in case you didn't. but I am part of a group called the "Table Tube Gang" the most powerful group in the multiverse of madness. Composed of </p>
+            <ul>
+              <li>Megan(The Skinwalker)</li>
+              <li>Timo(The Catalyst){aka:me}</li>
+              <li>Fede(The Activist)</li>
+              <li>Sebs(The Eternal)</li>
+              <li>Milla(Jesus)</li>
+              <li>Alex(The Detective)</li>
+              <li>Ethan (The Artist)</li>
+            </ul>
+            <p>The list is in order of activity in the groupchat. Please note that the last two are essentially honorary memebers since they almost never interact with the group unless the planets align correctly or something.</p>
+            <p>If you want to know the origins behind the name and the creation of this group, please look it up in the chronicle. But what you have to know is that we have an instagram groupchat where we talk about our lives, give each other advise, and share some secrets or updates we might have. This group is one of my favourite things in my life currently because everyone in it is very cool, except Ethan and Alex who never freaking use it unless they are bored out of their minds.</p>
+            <p>Unfortunately, most days we don'g talk through the groupchat :( So I am going to anything that happens in this groupchat from this day forward unless theres a secret obviously.</p>
+            <hr>
+            <p>Today was the fourth of july, so I took the opportunity to congratulate Megan (she's american) and she said that she was very drunk and ready to make stupid decisions. That might sound worrying, but there is no need to worry about Megan because she is very awesome and can therefore handle any situation life throws at her.</p>
+            <p>Fede also shared that he is with his scout friends, Fede recently came back to Uruguay from the neatherlands, he saw Sebs and now he is seeing his scout friends before leaving to brazil. But then he'll come back in the 13nth and I will be able to see him and it's going to be epic.</p>
+            <p>Megan then says that he trusted a really drunk guy to drive her on a 4wheeler down some random trail and it was really fun.</p>
+            <p><b>Morale of the story:</b> <i>Though also risky, trust can be fruitful</i></p>
+          </div>
+          <br>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>2</i></p>
+            <p>It was actually pretty good</p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>05/07/2025</i></p>
+            <p><b>Climate:</b> <i>Very undecided, sometimes it was cold, sometimes it was hot, sometimes it snowed</i></p>
+            <p><b>Location:</b> <i>Valle Nevado Chile</i></p>
+            <p><b>Title:</b> <i>Parva, but not</i></p>
+          </div>
+          <p>So we woke up today, it was really hard for me to wake up, but I somehow managed. All day Iw as extremely tired because of this. We tried getting tickets to gain access to a new ski resort that was close by, but we failed. So we just skied normally for the rest of the day.</p>
+          <p>There were some clouds in the sky, the clouds sometimes blocked the sun, which made it cold sometimes. Eventually, my sister got tired and she rested at a food truck in the mountains while the rest of us skied. Then I went with my sister to eat a hamburger with pickles and onion rings that was really good. It also got really cold because the sun went down. </p>
+          <p>After that we skied some more. Then we went down to the base of hotels because I wanted to eat crepes and Pauli wanted to eat waffles. I ordered a crepe with berries and dulce de leche and it was amazing. Then we skied more, and then we went back home. I immediately slept a lot. And that's pretty much the end.</p>
+          <div class="img si90">
+            <div class="third">
+              <img src="days/dayslost/20250704_165310058_iOS.jpg">
+              <img src="days/dayslost/20250704_184428987_iOS.jpg">
+              <img src="days/dayslost/20250704_194404208_iOS.jpg">
+            </div>
+            <p class="itg">photos</p>
+          </div>
+          <p></p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>1</i></p>
+            <p>It was okay</p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>06/07/2025</i></p>
+            <p><b>Climate:</b> <i>Cold</i></p>
+            <p><b>Location:</b> <i>Valle Nevado</i></p>
+            <p><b>Title:</b> <i>The last full day</i></p>
+          </div>
+          <p>I woke up at 6 today and I prepared some toast for breakfast. Then I fell asleep again till 15. And after that. The ski chairs that carry you up the mountain close at 17. After my morningn routine, and getting ready for skiing. I go to the egg thing and I listen to Toriel's Fight theme in the egg. Then I meet up coincidentally with my sister and my father and we go down the mountain a final time.</p>
+          <p>Also, I talke to Sebs and he tells me that some interesting things have happened</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>0</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>07/07/2025</i></p>
+            <p><b>Climate:</b> <i>Hotter than what you'd expect at the top of a mountain with snow</i></p>
+            <p><b>Location:</b> <i>Valle Nevado - Santiago de Chile</i></p>
+            <p><b>Title:</b> <i>By Valle</i></p>
+          </div>
+          <p>Today we leave valle nevado and commence our return to chile. It's been great but all good things come to an end. After helping my mother prepare the bags, we went to ski one final time. We also ate asado at the foodtruck in the mountain, it was really good. After that we returned our skiis and stuff and we headed back to Santiago through the car that we rented.</p>
+          <p>It was a long car ride, but we eventually went to the previous hotel to get a bag that we had left there, and then we went to another hotel. The prices for the last hotel were too high this night for some reason, therefore we went different to a different hotel that was cheaper.</p>
+          <p> We had some issues with the internet at first but overall it was a great experience. I watched the series "You" with my sister, we finished season 2, I can not believe that Joe didn't stay with his sister, and I want Nellie to come back and destroy Joe. I can only hope however.</p>
+          <p>After watching you, we were going to go eat some sushi, but we decided not to since my father wasn't convinced that the place was that good. Instead we went to the hotel's restaurant I ate pasta with shrimps and onions, and my sister tried octopus for the first time. I hate octopus.</p>
+          <p>Then we went back into our room, where I tried defeating the character "Red" from an undertale fangame, I plan to buy undertale, deltarune, OneShot, and Hollow Knight once we get back from Uruguay. Except Hollow Knight because I suspect that there might be some kind of offer once Silksong comes out.</p>
+          <p>Then I fell asleep... whenever I'm tired, I get really anxious about death, that's how I usually figure out I should go to sleep</p>
+          <div class="info">
+            <p><b>Rating from -10 to 10:</b> <i>2</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>08/07/2025</i></p>
+            <p><b>Climate:</b> <i>Colder than in Valle Nevado somehow</i></p>
+            <p><b>Location:</b> <i>Santiago de Chile</i></p>
+            <p><b>Title:</b> <i>Going Back Home</i></p>
+          </div>
+          <p>We wake up, we get ready, and we leave. Quite simple. In the airport I realise that a few days ago at the coffee shop where I ordered the chocolate mint beverage, my credit card was stolen. I was very tired that day so I ain't surprised. Luckily, all of the purchases I didn't make didn't go through, so we good.</p>
+          <p>In the plane, my sister and I talk about the marvel cinematic universe. I think it's getting better now. Mica had told me that the Captain America plotline was pretty good so that's something I should look forward to watching.</p>
+          <p>After a while, I fall asleep</p>
+          <p>In Argentina, we can't leave because fog is dangerous to traverse through with boats</p>
+          <div class="img si30">
+            <div class="oneth">
+              <img src="days/dayslost/20250708_210856391_iOS.jpg">
+            </div>
+            <p class="itg">The freaking fog trapped us in Argentina</p>
+          </div>
+          <div class="info">
+            <p><b>Rating</b> <i>- 2</i></p>
+            <p>I really wanted to go back</p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>10/07/2025</i></p>
+            <p><b>Climate:</b> <i>cool</i></p>
+            <p><b>Location:</b> <i>Airport</i></p>
+            <p><b>Title:</b> <i>Sebs leaves to Germany</i></p>
+          </div>
+          <p>Sebs will be leaving to Germany today, I've been in chile lately so I haven't had many chances to meet this epic dude. I go to the airport and I wait for him. And eventually he comes and we start talking about some random stuff.</p>
+          <p>Now, during my time in Chile, Sebs told me via instagram messages that there have been some interesting developments.</p>
+          <div class="vuhj" style="padding: 10px; background-color: rgb(98, 67, 145);border: 4px dotted rgb(25, 84, 0); width: 45%; margin: 10px;">
+            <p>Basically, Sofe kinda indirectly asked him out but not really. According to Sebs she said something along the lines of "we could have been something"</p>
+            <div class="vuh">
+              <p>Now, for this, you may want some backstory. Back in 2024 at some point, Sebs and sofe were hanging out together all the time, and they completely excluded me from everything :( like they even watched la haine (Sebs favorite movie) without me. So at the time I made it all about myself in case you didn't notice, but later on, during the timeskip. Sebs told me a little secret. Sebs thought that since they were hanging out so much, Sofe liked Sebs(romantically) and thus Sebs asked her out. However Sofe said that she only saw him as a friend :/</p>
+              <p>Fast forward to a time during the <a href="page1.html#timeskip">timeskip</a>, in germany Sebs got a girlfriend who's name was also Sofia, but I call Uruguayan Sofia "Sofe" and Sebs' girlfriend "Sofa" to differentiate between the two.</p>
+              <p>Fast forward further more, Sebs comes back to Uruguay and tells me and Sofe about his new girlfriend. At the time, Sofe and I were taking French classes, and during one of these classes we talked briefly about Sebs, I also remember Bruno being there somehow. Sofe says that she thinks Sofa was too old for Sebs. Sebs told me Sofa was 29, which is a lie(sebs likes to lie). He lied to me because upon telling Sofe that Sofa was 39, Sofe started bothering him about Sofa being way too old for him.</p>
+              <p>Even though she was older than what Sebs told me, Bruno and I ultimately concluded that as long as they are happy it good. Sofe kinda reluctantly agreed, which was god's way of forshadowing what would happen next.</p>
+              <p>Fast forward to this week were Sebs and Sofe are hanging out in an unspecified location at an unspecified time. Sofe tells Sebs that going for the first woman he has is a bad idea since you are limiting yourself to more experiences in the romantic world. A good metaphor would be like having a buffet of cakes, only trying one(and you liked), and then picking that cake as your birthday cake, even though you didn't try the rest.</p>
+              <p>This is a sentiment that Sofa had also expressed with Sebs, she was concerned about being Sebs first girlfriend since Sebs wouldn't have any other experiences with any girl and she felt like she was limiting him in a way.</p>
+              <p>But Sebs argued that they are both happy and both in love. And also what could he possibly be missing out on? Heartbreak? Sound to me like some unnecesary character development. Then Sofe says to Sebs something along the lines of "maybe we could have been something" which is strange line to say to someone that asked you out.</p>
+            </div>
+          </div>
+          <p>So yeah, we both kinda once again agree, that Fede was right. Fede and Sofe hate each other even though both are the nicest people ever to us. But I think that Fede has gotten the edge with this one since he hasn't asked out Sebs out while he had a girlfriend. It's kind of an unspoken rule to not do that, not because its taboo or anything, but because its so obvious.</p>
+          <p>Anyway, we also talk about Sebs' plan in germany. Basically to go to a university, do all courses online, focus as much as he can on the buisness with my dad, and get back to Uruguay as fast as possible.</p>
+          <p>He will also meet up with Lupi and Eitoku and do some cool stuff together. I don't remember anything else because I am way too tired. Furthermore, I forgot to take a picture:(</p>
+          <p></p>
+          <div class="info">
+            <p><b>Rating</b> <i>3</i></p>
+            <p>You will be missed sebs</p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>11/07/2025</i></p>
+            <p><b>Climate:</b> <i>Foggy</i></p>
+            <p><b>Location:</b> <i>Costa Urbana</i></p>
+            <p><b>Title:</b> <i>Not Uruguayan</i></p>
+          </div>
+          <p>I have lived in Uruguay for as long as I can remember, yet I still don't have the Uruguayan nationality because making one is real touph for some reason. My parents never made me one since I always had a uruguayan passport because, for people under 18, the parents could get them a Uruguayan passport to make travelling easier. Ever since I turned 18 I do not have a Uruguayan Passport. So instead I have to get a residence permit. Today I got that thing renewed, it was epic.</p>
+          <div class="info">
+            <p><b>Rating</b> <i></i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>12/07/2025</i></p>
+            <p><b>Climate:</b> <i>Normal</i></p>
+            <p><b>Location:</b> <i>Arocena Montevideo Uruguay</i></p>
+            <p><b>Title:</b> <i>The Fog and the Chinese Restaurant</i></p>
+          </div>
+          <p>Lucas wants to make a plan to do something today. He makes me chose the time and the place to do something which I don't like because I hate decisions, but it is what it is. I decided we would go at 21 to the Chinese restaurant that I had discovered with Sebs a while ago.</p>
+          <p>But before that, remember that yesterday I got my residence permit renewed, well the real reason behind that was to get my Uruguay ID renewed to, and that I did. I look like an absolute asassin. My eye-bags made the parts around my eye super dark, and combined with the fact I had a hoodie and a serious face. I look like im either on drugs or I killed someone(or both) but it could be worse.</p>
+          <p>Lucas informs me that Ethan will probably not be coming because there is too much fog and he doesn't want to drive in the fog. So I go to pick him up instead. He lives in latahona, in canelones, which is another department. Uruguay is divided in departments, much like argentina being divided into provinces and the United States being divided in states. So I go to Ethan, we recap real quick.</p>
+          <p>Basically, Ethan has been studying at the University of Montevideo in Uruguay, he is studying finance but he is starting to dislike certain parts of the career. He would much rather study something that has to do with physics or math or STEM in general... maybe even STEAM(Science, Technology, Engineering, Arts, Mathematics) since he is an artist too. However, he is afraid that his true ambitions won't provide him with any financial gain, specially his more artsy side. But I try to convince him to follow his true passions, mainly arguing that engineering is still a very respected career that will still be useful to him no matter what he pursues since it opens up many opportunities. He starts considering it, so I hope he ends up doing something he likes.</p>
+          <p>Then we pick up Lucas and we start heading to the chinese restaurant. On the way there, I forgot what we talked about. But it was probably really good</p>
+          <p>So we get there and Lucas is very doubtful about the place, he believes its a little bit expensive. I don't think its that expensive, but maybe we were raised under different economic circumstances that have shapes our perception of what is considered cheap or expensive. Or maybe he was just looking at the page that just happened to have the most expensive stuff such as "Camarones Cristalinos" which was over 1000 Uruguayan pesos. The waitresss comes along several times, she is really nice and she introduces some items in the menu that we might not understand. We take a lot of time to decide what to eat, but eventually, we land on something.</p>
+          <ul>
+            <li>I got soup noodles with chicken and a sprite.</li>
+            <li>Ethan got chicken</li>
+            <li>Lucas got rice</li>
+            <li>And we all got some spring rolls to share (also Ethan and Lucas basically shared their meals)</li>
+          </ul>
+          <p>While waiting for our food, I went to get a pear from my car. By the way, pears are my absolute favourite fruit, i'm aware it's unusual, but I love pears and I am really glad I got to eat one just now.</p>
+          <p>I don't really remember what we talked about while waiting for the food, but I do recall that upon obtaining the chopsticks for the food, I considered stealing them since they were really good chopsticks. And then everyone else argued that they might aswell steal all the cutlery and the plates along with the chopsticks. we didn't do any of that thoguh.</p>
+          <p>The food arrives, rather quickly. But unfortunately, my soup is too hot. I use the principles of thermodynamic equilibrium, and I pour the unused soy sauce that came with the spring rolls onto the soup in order to cool them down. I did that and waited a little until the stuff was actually edible. The meal itself looked pretty bad, presentation 0, but it actually did taste pretty good.</p>
+          <p>After finishing everything, Ethan insisted on paying everything and then we pay him back. He did this because he thought the the chinese waiter wasn't going to understand us that much. Last time with Sebs it was just fine though, but i wasn't feeling like argumenting I guess. So Ethan payed for all of us.</p>
+          <p>Then we all decided we wanted ice-cream. On the way to the ice-cream shops, we pass through the restaurant "Manzanar". A fairly good and fancy restaurant that me and my family often goes to when we feel like eating fancy. They have really good boniuelos de espinaca and faina and pizza. The barbacue ribs suck ass though, they really missed there. Lucas agreed that the place, although more expensive, was worth what it offered. Ethan said that the owner of the place was "kinda anti-semitic" (Ethan is jewish by the way), which was kind of interesting to me since my parents are good friends with the owner. I don't knwo how Ethan could possibly know the political stance of the owner of Manzanar unless the owner somehow knew his family aswell or someting.</p>
+          <p>Then, we went to las delicias to Lucas' request, but Ethan and I (the argentinian folk) wanted to go to fredo because we believed it was superior to las delicias. Both of these are ice-cream shops in Arocena in case you didn't know. Fredo is Argentine and Las Delicias is Uruguayan, and I must admit Fredo is better, even though I would usually side with Uruguay on these kind of debates.</p>
+          <p>I ordered a the chocotorta flavour with Chocolate chiped mint. I don't know why so many people hate chocolate chiped mint, but it is what it is. There is a 2x1 promotion, Lucas buys 2 ice-creams, one for Ethan and one for himself. Meanwhile I also buy 2 icecreams, one for myself, 0.5 for Ethan, and 0.5 for Lucas. They wanted the extra ice-cream, but I only wanted one. </p>
+          <div class="img si30">
+            <div class="oneth">
+              <img src="days/dayslost/20250713_030754774_iOS.jpg">
+            </div>
+            <p class="itg">Us after ice-cream</p>
+          </div>
+          <p>At some point, I talked about something political with Ethan, and Lucas is not really a political guy so I intentionally asked him what his thoughts were on the sociopolitical climate of the United States and he said "it's pretty good, as long as I don't get deported"</p>
+          <p>After that, we walked around, talking about stuff. Eventaully we got to my car. I drove Lucas to his house, but he refused to leave until I shared a spotify playlist with him. Apparently these two being like my music, which I admire and appreciate. And also I apparently forgot that I told Lucas I would share one of my spotify playlst with him. So we spend a good 5 minutes listening to music so that Lucas can decide which playlist he wants. Eventually he lands in the playlist "Cancer moves" one of my best indeed.</p>
+          <p>On the way to drive Ethan back home, Ethan decides what playlist he wants. He says he likes metaphorical lyrics so I recommend some Cosmo Sheldrake classics like "Shiny is the view" it's really alternative music, but I really like it. Ethan said he liked it too, so I'm glad. Sebs and Dani would always jokingly make fun of me for listening to Cosmo Sheldrake but I really do love his music. Eventually, Ethan chose the playlist "Unspecified Direction"</p>
+          <p>I dropped Ethan off at his home. Ethan seems to have been very occupied lately. He hasn't been able to go to the hangouts like when Luca, Lucas, Sebs, Dani, and I watched a game in la pasiva. Also I don't think i'll ever repay him for the dinner, or send him the playlist, unless he reminds me too. But I guess he got 1.5 ice-creams for free, and I also drove him all the way to latahona twice</p>
+          <p></p>
+          <div class="info">
+            <p><b>Rating</b> <i>3</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>14/07/2025</i></p>
+            <p><b>Climate:</b> <i>cool</i></p>
+            <p><b>Location:</b> <i>Rudy and Arocena in general</i></p>
+            <p><b>Title:</b> <i>Encounter with Fede</i></p>
+          </div>
+          <p>So Fede is my friend that has gone to the Neatherlands to study something, I don't actually remember what, but I think it had something to do with international relations. He tells me about a lot of things that he has been through. Interestingly he tells me that he has been having trouble with an intro class which is kind of odd. Apart from that, he tells me that he has joined some club that has a fox logo, he is working for doctors without borders, and there is a hazing culture in the Neatherlands. Personally I only like hazing when its optional and consensual, like the goody SAAC haircuts that we used to do in our school, but that's not really hazing I believe, it's more like, a tradition.</p>
+          <p>So Fede also tells me about some common hazing rituals that they do, a little more extreme that what I'd like but Fede sounded like he had fun. I told him about the unfortunate math news and that I will stay in the Italian Hospital for this year. But I am considering applying to AUC again next year, we'll just have to see. He also told me that he was going to eat with his dad tonight, and he didn't like his dad that much. It's kinda weird to me because when fede came out as gay to his family, his dad was much supportive than his mother, so I asked him something along the lines of "Why do you hate your dad, didn't you get along before?" Fede then explained that he never really interacted with him that much before, but lately Fede's parents got divorced and I remember Fede at some point complaining(rightfully so) about his parents using him as a bargaining chip, and his father refusing to pay for his college. So maybe it has something to do with that. But whatever the case, I didn't insist for further information since I thought it might make Fede uncomfortable. Fede said that since he is paying for half of his rent, he has to act nice towards his father. He also told me that his father suggested for Fede and her older sister (who is also studying in europe) to come back to Uruguay and work to help the family (Fede's sister is like already 3 years into college to that suggestion is kinda crazy from any standpoint really) So fede definately didn't paint the greatest picture of his dad today.</p>
+          <p>After eating Rudy burgers, Fede remarks how much the Rudy burgers fill you up. And by that he meant that the burgers absolutely destroy your hunger, but they are really good still. We went to walk around arocena, I showed Fede several parts that have changed, and I also noticed a new ice-cream shop called Lucciano's that I haven't seen before. I showed Fede the Chinese restaurant, the cafe "Le Pain Quotidienn" and some place else.</p>
+          <p>Then Fede left, we both said that we should gather the entire group together to do something. And while all this was happening, Fede texted the UAS Class of 2024 groupchat, a groupchat that I will now be referring to as the Class Groupchat. Mili and Angie seemed like they wanted to. Fabri and San also, and Martina too, and Lucas. So everything was going well. Also another detail that I forgot to mention is that I met Fede's grandmother at Rudy and she was really nice.</p>
+          <div class="info">
+            <p><b>Rating</b> <i>2</i></p>
+            <p>It was real nice re-uniting with Table Tube Gang/Mr Williams Fan Club member Fede for the first time in a long time.</p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>16/07/2025</i></p>
+            <p><b>Climate:</b> <i>cool</i></p>
+            <p><b>Location:</b> <i>Irrelevant</i></p>
+            <p><b>Title:</b> <i>The Epic Asado at Angie's house</i></p>
+          </div>
+          <p>To today was spent organising the Asado that is going to happen at Angie's house, if you look at the last event, Fede wasnted to see everyone again before he left Uruguay once again, so through our Class' groupchat, he suggested we make an asado or something. Angie offered her house and everything was going according to plan. I spent the day re-involving myself in a project that I started a while ago, it's a song about the class "Theory of Knowledge" that I took in the IB with Mr Turner. I also went o buy food for my dog, and I played this cool game called Dead Cells which I bought in 10/07/2025 during the last day of Steam's summer sale.</p>
+          <p>Overall it was a pretty good day, until Angie said that since she is leaving the house tomorrow, she won't be able to clean the barbacue, so we shouldn't do an asado, instead we should buy pizza. Okay, you know that's not that bad, the main appeal of the hangout was only to see everyone again so it's fine.</p>
+          <p>Then Angie says that it ain't happening, no what when no why, she just said "Oh sorry, it can't be done at my house. Now this event was planned to happen at 21:30, and she canceled the whole thing at 20:28, which is straight up criminal behaviour. I was annoyed, Fede was mad, Lucas simply knew that this was going to happen, and Fabri is fuming. So Lucas still wanted to do something, so we went to Arocena to get some Shawarma. I mean, I got a shawarma, he got a burger. And then we went to get ice-cream at Lucciano's, the new ice-cream shop that recently opened up. I payed for Lucas' ice-cream, so he owes me an ice-cream now.</p>
+          <div class="info">
+            <p><b>Rating</b> <i>1</i></p>
+            <p>Angie's switch up was crazyyyyyy, with probably about 30 more y's. How are you gonna just dip like that with only 30 mins of anticipation and absolutely 0 reasons. Maybe she had a secret reason, like she had to transform into a superhero to fight crime or something. But that's a theory for another day.</p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>17/07/2025</i></p>
+            <p><b>Climate:</b> <i>cool</i></p>
+            <p><b>Location:</b> <i>Rudy</i></p>
+            <p><b>Title:</b> <i>KFC</i></p>
+          </div>
+          <p>So today, during the day time, I went for a walk. But during the night time, Lucas wanted to hang out. I suggested kfc, however, it got closes after 22:00, so it was already too late since it was 21:30 and we wouldn't get ther in time. We decided to go to Rudy instead, and my sister joined the party along with her friend Thomas.</p>
+          <p>In Rudy, we talked about the new superman movie, last time I was with Ethan, he expressed interest in watching this movie, and he invited mono to go and watch it. Unfortunately, Mono is not interested in the slightest on the superman movie and he apparently hates the concept of going to watch the superman movie. Initially I shared this sentiment, mainly due to the fact that are already about 4 or 5 superman movies(That's what it seems like to me but I'm not even sure) and all of them are kinda the same story to me, and now DC pops with another one? It seemed to me like they are just adding another one to the pile. However upon seeing the reviews online, I was actually really intrigued.</p>
+          <p>You see, sometimes people that lean to the right in politics will often call certain movies "woke" which is a term that was initially used to refer to those that support things like lgbt rights and women's rights and that now about the struggles of minorities in society (although calling women a minority is kind of a stretch[even though they still have a lot of struggles{not saying that normal people don't have struggles just that they have more struggles due to discriminations⟨ Ima be honest, I went into this tangent because I wanted to use these cool new brackets I found, but I do believe in everything i said ⟩}])</p>
+          <p>Anways, the logic behind calling someone "woke" was that they have been awakened with this new knowledge about the challenges faced by groups that suffer of discrimination and now they are more accepting of different reference frames, or perspectives I guess. But the right wing just associated the word "woke" with "those damn liberals" i guess, so they just started using the word "woke" as an insult. To me that's pretty funny because if they aren't "woke" it kinda implies they aren't fully "awake" which might explain some of their behaviour.</p>
+          <p>Why did I just tell you that, mainly cause I found it interesting. But connecting this back to SuperMan, i've started to check out some discourse online about the movie. Many people called it a very hopeful movie, and that is really nice considering that lately the world seems to be fully made of bad news. The hopeful tone that people claim can be found in the movie, is also found in the song "PunkRocker" by Teddy Bears and Iggy pop. The song is just three chords over and over and it's on F major which is a key I like. It starts with the root F, then it builds up tension by jumping straight to the Bb which is the fourth, building up tension and anticipating a return home. Then it goes to Dm which is the sixth degree of the scale only to return back to F smoothly, but there are no strong resolutions which kinda gives you room to think. Also the first two chords are not only major, but they also go from lower to higher which kind of gives a feeling of hope which is later countered by going to Dminor, perhaps to show that despite hope things can still get hard, overall painting a picture of someone that doesn't know what to do in a challengin world, but remaining hopeful nonetheless. I really liked the song.</p>
+          <p>But in the internet I also saw a lot of people calling it some "woke trash". Now these people are the same people that believe pretty much the opposite of what I do, such as the insane statement of "misandry is more prevelant than misogyny" therefore it is safe to say that if these people hated the movie, I will most likely enjoy the movie. Safe to say i am ultra invested.</p>
+          <p>So I tell Lucas about this, but unfortunately, he just ain't interested. I ask Thomas, and apparently he has seen the movie and he says it was great, Lucas is still not convinced though.I will try to get people to join me in the watching of this movie somehow. </p>
+          <p>We spend most of the time talking about teachers, some of whom have left the school, some whom have come to replace those who have left.</p>
+          <div class="info">
+            <p><b>Rating</b> <i>2</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>19/07/2025</i></p>
+            <p><b>Climate:</b> <i>cool</i></p>
+            <p><b>Location:</b> <i>Cinema</i></p>
+            <p><b>Title:</b> <i>SUPRE MAN</i></p>
+          </div>
+          <p>Yesterday, I bought tickets for Fabri, Lucas, Fede and myself to go to this epic. I bet Fabri is never paying me back and Fede might pay me back in the future. Lucas will because he is staying in Uruguay for a while. My sister also invited Leti, Lu, and Agus. Some friends</p>
+          <p>So i go there and I arrive an hour early to eat burger king, and we all eat burger king. I learn that the onion rings are fire. My sister hasn't tried burger king yet, but somehow she didn't like it. Unforgivable. I think it's better than McDonalds. Anyways, we do that, and the Lucas arrives. Then we go get tickets, we wait at a table, and then Fede arrives. Fede is worried because if Fabri arrives too late, they might miss the ads that come before the movie. Fabri now leaves closer to the school, but all that means is that he will provrastinate leaving his house as much as possible. While Fabri is coming, we discuss the situation with Megan, apparently she crashed her car because she was speeding while the floor was wet(rain) thus it hydroplaned and went onto a ditch, Fede thinks that this was very irresponsible behaviour. Effectively, he does arrive 10 minutes late.</p>
+          <p>So we go to the movie, and we see some interesting ads. There was one about another "now you see me" movie that I am really not interested in watching. The movie itself was really good, here are some good things about the movie.</p>
+          <ul>
+            <li>It still felt like the classic superman</li>
+            <li>The battle scenes were epic</li>
+            <li>The dog was really epic</li>
+            <li>The soundtrack was really epic</li>
+            <li>It assumed that the audience already knew quite a bit about superman, making it easy to understand and allowing it to build more on other things</li>
+            <li>It explored themes of war, politics, and media which are all really interesting and relevant to the modern world</li>
+            <li>All characters have their own thing going which makes it so that it doesn't seem like they were all just plot devices</li>
+            <li>I forgot how funny it is to have a villain be evil just because, in this case he just hates superman just because, and it's really funny, it's specially funny when he reveals he created an entire conflict in the middle east just cause he knew SuperMan would get involved and then he would have legal reasons to kill him.</li>
+            <li>It was an incredible twist and a very nice switch up to the usual story to have SuperMan's parents say that SuperMan's original goal was to conquer earth instead of protecting it. My personal theory is that the robots intentionally corrupted the code so that SuperMan would turn out to be a good guy.</li>
+            <li>I also liked the joke about the robots not having feelings even though they clearly did</li>
+            <li>The part where superman sits with his earth dad, and he tells him that he is proud and he says something along the lines of "I think what you wanted the message to say means much more than what it actually said" which is an epic line</li>
+            <li>Towards the end, the film kind of establishes that being a good person is essentially being human, and thus superman establishes himself as a human, using the song "PunkRocker" at the end while his life with his parents flashes before his eyes. The fact the song says "I'm a punkrocker, yes I am", I see it as him somehow reaffirming his humanity.</li>
+          </ul>
+          <p>SO in conclusion I really liked it. After that, we all catched up. Fede said he was leaving on monday so that he could participate in an activity where he gets free beer</p>
+          <p>Fabri is going to try out for a team in italy fourth division. He plays soccer professionally and stuff</p>
+          <p>Also, I made chocotorta</p>
+          <div class="img si30">
+            <div class="half">
+              <img src="days/dayslost/20250720_040519524_iOS.jpg">
+              <img src="days/dayslost/20250719_035235003_iOS.jpg">
+            </div>
+            <p class="itg">Chocotorta</p>
+          </div>
+          <div class="tube">
+            <h3>Megan Crashed her Car!</h3>
+            <p>Apparently she was going 133 kilometers per hour in a highway, and then her car (named donatello) hydroplaned and crashed onto the grass, truly unfortunate. She has a court date, a speeding ticket, and driving lessons. THe way things are going, that's how the court is porbably going to turn out.</p>
+            <div class="img si30">
+              <div class="oneth">
+                <video controls>
+                  <source src="days/19,07,2025/3b306af7c3c7453dab3aa4a5e6f887fa.MOV" type="video/mp4">
+                </video>
+              </div>
+              <p class="itg">Megan Crash</p>
+            </div>
+            <p>Megan is all okay, when I texted her about the incident, I just kinda assumed she was okay because... like... it's megan we're talking about, one of the most powerful beings. But then she specified she was okay without me asking and now I feel bad. If you're reading this Megan, you are very underated</p>
+            <p>We also talk about how I could have been permanently banned from the US if I was caught trespassing with Megan that one time I went to visit her, and all of the evidence is posted on the chronicle soooooooooooooooo, might get perma banned some day.</p>
+          </div>
+          <div class="info">
+            <p><b>Rating</b> <i>3</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>21/07/2025</i></p>
+            <p><b>Climate:</b> <i>cool</i></p>
+            <p><b>Location:</b> <i>Lon Tennis gym and pool - Le Pain Quotidienn</i></p>
+            <p><b>Title:</b> <i></i></p>
+          </div>
+          <p>I went to the club Lon Tennis with Lucas today. We hit the gym, and we also went to the pool. In the pool. We talk about a lot of things in there.</p>
+          <p>After that, remember from last event, the Lucas owes me 250 from the SuperMan movie, coincidentally, the Chocolate Milk from Le Pain Quotidienn is worth 250 pesos. SO he buys me one of those. Then we both went home.</p>
+          <div class="info">
+            <p><b>Rating</b> <i>3</i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>22/07/2025</i></p>
+            <p><b>Climate:</b> <i>Cool</i></p>
+            <p><b>Location:</b> <i>Uruguay, my home</i></p>
+            <p><b>Title:</b> <i>Sofe</i></p>
+          </div>
+          <p>Also, remember Sofe, I just assumed she left to France a long time ago. A stupid assumption given that Sebs told me they hang out shortly before he left. So I texted sofe and naturally, she was in Uruguay. I told her if she wanted to do something tomorrow and she said she was going to ciudad vieja with unkown character Julia from france.</p>
+          <p>It seemed fun so she said she would text me back, she probably won't because Sofe tends to be very unpleasent to create plans with.</p>
+          <div class="info">
+            <p><b>Rating</b> <i></i></p>
+          </div>
+        </div>
+        <br>
+        <div class="mevent">
+          <div class="info">
+            <p><b>Date:</b> <i>23/07/2025</i></p>
+            <p><b>Climate:</b> <i>cool</i></p>
+            <p><b>Location:</b> <i>my home</i></p>
+            <p><b>Title:</b> <i>nothing much, just</i></p>
+          </div>
+          <p>Sofe unsurprisingly did not text me, so I texted her. She couldn't make it in the end. And I am 50% sure that's a lie, but sofe does get sick often so I'm not sure. I asked Lucas if he wanted to play paddle, but he was too tired. We agreed to play tomorrow. Finally, Ethan finally replied to the text message I sent him 2 days ago asking him if he wanted to play minecraft. He said no.</p>
+          <p>Also, I inscribed myself to the next classes of the Italian. Under the condition I inject myself with something in the future.</p>
+          <div class="tube">
+            <h3>Why did no one reply :(</h3>
+            <p>Also, Milla asked when I'm moving. I informed her of my situation and how I decided to stay in the Italian Hospital and apply to the same universities again next year in hopes i get into a better one.</p>
+            <p>No one replied to that message, not even milla, the one asking the question, why??? I thought it was pretty well written overall. I hate texting so much, it stresses me out, specially when I text to a group and no one replies. I feel like an absolute clown</p>
+          </div>
+          <div class="info">
+            <p><b>Rating</b> <i>-1</i></p>
+            <p>Really didn't like how 4 people in the table tube gang left me on read, even an okay would've been better</p>
+          </div>
+        </div>
+        <br>
         <br>
     </div>
     <a href="events4.html"><button type="button" name="buttonWW" class="pagebutton" >Page 5</button></a>
