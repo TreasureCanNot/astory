@@ -745,8 +745,7 @@
   color: rgb(212, 255, 249);
   display: inline-block;
 }
-
-@media (max-width: 877px) {
+@media (max-width: 768px) {
   .only-phones {
     display: block;
   }
