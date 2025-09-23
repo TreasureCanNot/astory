@@ -866,7 +866,7 @@
 }
 .third img {
   width: 33.3333%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -955,6 +955,18 @@
   display: inline-block;
 }
 .neatherlavasauce i{
+  color: rgb(255, 224, 87);
+}
+
+.tabletubegang {
+  color: rgb(255, 224, 87);
+  background-color: rgb(0, 89, 190);
+  padding: 10px;
+  border-radius: 22px;
+  display: inline-block;
+}
+
+.tabletubegang i {
   color: rgb(255, 224, 87);
 }
 
