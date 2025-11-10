@@ -421,6 +421,19 @@
   text-decoration: none;
 }
 
+.deb{
+  background-image: linear-gradient(rgb(255, 108, 167), rgb(196, 118, 118));
+  border: 2px solid black;
+  color: white;
+  text-decoration: none;
+}
+.deb:hover {
+  background-image: linear-gradient(rgb(196, 118, 118), rgb(255, 108, 167));
+  border: 2px dotted black;
+  color: black;
+  text-decoration: none;
+}
+
 /*End of control pad*/
 
 .only-phones{
@@ -957,6 +970,19 @@
 .neatherlavasauce i{
   color: rgb(255, 224, 87);
 }
+.achieve{
+  color:black;
+  background-color: #17c60d;
+  padding: 10px;
+  border-radius: 22px;
+  display: inline-block;
+}
+.achieve i{
+  color: black;
+}
+.achieve h7{
+  font-size: 19px;
+}
 
 .tabletubegang {
   color: rgb(255, 224, 87);
@@ -1004,6 +1030,15 @@
   border-radius: 10px;
   padding: 5px;
   color: rgb(212, 255, 249);
+  display: inline-block;
+}
+
+.unsdi{
+  background-color: rgb(155, 200, 216);
+  border: 3px solid rgb(0, 30, 80);
+  border-radius: 10px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
   display: inline-block;
 }
 
@@ -1080,5 +1115,7 @@
   height: 50%;
 }
 }
+
+
 
 
