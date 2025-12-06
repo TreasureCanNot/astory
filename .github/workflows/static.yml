@@ -31,13 +31,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Clean disk space
+        run: |
+          echo "Cleaning up disk space to prevent 'No space left on device' error..."
+          # Clean npm cache (in case any npm commands run)
+          npm cache clean --force 2>/dev/null || true
+          # Clear temporary files
+          sudo rm -rf ~/.npm
+          sudo rm -rf ~/.cache
+          # Clear GitHub Actions runner cache
+          sudo rm -rf /opt/hostedtoolcache/* 2>/dev/null || true
+          # Clear APT cache
+          sudo apt-get clean 2>/dev/null || true
+          # Report free space
+          df -h
+      
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: '.'
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
