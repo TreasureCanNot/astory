@@ -183,6 +183,7 @@
   padding: 9px;
   box-sizing: border-box;
   overflow: auto;
+  background-color: rgba(245, 245, 220, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -191,6 +192,7 @@
       padding: 9px;
       box-sizing: border-box;
       overflow: auto;
+      background-color: rgba(245, 245, 220, 0.3);
     }
     .anevent{
       border: 2.5px solid black;
@@ -421,13 +423,13 @@
   text-decoration: none;
 }
 
-.deb{
+.prb{
   background-image: linear-gradient(rgb(255, 108, 167), rgb(196, 118, 118));
   border: 2px solid black;
   color: white;
   text-decoration: none;
 }
-.deb:hover {
+.prb:hover {
   background-image: linear-gradient(rgb(196, 118, 118), rgb(255, 108, 167));
   border: 2px dotted black;
   color: black;

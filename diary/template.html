@@ -165,3 +165,83 @@
     <a href="events6.html"><button type="button" name="button" style="width:20%; height:20%; float:right;">Page 6</button></a>
   </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="img/awesome.jpg">
+    <script src="script.js"></script>
+    <meta charset="utf-8">
+    <title>after/diary</title>
+    <header class="header" >
+      <div style="height: 5px;" class="only-computers"></div>
+      <br class="only-phones">
+      <button id="toggleButton" onclick="controlPad()">Hide</button>
+      <div id="navContainer" class="moved-navcontainer">
+        <nav id="controlP" class="controlP" style="">
+          <b>Control Pad</b>
+          <div class="chapter-select only-computers" id="selector" onmouseenter="chapterSelect()"><p>↔</p></div>
+          <button onclick="chapterSelect()" id="selector-phone" class="chapter-select only-phones">↔</button>
+          <br>
+          <br>
+          <table id="selection-table" class="selection-table vanished">
+            <tr>
+              <td>
+                <a href="page1.html" class="und">Unspecified Direction</a>
+              </td>
+              <td>
+                <a href="page2.html" class="deb">Death Bound</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+
+              </td>
+            </tr>
+          </table>
+          <a class="ni" href="after.html">After</a>
+          <a class="ni" style="background-color: #FFF8E7;" href="page1.html">Timothy's Diary</a>
+          <a class="ni" href="individuals.html">Individuals</a>
+          <a class="ni" href="voiceBag.html">voiceBag</a>
+        </nav>
+      </div>
+    </header>
+    <style>
+      .boxy{
+        width: 900px;
+      }
+      @media (max-width: 768px) {
+        
+      .controlP {
+        width: 90% !important;
+      }
+
+      .controlP-chapterMode {
+        width: 90% !important; 
+      }
+      }
+      .controlP {
+        width: 360px;
+      }
+
+      .controlP-chapterMode {
+        width: 360px;
+      }
+    </style>
+  </head>
+  <body class="chapter" style="background-image: linear-gradient(rgb(117, 135, 135), rgb(155, 200, 216)); border: 2px solid rgb(255, 226, 110);">
+    <center><h1>Page 1</h1></center>
+    <a href="events5.html"><button type="button" class="pagebutton">Page 1</button></a>
+    <a href="events7.html"><button type="button" class="pagebutton" style="float: right;">Page 2</button></a>
+    <div>
+    </div>
+    <a href="events4.html"><button type="button" name="buttonWW" class="pagebutton" >Page 5</button></a>
+    <a href="events6.html"><button type="button" name="button" class="pagebutton" style="float:right;">Page 6</button></a>
+  </body>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</html>
