@@ -200,6 +200,15 @@
       overflow: auto;
       box-sizing: border-box;
     }
+    .chapBgone{
+    font-size: 30px;
+    opacity:0;
+    }
+    .chapBs{
+    font-size: 30px;
+    transition: 1s linear;
+    opacity: 1;
+    }
 }
 
 .duh{
@@ -276,6 +285,30 @@
   text-decoration: none;
   color: black;
 }
+@media (max-width: 768px){
+  .NOni {
+    font-size: 30px;
+  }
+  .ni {
+    background-color: rgb(158, 158, 158);
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    opacity: 1;
+    transition: 0.1s linear;
+    font-size: 30px;
+  }
+
+  .ni:hover {
+    background-color: black;
+    border: 2px solid white;
+    text-decoration: none;
+    color: rgb(158, 158, 158);
+    font-size: 30px;
+  }
+}
+
 
 .mother{
   background-color:rgba(134, 171, 165, 0.99);
@@ -349,8 +382,16 @@
   padding: 7px;
   padding-top: 2%;
   width: 350px;
-  height: 54px;
   transition: 0.1s linear;
+}
+
+@media (max-width: 768px){
+  .controlP{
+    width: 90%;
+  }
+  .controlP-chapterMode{
+    width: 90%;
+  }
 }
 
 .chapter-select {
@@ -423,13 +464,13 @@
   text-decoration: none;
 }
 
-.prb{
+.caf{
   background-image: linear-gradient(rgb(255, 108, 167), rgb(196, 118, 118));
   border: 2px solid black;
   color: white;
   text-decoration: none;
 }
-.prb:hover {
+.caf:hover {
   background-image: linear-gradient(rgb(196, 118, 118), rgb(255, 108, 167));
   border: 2px dotted black;
   color: black;
@@ -474,6 +515,29 @@
   font-size: 18.7px;
   color: black;
   text-decoration:wavy;
+}
+.data{
+  color:rgb(0, 0, 0);
+  background-color: rgb(197, 197, 197);
+  padding: 10px;
+  border-radius: 22px;
+  display: inline-block;
+}
+.data i{
+  font-size: 18.7px;
+  color: black;
+  text-decoration:wavy;
+}
+.title{
+  color:rgb(0, 0, 0);
+  background-color: rgb(197, 197, 197);
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 22px;
+  font-size: 30px;
+  display: inline-block;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .cave{
@@ -903,6 +967,11 @@
   object-fit:contain;
   display: block;
 }
+.quarter video {
+  width: 25%;
+  object-fit:contain;
+  display: block;
+}
 
 .fifth {
   display: flex;
@@ -938,11 +1007,13 @@
       width: 19%;
     }
   */
-
-
+  
   .fullphone{
     width: 100%;
     height: auto;
+  }
+  .fotn30{
+    font-size: 30px;
   }
 }
 
@@ -960,6 +1031,7 @@
 .iphone9o16 {
   aspect-ratio: 9/16;
 }
+
 
 
 .neatherlavasauce{
@@ -1044,27 +1116,56 @@
   display: inline-block;
 }
 
+.wordbox{
+  border: 9px double rgb(210, 201, 149);
+  background-color: rgb(75, 58, 33);
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  color: rgb(210, 201, 149);
+}
+
+.redbord{
+  border: 9px double rgb(255, 55, 55);;
+}
+
+.wordtog{
+  border: 2px solid rgb(88, 30, 30);
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #DBAD8A;
+}
+.wordtog:hover{
+  border: 2px solid rgb(88, 30, 30);
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #db8f8a;
+}
+.wordtog:active{
+  border: 2px solid rgb(88, 30, 69);
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #9e566b;
+}
+
+.hidden {
+  display: none;
+}
+
+
 @media (max-width: 768px) {
   .only-phones {
     display: block;
   }
-
-  .ni {
-    background-color: rgb(158, 158, 158);
-    border: 2px solid black;
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    opacity: 1;
-    transition: 1s linear;
+  .wordbox{
+    width: 100%;
   }
-
-  .ni:hover {
-    background-color: black;
-    border: 2px solid white;
-    text-decoration: none;
-    color: rgb(158, 158, 158);
-    font-size: 30px;
+  .wordtog{
+  font-size: 20px;
   }
 
   .only-computers {

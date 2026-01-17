@@ -81,6 +81,7 @@ function chapterSelect() {
         animationTracker.push(new Promise(resolve => {
             if (element.classList.contains('ni')) {
                 element.classList.remove('ni');
+                element.offsetHeight; // FORCE reflow (this is the key)
                 element.classList.add('NOni');
             }
             setTimeout(() => {
@@ -99,6 +100,7 @@ function chapterSelect() {
             setTimeout(() => {
                 if (element.classList.contains('NOni')) {
                     element.classList.remove('NOni');
+                    element.offsetHeight; // same reason
                     element.classList.add('ni');
                 }
                 resolve();
@@ -116,3 +118,34 @@ function chapterSelect() {
         throw error;                   // Re-throw to maintain error propagation
     });
 }
+
+
+
+
+
+
+var buttons = document.getElementsByClassName('wordtog');
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].onclick = function () {
+
+    var box = this.parentElement;
+    var definitions = box.getElementsByClassName('definition');
+
+    if (definitions.length === 0) return;
+
+    var isHidden = definitions[0].classList.contains('hidden');
+
+    for (var j = 0; j < definitions.length; j++) {
+      if (isHidden) {
+        definitions[j].classList.remove('hidden');
+      } else {
+        definitions[j].classList.add('hidden');
+      }
+    }
+
+    this.textContent = isHidden ? 'Hide definition' : 'Enlighten';
+  };
+}
+
+

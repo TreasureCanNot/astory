@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="img/awesome.jpg">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>after/voiceBag</title>   
+    <header class="header" >
+      <div style="height: 5px;" class="only-computers"></div>
+      <br class="only-phones">
+      <button id="toggleButton" onclick="controlPad()">Hide</button>
+      <div id="navContainer" class="moved-navcontainer">
+        <nav class="controlP">
+          <b>Control Pad</b>
+          <br>
+          <br>
+          <a class="ni" href="after.html">After</a>
+          <a class="ni" href="page1.html">Timothy's Diary</a>
+          <a class="ni" href="individuals.html">Individuals</a>
+          <a class="ni" style="color:rgb(86, 75, 69);background-color: bisque;" href="voiceBag.html">voiceBag</a>
+        </nav>
+      </div>
+      <style>
+        b{
+        font-size: 20px;
+        }
+        p{
+        font-size: 20px;
+        }
+        button{
+        font-size: 20px;
+        }
+        td{
+            border: 2px solid rgb(86, 75, 69);
+        }
+        th{
+            border: 2px solid rgb(86, 75, 69);
+        }
+        table{
+            border: 6px double rgb(86, 75, 69);
+            width: 100%;
+        }
+        td{
+            padding: 50px;
+        }
+        @media (max-width: 768px) {
+            td{
+                padding: 10px;
+            }
+            audio{
+                width: 100%;
+            }
+            .cuas{
+                width: 100%;
+            }
+        }
+
+      </style>
+    </header>
+  </head>
+  <body style="background:rgb(195, 124, 76);">
+    <center>
+        <h1>Words</h1>
+    </center>
+    <p>This is like a dictionary/glossary/lexicon of words, terms, and phrases that I might use. I might reference this page every once in a while. Or i might just put words here for fun.</p>
+        <div class="wordbox" id="Abscond">
+            <p><b>Abscond</b></p>
+            <p class="hidden definition">To hide, withdraw, or be concealed.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Agress">
+            <p><b>Aggress</b></p>
+            <p class="hidden definition">To give pain or sorrow to; afflict; grieve.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Abstain">
+            <p><b>Abstain</b></p>
+            <p class="hidden definition">To hinder; to withhold.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Abjure">
+            <p><b>Abjure</b></p>
+            <p class="hidden definition">To renounce upon oath; to forswear; to disavow. To abjure the realm, is to swear to abandon it forever.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Covet">
+            <p><b>Covet</b></p>
+            <p class="hidden definition">To feel strong or immoderate desire for somethign (could be something that is of another).</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Adulation">
+            <p><b>Adulation</b></p>
+            <p class="hidden definition">Servile flattery; excessive or unmerited praise; exaggerated compliment</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Arraign">
+            <p><b>Arraign</b></p>
+            <p class="hidden definition">To appeal to; to demand; or to accuse</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Magnanimous">
+            <p><b>Magnanimous</b></p>
+            <p class="hidden definition">Dictated by greatness of mind or heart; exhibiting nobleness of soul; liberal and honorable; unselfish</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Mendacious">
+            <p><b>Mendacious</b></p>
+            <p class="hidden definition">False; untrue: synonym: dishonest.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Eluding">
+            <p><b>Eluding</b></p>
+            <p class="hidden definition">Escaping</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Elusive">
+            <p><b>Elusive</b></p>
+            <p class="hidden definition">difficult to detect or grasp by the mind or analyze</p>
+            <p class="hidden definition">skillful at eluding capture</p>
+            <p class="hidden definition">making great mental demands; hard to comprehend or solve or believe</p>
+            <p class="hidden definition">Example: Milla</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Surmise">
+            <p><b>Surmise</b></p>
+            <p class="hidden definition">To say (something) as a guess or conjecture or guess</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Hale-and-Hearty">
+            <p><b>Hale and Hearty</b></p>
+            <p class="hidden definition">Free from disease, vigorous, lively, hearty, healthy</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Acrimonious">
+            <p><b>Acrimonious</b></p>
+            <p class="hidden definition">angry and bitter : caustic, biting, or rancorous especially in feeling, language, or manner</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Lobbying">
+            <p><b>Lobbying</b></p>
+            <p class="hidden definition">attempting to influence decisions of government officials</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Bereft">
+            <p><b>Bereft</b></p>
+            <p class="hidden definition">Deprived of something</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Rancor">
+            <p><b>Rancor</b></p>
+            <p class="hidden definition">Malice, Spitefulness, sourness, bitterness</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Caustic">
+            <p><b>Caustic</b></p>
+            <p class="hidden definition">capable of destroying or eating away by chemical action, or sarcasm</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Guise">
+            <p><b>Guise</b></p>
+            <p class="hidden definition">Outward appearance or aspect; semblance.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Inapt">
+            <p><b>Inapt</b></p>
+            <p class="hidden definition">Inept</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Sullied">
+            <p><b>Sullied</b></p>
+            <p class="hidden definition">defiled or tainted, soiled or stained.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Forshadowing">
+            <p><b>Forshadowing</b></p>
+            <p class="hidden definition">the act of providing vague advance indications; representing beforehand</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Foreboding">
+            <p><b>Foreboding</b></p>
+            <p class="hidden definition">Implying something bad will happen</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Bonsternation">
+            <p><b>Consternation</b></p>
+            <p class="hidden definition">Astonishment combined with terror: Amazement or horror that confounds the faculties, and incapacitates for reflection; terror, combined with amazement; dismay.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Consarn-it">
+            <p><b>Consarn it</b></p>
+            <p class="hidden definition">Damn it</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="">
+            <p><b>A few apples short of a bushel</b></p>
+            <p class="hidden definition">"A few drops away from tipping the cup"</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Dandy">
+            <p><b>Dandy</b></p>
+            <p class="hidden definition">Something very good or agreeable</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Flail">
+            <p><b>Flail</b></p>
+            <p class="hidden definition">To wave or swing vigorously; thrash.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Pilfer">
+            <p><b>Pilfer</b></p>
+            <p class="hidden definition">To steal in small quantities, or articles of small value; to practice petty theft. Pillage</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Affliction">
+            <p><b>Affliction</b></p>
+            <p class="hidden definition">A condition of pain, suffering, or distress: synonym: trial.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Repentant">
+            <p><b>Repentant</b></p>
+            <p class="hidden definition">Feeling or showing sorrow and regret for having done wrong.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Penitent">
+            <p><b>Penitent</b></p>
+            <p class="hidden definition">Repentant</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Contrite">
+            <p><b>Contrite</b></p>
+            <p class="hidden definition">Penitent</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Mired">
+            <p><b>Mired</b></p>
+            <p class="hidden definition">A disadvantageous or difficult condition or situation or an area of wet soggy, muddy ground</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Kindle">
+            <p><b>Kindle</b></p>
+            <p class="hidden definition">To light up, specially with fire</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Volatile">
+            <p><b>Volatile</b></p>
+            <p class="hidden definition">Explosive and unstable</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Baleful">
+            <p><b>Baleful</b></p>
+            <p class="hidden definition">Deadly or Foreboding</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Adamant">
+            <p><b>Adamant</b></p>
+            <p class="hidden definition">unyielding, not willing to give up</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Adroit">
+            <p><b>Adroit</b></p>
+            <p class="hidden definition">Clever or resourceful</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Scourge">
+            <p><b>Scourge</b></p>
+            <p class="hidden definition">A source of widespread dreadful affliction and devastation such as that caused by pestilence or war.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Revile">
+            <p><b>Revile</b></p>
+            <p class="hidden definition">Revilement; abusive treatment or language; an insult; a reproach.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Amatory">
+            <p><b>Amatory</b></p>
+            <p class="hidden definition">Sexual</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Beckon">
+            <p><b>Beckon</b></p>
+            <p class="hidden definition">To signal or summon, as by nodding or waving.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Divested">
+            <p><b>Divested</b></p>
+            <p class="hidden definition">To deprive, as of rights or property; dispossess. To free or rid</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Bellicose">
+            <p><b>Bellicose</b></p>
+            <p class="hidden definition">Warlike</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Bilious">
+            <p><b>Bilious</b></p>
+            <p class="hidden definition">unpleasant, peevish</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Calamitous">
+            <p><b>Calamitous</b></p>
+            <p class="hidden definition">disastrous</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Comely">
+            <p><b>Comely</b></p>
+            <p class="hidden definition">attractive or pleasant to look at</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Contumacious">
+            <p><b>Contumacious</b></p>
+            <p class="hidden definition">rebellious</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Corpulent">
+            <p><b>Corpulent</b></p>
+            <p class="hidden definition">Obese</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Didactic">
+            <p><b>Didactic</b></p>
+            <p class="hidden definition">conveying information or moral instruction</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Dilatory">
+            <p><b>Dilatory</b></p>
+            <p class="hidden definition">causing delay</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Dowdy">
+            <p><b>Dowdy</b></p>
+            <p class="hidden definition">shabby, old-fashioned or an unkempt woman</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Efficacious">
+            <p><b>Efficacious</b></p>
+            <p class="hidden definition">producing a desired effect</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Effulgent">
+            <p><b>Effulgent</b></p>
+            <p class="hidden definition">brilliantly radiant</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Egregious">
+            <p><b>Egregious</b></p>
+            <p class="hidden definition">conspicuous, flagrant</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Endemic">
+            <p><b>Endemic</b></p>
+            <p class="hidden definition">prevalent, native, peculiar to an area</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Equanimous">
+            <p><b>Equanimous</b></p>
+            <p class="hidden definition">even, balanced</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Execrable">
+            <p><b>Execrable</b></p>
+            <p class="hidden definition">wretched, detestable</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Fastidious">
+            <p><b>Fastidious</b></p>
+            <p class="hidden definition">meticulous, overly delicate</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Fecund">
+            <p><b>Fecund</b></p>
+            <p class="hidden definition">Capable of producing offspring, fertile</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Friable">
+            <p><b>Friable</b></p>
+            <p class="hidden definition">Brittle</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Fulsome">
+            <p><b>Fulsome</b></p>
+            <p class="hidden definition">abundant, overdone, effusive</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Rambunctious">
+            <p><b>Rambunctious</b></p>
+            <p class="hidden definition">uncontrollably exuberant; boisterous.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Ineluctable">
+            <p><b>Ineluctable</b></p>
+            <p class="hidden definition">Inevitable</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Ubiquitous">
+            <p><b>Ubiquitous</b></p>
+            <p class="hidden definition">Being or seeming to be everywhere at the same time; omnipresent.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Befall">
+            <p><b>Befall</b></p>
+            <p class="hidden definition">To come to pass or happen</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Behest">
+            <p><b>Behest</b></p>
+            <p class="hidden definition">An authoritative command or urgent request</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Bequeath">
+            <p><b>Bequeath</b></p>
+            <p class="hidden definition">To leave or give (personal property) by will.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Languid">
+            <p><b>Languid</b></p>
+            <p class="hidden definition">Lacking in vigor or vitality</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Nescience">
+            <p><b>Nescience</b></p>
+            <p class="hidden definition">Lack of knowledge, anti science</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Competence">
+            <p><b>Competence</b></p>
+            <p class="hidden definition">The ability to do something well or efficiently.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Perspicacious">
+            <p><b>Perspicacious</b></p>
+            <p class="hidden definition">Keen mental perception and understanding. A lot of insight</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Exuberant">
+            <p><b>Exuberant</b></p>
+            <p class="hidden definition">filled with or characterized by a lively energy and excitement.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Acquiesce">
+            <p><b>Acquiesce</b></p>
+            <p class="hidden definition">To consent or comply passively or without protest: synonym: assent.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Assent">
+            <p><b>Assent</b></p>
+            <p class="hidden definition">To express agreement as of a proposal</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Ostentatious">
+            <p><b>Ostentatious</b></p>
+            <p class="hidden definition">Something designed to gain attention</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Pander">
+            <p><b>Pander</b></p>
+            <p class="hidden definition">To gratify or indulge; Say what people want to here</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Pretentious">
+            <p><b>Pretentious</b></p>
+            <p class="hidden definition">Claiming that or behaving as if one is important or deserving of merit when such is not the case.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Fervent">
+            <p><b>Fervent</b></p>
+            <p class="hidden definition">Intense passion; Hot or glowing, or both</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Invigorating">
+            <p><b>Invigorating</b></p>
+            <p class="hidden definition">Giving vigor</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Wayfarer">
+            <p><b>Wayfarer</b></p>
+            <p class="hidden definition">A person who travels by foot</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Seafarer">
+            <p><b>Seafarer</b></p>
+            <p class="hidden definition">A person who travels by sea</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Farer">
+            <p><b>Farer</b></p>
+            <p class="hidden definition">A person who travels</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Rambler">
+            <p><b>Rambler</b></p>
+            <p class="hidden definition">A person who enjoys long walks in the countryside</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="(Something)-ward">
+            <p><b>(Something)-ward</b></p>
+            <p class="hidden definition">Heading to (something)</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Billingsgate">
+            <p><b>Billingsgate</b></p>
+            <p class="hidden definition">Abusive language or curse words</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Brabble">
+            <p><b>Brabble</b></p>
+            <p class="hidden definition">To argue loudly about matters of no importance.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Crapulous">
+            <p><b>Crapulous</b></p>
+            <p class="hidden definition">Feeling ill as a result of too much eating/drinking.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Erstwhile">
+            <p><b>Erstwhile</b></p>
+            <p class="hidden definition">Something that is not current and belongs to the past</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Fudgel">
+            <p><b>Fudgel</b></p>
+            <p class="hidden definition">To pretend you are doing something when you are actually not</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Fugacious">
+            <p><b>Fugacious</b></p>
+            <p class="hidden definition">Fleeting, Fading quickly</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        <div class="wordbox" id="Peccable">
+            <p><b>Peccable</b></p>
+            <p class="hidden definition">Flawed; prone to sin or wrongdoing; not impeccable.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Elysian">
+            <p><b>Elysian</b></p>
+            <p class="hidden definition">Heavenly; blissful.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Lucubration">
+            <p><b>Lucubration</b></p>
+            <p class="hidden definition">Study or writing late into the night.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Irenic">
+            <p><b>Irenic</b></p>
+            <p class="hidden definition">Tending to promote peace or reconciliation.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Conciliatory">
+            <p><b>Conciliatory</b></p>
+            <p class="hidden definition">Tending to conciliate or win goodwill.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Jargogle">
+            <p><b>Jargogle</b></p>
+            <p class="hidden definition">To confuse someone.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Lanspresado">
+            <p><b>Lanspresado</b></p>
+            <p class="hidden definition">A person who arrives somewhere having conveniently forgotten their wallet or lacking money with an elaborate excuse.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Mumpsimus">
+            <p><b>Mumpsimus</b></p>
+            <p class="hidden definition">An incorrect view stubbornly held.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Rawgabbit">
+            <p><b>Rawgabbit</b></p>
+            <p class="hidden definition">A person who gossips confidentially about matters they know nothing about.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Subjugate">
+            <p><b>Subjugate</b></p>
+            <p class="hidden definition">To bring under control, especially by military force.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Implement">
+            <p><b>Implement</b></p>
+            <p class="hidden definition">A tool or instrument used to achieve an end.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Snollygoster">
+            <p><b>Snollygoster</b></p>
+            <p class="hidden definition">A person, especially a politician, guided by self-interest rather than principles.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Snottor">
+            <p><b>Snottor</b></p>
+            <p class="hidden definition">Wise.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Trumpery">
+            <p><b>Trumpery</b></p>
+            <p class="hidden definition">Things that appear impressive but are worthless.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Uhtceare">
+            <p><b>Uhtceare</b></p>
+            <p class="hidden definition">Lying awake worrying before dawn.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Cockalorum">
+            <p><b>Cockalorum</b></p>
+            <p class="hidden definition">A small man with an exaggerated sense of self-importance.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Cant-make-heads-or-tails-of-it">
+            <p><b>Can’t make heads or tails of it</b></p>
+            <p class="hidden definition">Unable to understand something at all.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Scurrilous">
+            <p><b>Scurrilous</b></p>
+            <p class="hidden definition">Spreading malicious rumors to damage reputations.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Thrice">
+            <p><b>Thrice</b></p>
+            <p class="hidden definition">Three times.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="What-ails-thee">
+            <p><b>What ails thee</b></p>
+            <p class="hidden definition">What is wrong with you?</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Egregious">
+            <p><b>Egregious</b></p>
+            <p class="hidden definition">Conspicuously bad or offensive.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Leer">
+            <p><b>Leer</b></p>
+            <p class="hidden definition">To look with a sly, malicious, or sexually suggestive glance.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Pluviophile">
+            <p><b>Pluviophile</b></p>
+            <p class="hidden definition">A person who enjoys rainy days.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Uglyography">
+            <p><b>Uglyography</b></p>
+            <p class="hidden definition">Poor handwriting and spelling.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+          
+          <div class="wordbox" id="Eventide">
+            <p><b>Eventide</b></p>
+            <p class="hidden definition">The time when the sun is setting.</p>
+            <button class="wordtog">Reveal</button>
+          </div>
+                                              
+  </body>
+  <script src="script.js"></script>
+  <script>
+    window.onload = function () {
+  if (location.hash) {
+    var targetId = location.hash.substring(1);
+    var box = document.getElementById(targetId);
+
+    if (!box) return;
+
+    // add red border
+    box.classList.add('redbord');
+
+    var definitions = box.getElementsByClassName('definition');
+    var button = box.getElementsByClassName('wordtog')[0];
+
+    for (var i = 0; i < definitions.length; i++) {
+      definitions[i].classList.remove('hidden');
+    }
+
+    if (button) {
+      button.textContent = 'Hide definition';
+    }
+  }
+};
+
+  </script>
+</html>
