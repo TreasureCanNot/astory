@@ -120,12 +120,7 @@ function chapterSelect() {
 }
 
 
-
-
-
-
-var buttons = document.getElementsByClassName('wordtog');
-
+let buttons = document.getElementsByClassName('wordtog');
 for (var i = 0; i < buttons.length; i++) {
   buttons[i].onclick = function () {
 

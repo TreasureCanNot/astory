@@ -368,7 +368,7 @@
   color: black;
   padding: 7px;
   padding-top: 2%;
-  width:350px;
+  width:360px;
   transition: 0.1s linear;
 }
 
@@ -1130,7 +1130,7 @@
 }
 
 .redbord{
-  border: 9px double rgb(255, 55, 55);;
+  border: 9px double rgb(255, 55, 55) !important;
 }
 
 .wordtog{
@@ -1156,6 +1156,48 @@
   display: none;
 }
 
+.QuackWords .wordbox{
+  border: 9px double rgb(205, 186, 78);
+  background-color: rgb(71, 75, 33);
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  color: rgb(149, 184, 210);
+}
+
+.QuackWords .wordtog{
+  border: 2px solid rgb(34, 88, 30);
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #dbcc8a;
+}
+
+.QuackWords .wordtog:hover{
+  border: 2px solid rgb(34, 88, 30);
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #8adba1;
+}
+
+.QuackWords .wordtog:active{
+  border: 2px solid rgb(31, 30, 88);
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #56889e;
+}
+
+.searchbar{
+  background-color: brown;
+  color: #8adbd0;
+  width:100%;
+  height: 50px;
+  border: 3px solid rgb(255, 124, 124);
+  font-size: 45px;
+}
 
 @media (max-width: 768px) {
   .only-phones {

@@ -162,7 +162,7 @@
         <br>
         <div class="mevent">
           <div class="info">
-            <h7 class="title">Beach</h7>
+            <h7 class="title">Title</h7>
             <br>
             <p class="data"><b>Date:</b> <i></i></p>
             <p class="data"><b>Climate:</b> <i></i></p>
@@ -373,3 +373,106 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </html>
+
+
+<script>
+  // ────────────────────────────────────────────────
+  // Wait until the whole HTML page has finished loading
+  // ────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', function () {
+  
+      // Line 1: Find the search input box by its id="searchbar"
+      //         We only need to find it once → store it in a variable
+      var searchInput = document.getElementById('searchbar');
+  
+      // Line 2: Find ALL elements that have class="wordbox"
+      //         querySelectorAll returns a list (NodeList) of elements
+      //         We store it so we don't have to search the page again every time user types
+      var wordboxes = document.querySelectorAll('.wordbox');
+  
+      // ────────────────────────────────────────────────
+      // Every time user types or deletes something → this function runs
+      // ────────────────────────────────────────────────
+      searchInput.addEventListener('input', function () {
+  
+          // Line 3: Get whatever is currently written in the search box
+          var rawValue = searchInput.value;
+  
+          // Line 4: Remove spaces from beginning and end (very important!)
+          //         Example: user types " apple " → becomes "apple"
+          var trimmedValue = rawValue.trim();
+  
+          // Line 5: Convert to lowercase so "Abscond" matches "abscond" or "ABS"
+          //         JavaScript string comparison is case-sensitive by default
+          var searchTerm = trimmedValue.toLowerCase();
+  
+          // ────────────────────────────────────────────────
+          // Go through every single wordbox one by one
+          // ────────────────────────────────────────────────
+          for (var i = 0; i < wordboxes.length; i++) {
+  
+              // Current wordbox we are looking at
+              var currentBox = wordboxes[i];
+  
+              // Line 6: Try to find the word title inside this box
+              //         We look first for a <b> tag, then for <p><b> (your HTML has both styles)
+              var titleElement = currentBox.querySelector('b') ||
+                                 currentBox.querySelector('p b');
+  
+              // Line 7: Safety check – what if this box has no title at all?
+              //         (maybe it's broken HTML or an empty div)
+              if (titleElement === null) {
+                  currentBox.style.display = 'none';   // hide it
+                  continue;                            // skip to next box
+              }
+  
+              // Line 8: Get the actual text of the title (e.g. "Abscond")
+              var titleText = titleElement.textContent;
+  
+              // Line 9: Remove extra spaces (just in case)
+              var cleanedTitle = titleText.trim();
+  
+              // Line 10: Convert title to lowercase too (must match searchTerm)
+              var wordTitle = cleanedTitle.toLowerCase();
+  
+              // ────────────────────────────────────────────────
+              // The actual decision: should we show or hide this word?
+              // ────────────────────────────────────────────────
+              if (searchTerm === '' || wordTitle.indexOf(searchTerm) !== -1) {
+                  // Condition explanation:
+                  //   searchTerm === ''          → user deleted everything → show ALL words
+                  //   titleLower.indexOf(searchTerm) !== -1  → title contains the search letters
+                  //                                             (indexOf returns position or -1 if not found)
+  
+                  currentBox.style.display = '';     // '' = show it using default CSS display
+              } else {
+                  currentBox.style.display = 'none'; // hide this wordbox
+              }
+          }
+          // end of for loop
+      });
+      // end of input listener
+  });
+  // end of DOMContentLoaded
+  </script>
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var search = document.getElementById('searchbar');
+  var boxes  = document.querySelectorAll('.wordbox');
+
+  search.addEventListener('input', function () {
+      var query = search.value.trim().toLowerCase();
+      for (var i = 0; i < boxes.length; i++) {
+          var box = boxes[i];
+
+          var fullText = box.textContent.toLowerCase();
+
+          if (query === '' || fullText.indexOf(query) !== -1) {
+              box.style.display = '';
+          } else {
+              box.style.display = 'none';
+          }
+      }
+  });
+});
