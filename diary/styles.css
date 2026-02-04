@@ -979,7 +979,7 @@
 
 .fifth img {
   width: 20%;
-  object-fit:scale-down;
+  object-fit:contain;
   display: block;
 }
 .fifth video {
