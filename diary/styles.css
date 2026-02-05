@@ -925,19 +925,21 @@
 }
 
 .half img {
-  width: 50%;
-  object-fit: cover;
+  width: 50%;  
+  object-fit: contain;
   display: block;
 }
 
 .half video {
   width: 50%;
   display: block;
+  object-fit: contain;
 }
 
 .half iframe{
   width: 50%;
   display: block;
+  object-fit: contain;
 }
 
 .third {
