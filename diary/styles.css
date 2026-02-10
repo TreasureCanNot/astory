@@ -989,6 +989,20 @@
   display: block;
 }
 
+.sixth {
+  display: flex;
+}
+
+.sixth img {
+  width: 16.66666666666666666666666666666666666%;
+  object-fit:contain;
+  display: block;
+}
+.sixth video {
+  width: 66666666666666666666666666666666666%;
+  display: block;
+}
+
 @media (max-width: 768px) {
   /*
   .oneth {
