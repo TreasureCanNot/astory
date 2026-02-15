@@ -13,6 +13,21 @@
   text-decoration: wavy;
 }
 
+.pauli{
+  background-color: #e69d0d;
+  color: white;
+  border-top: 7px dotted #b22d48;
+  border-bottom: 7px dotted #b22d48;
+  margin-left: -9px;
+  margin-right: -9px;
+  padding: 9px;
+}
+
+.paili i {
+  font-size: 18.7px;
+  text-decoration: wavy;
+}
+
 
 
 .box{
@@ -1145,6 +1160,28 @@
   color: rgb(210, 201, 149);
 }
 
+.saybox-container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.saybox-container .saybox{
+  width: 50%;
+}
+
+.saybox{
+  border: 9px double rgb(210, 201, 149);
+  background-color: rgb(75, 58, 33);
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  color: rgb(210, 201, 149);
+  box-sizing: border-box;
+}
+
 .redbord{
   border: 9px double rgb(255, 55, 55) !important;
 }
@@ -1215,6 +1252,38 @@
   font-size: 45px;
 }
 
+.saycontain{
+  width: 100%;
+}
+
+.saybar{
+  background-color: #fac37d;
+  color: #000000;
+  width:50%;
+  height: 190px;
+  border: 8px dashed #fac37d;
+  font-size: 20px;
+  font-family:'Times New Roman', Times, serif
+}
+.saysend{
+  font-size: 39px;
+  background-color: #ffecc0;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.saysend:hover{
+  font-size: 39px;
+  background-color: #ffc0e1;
+  border: 2px solid #dca5ff;
+}
+.saysend:active{
+  font-size: 39px;
+  background-color: #dca5ff;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+
+
 @media (max-width: 768px) {
   .only-phones {
     display: block;
@@ -1224,6 +1293,15 @@
   }
   .wordtog{
   font-size: 20px;
+  }
+  .saybar{
+    background-color: #fac37d;
+    color: #000000;
+    width:90%;
+    height: 190px;
+    border: 8px dashed #fac37d;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif
   }
 
   .only-computers {

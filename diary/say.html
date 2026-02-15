@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpg" href="img/awesome.jpg">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>after/say</title>   
+    <header class="header" >
+      <div style="height: 5px;" class="only-computers"></div>
+      <br class="only-phones">
+      <button id="toggleButton" onclick="controlPad()">Hide</button>
+      <div id="navContainer" class="moved-navcontainer">
+        <nav class="controlP">
+          <b>Control Pad</b>
+          <br>
+          <br>
+          <a class="ni" href="after.html">After</a>
+          <a class="ni" href="page1.html">Timothy's Diary</a>
+          <a class="ni" href="individuals.html">Individuals</a>
+          <a class="ni" href="voiceBag.html">voiceBag</a>
+          <a class="ni" href="say.html">say</a>
+        </nav>
+      </div>
+    </header>
+    <style>
+        .saytext{
+            width: 50%;
+        }
+        @media (max-width: 768px){
+          .saytext{
+            width: 90%;
+          }
+          }
+    </style>
+  </head>
+  <body style="display: flex; flex-wrap: wrap; border: 19px rgb(205, 136, 255); border-style: double; background-color: rgb(255, 222, 203);">
+    <center>
+        <h1 style="font-family: Arial, Helvetica, sans-serif;">Tell me something!!!</h1>
+        <p style="font-family: Arial, Helvetica, sans-serif;font-size: 19px;" class="saytext">Through the TEXT-BOX below, you can send me an anonymous message. Click the "Say" button to Send. I will probably publish my response in this very same page once I see it.</p>
+    </center>
+    <form
+    action="https://formspree.io/f/mdalgbzn"
+    method="POST"
+    class="saycontain"
+    >
+        <center>
+            <label>
+                <textarea  class= "saybar" name="message"></textarea>
+            </label>
+        </center>
+        <br>
+        <center>
+            <button class="saysend" type="submit">Say</button>
+        </center>
+    </form>
+    <br>
+    <div style="padding: 10px;" class="saybox-container">
+        <div class="saybox" id="Abstain">
+            <p><b>Abstain</b></p>
+            <p class="hidden definition">To hinder; to withhold.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        
+        <div class="saybox" id="Abstain">
+            <p><b>Abstain</b></p>
+            <p class="hidden definition">To hinder; to withhold.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+        
+        <div class="saybox" id="Abstain">
+            <p><b>Abstain</b></p>
+            <p class="hidden definition">To hinder; to withhold.</p>
+            <button class="wordtog">Reveal</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </body>
+  <script src="script.js"></script>
+</html>
