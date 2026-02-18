@@ -1160,28 +1160,6 @@
   color: rgb(210, 201, 149);
 }
 
-.saybox-container{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0;
-}
-
-.saybox-container .saybox{
-  width: 50%;
-}
-
-.saybox{
-  border: 9px double rgb(210, 201, 149);
-  background-color: rgb(75, 58, 33);
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-top: 0px;
-  color: rgb(210, 201, 149);
-  box-sizing: border-box;
-}
-
 .redbord{
   border: 9px double rgb(255, 55, 55) !important;
 }
@@ -1243,6 +1221,43 @@
   background-color: #56889e;
 }
 
+
+.connective .wordbox{
+  border: 9px double rgb(58, 79, 81);
+  background-color: rgb(0, 0, 0);
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  color: rgb(255, 255, 255);
+}
+
+.connective .wordtog{
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #000000;
+}
+
+.connective .wordtog:hover{
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  padding: 5px;
+  color: black;
+  background-color: #ffffff;
+}
+
+.connective .wordtog:active{
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  padding: 5px;
+  color: white;
+  background-color: #000000;
+}
+
 .searchbar{
   background-color: brown;
   color: #8adbd0;
@@ -1252,16 +1267,72 @@
   font-size: 45px;
 }
 
+.saytitle{
+  background-color: #ffecc0;
+  border: 10px solid #ffecc0;
+  border-radius: 10px;
+  padding: 5px;
+  color: rgb(168, 46, 255);
+  display: inline-block;
+  font-size: 50px;
+}
+
+.sayingstitle{
+  background-color: #b22d48;
+  border: 10px solid #b22d48;
+  border-radius: 10px;
+  padding: 5px;
+  color: #ffecc0;
+  display: inline-block;
+  font-size: 50px;
+}
+
+.saytext{
+  color: #b22d48;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+}
+
+.saybox-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.saybox-container .saybox{
+}
+
+.saybox{
+  border: 9px double #b22d48;
+  background:linear-gradient(#ff00003c), url("other/antipapy.png");
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  color: #ffe7b0;
+  box-sizing: border-box;
+}
+
+
 .saycontain{
   width: 100%;
 }
 
+.saytext{
+  text-align: center;
+}
+
 .saybar{
-  background-color: #fac37d;
+  background:linear-gradient(#ffecc09f, #ffecc09f), url("other/papy.jpg");
   color: #000000;
   width:50%;
   height: 190px;
-  border: 8px dashed #fac37d;
+  border: 8px double #fac37d;
   font-size: 20px;
   font-family:'Times New Roman', Times, serif
 }
@@ -1273,13 +1344,15 @@
 
 .saysend:hover{
   font-size: 39px;
-  background-color: #ffc0e1;
-  border: 2px solid #dca5ff;
+  background-color: #b22d48;
+  color: #ffecc0;
+  border: 2px solid rgb(128, 35, 194);
 }
 .saysend:active{
   font-size: 39px;
-  background-color: #dca5ff;
-  border: 2px solid rgb(255, 255, 255);
+  color: #ffecc0;
+  background-color: rgb(128, 35, 194);
+  border: 2px solid #b22d48;
 }
 
 
@@ -1290,6 +1363,12 @@
   }
   .wordbox{
     width: 100%;
+  }
+  .saybox-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .wordtog{
   font-size: 20px;
