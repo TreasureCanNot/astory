@@ -1302,6 +1302,7 @@
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
+  align-items: start;   /* ← ADD THIS */
 }
 
 .saybox-container .saybox{
@@ -1309,7 +1310,7 @@
 
 .saybox{
   border: 9px double #b22d48;
-  background:linear-gradient(#ff00003c), url("other/antipapy.png");
+  background:linear-gradient(#81191967), url("other/antipapy.png");
   padding-left: 10px;
   padding-bottom: 10px;
   padding-right: 10px;
