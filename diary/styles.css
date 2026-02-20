@@ -1319,6 +1319,10 @@
   box-sizing: border-box;
 }
 
+.saybox b{
+ color: #ffeaee;
+}
+
 
 .saycontain{
   width: 100%;
@@ -1340,7 +1344,7 @@
 .saysend{
   font-size: 39px;
   background-color: #ffecc0;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid #ffeaee;
 }
 
 .saysend:hover{
@@ -1351,7 +1355,7 @@
 }
 .saysend:active{
   font-size: 39px;
-  color: #ffecc0;
+  color: #ffeaee;
   background-color: rgb(128, 35, 194);
   border: 2px solid #b22d48;
 }
