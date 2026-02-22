@@ -199,6 +199,7 @@
   box-sizing: border-box;
   overflow: auto;
   background-color: rgba(245, 245, 220, 0.3);
+  font-size: larger  ;
 }
 
 @media (max-width: 768px) {
