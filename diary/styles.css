@@ -6,6 +6,7 @@
   margin-left: -9px;
   margin-right: -9px;
   padding: 9px;
+  overflow:hidden;
 }
 
 .tube i {
@@ -252,6 +253,8 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  margin: 0px;
+  overflow-x: none;
 }
 @media (max-width: 768px ) {
   .chapter{
@@ -296,11 +299,12 @@
   height: 0px;
   opacity: 0;
   transition: 0.1s linear;
-  background-color: rgb(158, 158, 158);
+  
+}
+/*background-color: rgb(158, 158, 158);
   border: 2px solid black;
   text-decoration: none;
-  color: black;
-}
+  color: black;*/
 @media (max-width: 768px){
   .NOni {
     font-size: 30px;
@@ -397,7 +401,7 @@
   color: black;
   padding: 7px;
   padding-top: 2%;
-  width: 350px;
+  width: 360px;
   transition: 0.1s linear;
 }
 
@@ -463,6 +467,10 @@
   display: none;
 }
 
+.invisible{
+  opacity: 0;
+}
+
 .selection-table{
   transition: 0.1s linear;
 }
@@ -513,6 +521,12 @@
   border:12px solid white;
   border-style:ridge groove groove ridge ;
   background-color: rgba(170,171,168,255);
+  float: left;
+  margin-right: 19px;
+}
+
+.idf{
+  float: none !important;;
 }
 
 .rock {
@@ -1041,7 +1055,13 @@
   */
   
   .fullphone{
-    width: 100%;
+    width: 100% !important;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .halfphone{
+    
+    width: 50%;
     height: auto;
   }
   .fotn30{
@@ -1369,6 +1389,10 @@
   }
   .wordbox{
     width: 100%;
+  }
+  .img{
+    width: 50%;
+    overflow: scroll;
   }
   .saybox-container{
     width: 100%;

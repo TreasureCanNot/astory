@@ -43,10 +43,22 @@ function chapterSelect() {
         setTimeout(function () {
             selectionTable.classList.remove('vanished');
         }, 100)
+        setTimeout(function () {
+            selectionTable.classList.remove('invisible');
+        }, 130)
     } else {
-        selectionTable.classList.remove('vanished')
         selectionTable.classList.add('vanished')
+        selectionTable.classList.add('invisible')
     }
+
+    /*
+    if (selectionTable.classList.contains('vanished')) {
+        setTimeout(function () {
+            selectionTable.classList.remove('invisible');
+        }, 1000)
+    } else {
+        selectionTable.classList.add('invisible')
+    }*/
 
     if (pad.classList.contains('controlP')) {
         pad.classList.remove('controlP')
