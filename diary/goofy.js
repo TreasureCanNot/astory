@@ -120,7 +120,3 @@ function chapterSelect() {
     });
 }
 
-function boron(){
-    let moron = document.getElementById('moron')
-    if()
-}
