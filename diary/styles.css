@@ -1104,6 +1104,61 @@
 .neatherlavasauce i{
   color: rgb(255, 224, 87);
 }
+
+.stupiditymeter{
+  color:rgb(255, 186, 237);
+  background-color: rgb(79, 0, 0);
+  padding: 10px;
+  border-radius: 22px;
+  display: inline-block;
+}
+.stupiditymeter i{
+  color: rgb(255, 186, 237);
+}
+
+.vial-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vial-label {
+  color: rgb(255, 186, 237);
+  white-space: nowrap;
+}
+
+.vial-track {
+  width: 900px;
+  height: 24px;
+  background: #ccc;
+  border-radius: 20px;
+  /*overflow: hidden;*/
+  border: 2px solid #999;
+}
+
+.vial-fill { /* ← change this to adjust fill level */
+  height: 100%;
+  background: #e75480;
+  float: left;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.vial-fill-new {
+  float: left;
+  height: 100%;
+  background: #e75480;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes flicker {
+  0%   { background: #e75480; }
+  100%  { background: white; }
+}
+
+
+
 .achieve{
   color:black;
   background-color: #17c60d;
@@ -1175,19 +1230,33 @@
   color: rgb(0, 0, 0);
   display: inline-block;
 }
+#glossary-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px; /* Slightly larger gap */
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto; /* Center the container */
+  box-sizing: border-box;
+}
 
-.wordbox{
+
+
+.regular {
   border: 9px double rgb(210, 201, 149);
   background-color: rgb(75, 58, 33);
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-top: 0px;
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+  padding: 0 10px 10px 10px; /* top:0, right:10, bottom:10, left:10 */
   color: rgb(210, 201, 149);
+  width: 100% !important;
+  margin: 0px !important;
+  box-sizing: border-box;
+  word-wrap: break-word; /* Break long words */
+  overflow: hidden; /* Prevent content from spilling out */
+  height: fit-content; /* Let height adjust to content */
+  max-width: 100%; /* Prevent going off screen */
 }
+
+
 
 .redbord{
   border: 9px double rgb(255, 55, 55) !important;
@@ -1216,16 +1285,18 @@
   display: none;
 }
 
-.QuackWords .wordbox{
+.QuackWords{
   border: 9px double rgb(205, 186, 78);
   background-color: rgb(71, 75, 33);
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-top: 0px;
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+  padding: 0 10px 10px 10px; /* top:0, right:10, bottom:10, left:10 */
+  color: rgb(210, 201, 149);
+  width: 100% !important;
+  margin: 0px !important;
+  box-sizing: border-box;
+  word-wrap: break-word; /* Break long words */
+  overflow: hidden; /* Prevent content from spilling out */
+  height: fit-content; /* Let height adjust to content */
+  max-width: 100%; /* Prevent going off screen */
   color: rgb(149, 184, 210);
 }
 
@@ -1251,16 +1322,18 @@
 }
 
 
-.connective .wordbox{
+.connective {
   border: 9px double rgb(58, 79, 81);
   background-color: rgb(0, 0, 0);
-  padding-left: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
-  padding-top: 0px;
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+  padding: 0 10px 10px 10px; /* top:0, right:10, bottom:10, left:10 */
+  color: rgb(210, 201, 149);
+  width: 100% !important;
+  margin: 0px !important;
+  box-sizing: border-box;
+  word-wrap: break-word; /* Break long words */
+  overflow: hidden; /* Prevent content from spilling out */
+  height: fit-content; /* Let height adjust to content */
+  max-width: 100%; /* Prevent going off screen */
   color: rgb(255, 255, 255);
 }
 
@@ -1294,6 +1367,11 @@
   height: 50px;
   border: 3px solid rgb(255, 124, 124);
   font-size: 45px;
+}
+@media (max-width: 768px) {
+  #glossary-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .saytitle{

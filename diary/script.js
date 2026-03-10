@@ -156,3 +156,5 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 
+//The whole fucking words issue
+
