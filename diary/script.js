@@ -157,4 +157,119 @@ for (var i = 0; i < buttons.length; i++) {
 
 
 //The whole fucking words issue
+document.addEventListener('DOMContentLoaded', function() {
+    loadGlossary();
+  });
+  
+  function loadGlossary() {
+    fetch('words.json')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        var container = document.getElementById('glossary-container');
+        container.innerHTML = '';
+        
+        data.forEach(function(item) {
+          if (!item.definitions) { console.log('BROKEN ENTRY:', item); return; }
+  
+          var wordBox = document.createElement('div');
+          wordBox.classList.add('wordbox');
+          if (item.category) {
+          wordBox.classList.add(item.category);
+  }
+          wordBox.id = item.word;
+          
+          var title = document.createElement('p');
+          var bold = document.createElement('b');
+          bold.textContent = item.word;
+          title.appendChild(bold);
+          wordBox.appendChild(title);
+          
+          item.definitions.forEach(function(def) {
+              var defPara = document.createElement('p');
+              defPara.classList.add('hidden', 'definition');
+              if (def.type === 'example') {
+                defPara.innerHTML = '<i>' + def.text + '</i>';
+              } else {
+                defPara.innerHTML = def.text;
+              }
+              wordBox.appendChild(defPara);
+            });
+          
+          var button = document.createElement('button');
+          button.classList.add('wordtog');
+          button.textContent = 'Reveal';
+          wordBox.appendChild(button);
+          
+          container.appendChild(wordBox);
+        });
+        
+        initializeRevealButtons();
+        initializeSearch();
+        handleUrlHash();
+      })
+      .catch(function(error) {
+        console.error('Error loading glossary:', error);
+      });
+  }
+  
+  function initializeRevealButtons() {
+    var container = document.getElementById('glossary-container');
+    container.addEventListener('click', function(event) {
+      if (event.target.classList.contains('wordtog')) {
+        var box = event.target.closest('.wordbox');
+        var definitions = box.querySelectorAll('.definition');
+        var isHidden = definitions[0] && definitions[0].classList.contains('hidden');
+        
+        definitions.forEach(function(def) {
+          def.classList.toggle('hidden');
+        });
+        event.target.textContent = isHidden ? 'Hide' : 'Reveal';
+      }
+    });
+  }
+  
+  function initializeSearch() {
+    var searchInput = document.getElementById('searchbar');
+    var wordBoxes = document.querySelectorAll('.wordbox');
+  
+    searchInput.addEventListener('input', function() {
+      var query = searchInput.value.trim().toLowerCase();
+  
+      wordBoxes.forEach(function(box) {
+        var bold = box.querySelector('b');
+        var word = bold ? bold.textContent.trim().toLowerCase() : '';
+  
+        if (query === '' || word.includes(query)) {
+          box.style.display = '';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+    });
+  }
+  
+  function handleUrlHash() {
+    if (location.hash) {
+      var targetId = location.hash.substring(1);
+      var box = document.getElementById(targetId);
+  
+      if (!box) return;
+  
+      box.classList.add('redbord');
+  
+      var definitions = box.getElementsByClassName('definition');
+      var button = box.getElementsByClassName('wordtog')[0];
+  
+      for (var i = 0; i < definitions.length; i++) {
+        definitions[i].classList.remove('hidden');
+      }
+  
+      if (button) {
+        button.textContent = 'Hide';
+      }
+    }
+  }
+  
 
