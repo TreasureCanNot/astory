@@ -15,7 +15,7 @@
         "type": "example"
       }
     ],
-    "category": "connective"
+    "category": "regular"
   },
   {
     "word": "Aggrieve",
@@ -33,7 +33,7 @@
         "type": "example"
       }
     ],
-    "category": "QuackWords"
+    "category": "regular"
   },
   {
     "word": "Abstain",
