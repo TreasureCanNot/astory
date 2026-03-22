@@ -1,3 +1,87 @@
+.news{
+  /*background-image: radial-gradient(rgb(255, 182, 182), rgb(255, 182, 182), rgb(255, 182, 182), #920f0f);*/
+  background:
+  linear-gradient(to right, #800000, transparent 5%, transparent 95%, #800000),
+  linear-gradient(to bottom, #800000, transparent 5%, transparent 95%, #800000),
+  rgb(255, 182, 182);
+  color: black;
+  border-top: 13px dotted #920f0f;
+  border-bottom: 13px dotted #920f0f;
+  margin-left: -9px;
+  margin-right: -9px;
+  margin-bottom: 9px;
+  padding: 80px;
+  overflow:hidden;
+}
+
+.news i {
+  font-size: 25px;
+  text-decoration: wavy;
+  color: #920f0f;
+}
+
+.news h2 {
+  text-decoration: wavy;
+  color: #920f0f;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .news{
+    background:
+  linear-gradient(to right, #800000, transparent 2%, transparent 98%, #800000),
+  linear-gradient(to bottom, #800000, transparent 2%, transparent 98%, #800000),
+  rgb(255, 182, 182);
+    
+    padding: 9px;
+  }
+}
+
+.dream{
+  background-image: linear-gradient(#ffaeeb,#bcdbff);
+  color: black;
+  border-top: 13px dashed #1f007b;
+  border-bottom: 13px dashed #1f007b;
+  margin-left: -9px;
+  margin-right: -9px;
+  margin-bottom: 9px;
+  padding: 9px;
+  overflow:hidden;
+}
+
+.dream i {
+  font-size: 18.7px;
+  text-decoration: wavy;
+}
+
+
+
+.info{
+  background-color:rgb(197, 197, 197);
+  margin:-9px;
+  padding: 9px;
+}
+.info i {
+  font-size: 18.7px;
+  color: black;
+  text-decoration:wavy;
+}
+.data{
+  color:rgb(0, 0, 0);
+  background-color: rgb(197, 197, 197);
+  padding: 10px;
+  border-radius: 22px;
+  display: inline-block;
+}
+.data i{
+  font-size: 18.7px;
+  color: black;
+  text-decoration:wavy;
+}
+
+
 .tube{
   background-color: #0060bf;
   color: white;
@@ -531,6 +615,7 @@
   background-color: rgba(170,171,168,255);
   float: left;
   margin-right: 19px;
+  box-sizing: border-box;
 }
 
 .idf{
@@ -544,28 +629,6 @@
   color:white;
 }
 
-.info{
-  background-color:rgb(197, 197, 197);
-  margin:-9px;
-  padding: 9px;
-}
-.info i {
-  font-size: 18.7px;
-  color: black;
-  text-decoration:wavy;
-}
-.data{
-  color:rgb(0, 0, 0);
-  background-color: rgb(197, 197, 197);
-  padding: 10px;
-  border-radius: 22px;
-  display: inline-block;
-}
-.data i{
-  font-size: 18.7px;
-  color: black;
-  text-decoration:wavy;
-}
 .title{
   color:rgb(0, 0, 0);
   background-color: rgb(197, 197, 197);
@@ -1105,16 +1168,49 @@
   color: rgb(255, 224, 87);
 }
 
-.stupiditymeter{
+.stupidityCount{
   color:rgb(255, 186, 237);
+  background-color: rgb(79, 0, 0);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  border-radius: 22px;
+  display: inline-block;
+  width: 50%;
+  float: left;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .stupidityCount{
+    width: 100%;
+  }
+}
+
+.stupidityCount span{
+  animation: flickerText 0.1s infinite alternate;
+}
+
+@keyframes flickerText {
+  0%   { color: #e75480; }
+  100%  { color: white; }
+}
+
+
+.stupiditymeter {
+  color: rgb(255, 186, 237);
   background-color: rgb(79, 0, 0);
   padding: 10px;
   border-radius: 22px;
   display: inline-block;
+  margin: 0 auto;
+  margin-top: 19px;
+  width: 100%;
+  box-sizing: border-box;
 }
-.stupiditymeter i{
-  color: rgb(255, 186, 237);
-}
+
+.stupiditymeter i { color: rgb(255, 186, 237); }
 
 .vial-row {
   display: flex;
@@ -1125,23 +1221,24 @@
 .vial-label {
   color: rgb(255, 186, 237);
   white-space: nowrap;
+  font-size: 30px;
 }
 
 .vial-track {
-  width: 900px;
-  height: 24px;
-  background: #ccc;
+  width: 100%;
+  height: 30px;
+  background: #3a0000;
   border-radius: 20px;
-  /*overflow: hidden;*/
-  border: 2px solid #999;
+  border: 2px solid #660000;
+  overflow: hidden;
 }
 
-.vial-fill { /* ← change this to adjust fill level */
+.vial-fill {
   height: 100%;
-  background: #e75480;
-  float: left;
+  background: linear-gradient(to right, #920f0f, #e75480, #ffb3d9);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  transition: width 0.6s ease;
 }
 .vial-fill-new {
   float: left;
@@ -1156,6 +1253,8 @@
   0%   { background: #e75480; }
   100%  { background: white; }
 }
+
+
 
 
 
@@ -1358,6 +1457,93 @@
   padding: 5px;
   color: white;
   background-color: #000000;
+}
+
+.use-full{
+  border: 9px groove #1ed760;
+  background-color: #fdaa5c;
+  padding: 0 10px 10px 10px; /* top:0, right:10, bottom:10, left:10 */
+  width: 100% !important;
+  margin: 0px !important;
+  box-sizing: border-box;
+  word-wrap: break-word; /* Break long words */
+  overflow: hidden; /* Prevent content from spilling out */
+  height: fit-content; /* Let height adjust to content */
+  max-width: 100%; /* Prevent going off screen */
+  color: #5a0024;
+  text-shadow: #1e4342;
+}
+
+.use-full b{
+ color: #5a0024;
+}
+
+.use-full .wordtog{
+  border: 2px dotted #1ed760;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #12833a;
+  color: #fdaa5c;
+}
+
+.use-full .wordtog:hover{
+  border: 2px dotted #00670f;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #1ed760;
+  color: #fdaa5c;
+}
+
+.use-full .wordtog:active{
+  border: 4px double #fdaa5c;
+  margin: -2px;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #5a0024;
+  color: #1ed760;
+}
+
+.HOMESTUCK{
+  border: 9px solid #c6c6c6;
+  background-color: #eeeeee;
+  padding: 0 10px 10px 10px; /* top:0, right:10, bottom:10, left:10 */
+  width: 100% !important;
+  margin: 0px !important;
+  box-sizing: border-box;
+  word-wrap: break-word; /* Break long words */
+  overflow: hidden; /* Prevent content from spilling out */
+  height: fit-content; /* Let height adjust to content */
+  max-width: 100%; /* Prevent going off screen */
+  color: black;
+  text-shadow: #1e4342;
+}
+
+.HOMESTUCK b{
+ color: #0000ee;
+}
+
+.HOMESTUCK .wordtog{
+  border: 2px solid #a21bae;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #c764ff;
+  color: #000000;
+}
+
+.HOMESTUCK .wordtog:hover{
+  border: 2px solid #ffe034;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #f3a20c;
+  color: white;
+}
+
+.HOMESTUCK .wordtog:active{
+  border: 2px solid #29ffff;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #35bfff;
+  color: white;
 }
 
 .searchbar{
