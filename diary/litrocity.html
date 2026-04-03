@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="litrocity.css">
+    <link rel="icon" type="image/jpg" href="img/awesome.jpg">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>after/voiceBag — Litrocity</title>
+    <header class="header">
+      <div style="height: 5px;" class="only-computers"></div>
+      <br class="only-phones">
+      <button id="toggleButton" onclick="controlPad()">Hide</button>
+      <div id="navContainer" class="moved-navcontainer">
+        <nav class="controlP">
+          <b>Control Pad</b>
+          <br><br>
+          <a class="ni" href="after.html">After</a>
+          <a class="ni" href="page1.html">Timothy's Diary</a>
+          <a class="ni" href="individuals.html">Individuals</a>
+          <a class="ni" href="voiceBag.html">voiceBag</a>
+          <a class="ni" href="say.html">say</a>
+        </nav>
+      </div>
+    </header>
+  </head>
+  <body class="lit-body">
+
+    <!-- TITLE -->
+    <div class="lit-title-section">
+      <h1 class="lit-main-title">LITROUS ATROCITY</h1>
+      <p class="lit-subtitle">Calculate the LITROCITY of any given event</p>
+      <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <div class="stupiditymeter">
+          <div class="vial-row">
+            <span class="vial-label"><b>Litro'vial</b></span>
+            <div class="vial-track">
+              <div class="vial-fill" id="vialFill" style="width: 0%;"></div>
+            </div>
+            <span class="vial-label" id="vialTotal" style="min-width: 120px; text-align:right;">0.000 L</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION I: PAIN -->
+    
+    
+    <h1 class="lit-sec-title">PAIN GAME</h1>
+
+    <div class="lit-fields pain-zone">
+      <div class="lit-field lit-field-full" id="painEvents"></div>
+      <div class="lit-field lit-field-full">
+        <button class="lit-add-btn pain-add-btn" onclick="addPainEvent()">+ Add Pain Event</button>
+      </div>
+      <div class="lit-field lit-field-wide"></div>
+      <div class="lit-field lit-result-box">
+        <span class="lit-sec-result" id="painResult">—</span>
+      </div>
+    </div>
+
+    <!-- SECTION I.5: PSYCHOLOGICAL -->
+    <div class="lit-fields psych-zone">
+      <div class="lit-field lit-field-full">
+        <p class="lit-explainer-block psych-block">Each entry has its own initial litrocity (hours × rank × 4.109), its own recovery phases, and its own people count. q from −1.6 (worsening) to +1.6 (fast recovery). Neutral ≈ 1.2.</p>
+      </div>
+      <div class="lit-field lit-field-full" id="psychEvents"></div>
+      <div class="lit-field lit-field-full">
+        <button class="lit-add-btn psych-add-btn" onclick="addPsychEvent()">+ Add Psychological Event</button>
+      </div>
+      <div class="lit-field lit-field-wide"></div>
+      <div class="lit-result-box">
+        <span class="lit-sec-result" id="psychResult">—</span>
+      </div>
+    </div>
+
+    <!-- SECTION II: LOSS -->
+    
+    <h1 class="lit-sec-title">Loss</h1>
+
+    <h2 class="sub-title">Losses</h2>
+    <div class="lit-fields loss-zone">
+
+      <!-- Freedom Loss -->
+      <div class="lit-field">
+        <button class="lit-add-btn loss-add-btn" onclick="addFreedomLossEntry()">+ Freedom Loss</button>
+        <div id="freedomLossEvents"></div>
+      </div>
+
+      <!-- Lethal Loss -->
+      <div class="lit-field">
+        <button class="lit-add-btn loss-add-btn" onclick="addLethalLossEntry()">+ Lethal Loss</button>
+        <div id="lethalLossEvents"></div>
+      </div>
+
+      <!-- Enthalpic Loss -->
+      <div class="lit-field">
+        <button class="lit-add-btn loss-add-btn" onclick="addEnthalpicLossEntry()">+ Enthalpic Loss</button>
+        <div id="enthalpicLossEvents"></div>
+      </div>
+
+      <!-- Other Loss -->
+      <div class="lit-field">
+        <button class="lit-add-btn loss-add-btn" onclick="addAdditionalLoss()">+ Other Loss</button>
+        <div id="additionalLossEvents"></div>
+      </div>
+
+      <div class="lit-field lit-field-wide"></div>
+      <div class="lit-result-box" style="border-width:3px;">
+        <span class="lit-sec-result" id="lossResult">—</span>
+      </div>
+    </div>
+
+
+    <!-- SECTION III: SPREAD DREAD
+    <div class="lit-result-box">
+      <span class="lit-sec-result" id="additionalLossResult">—</span>
+    </div> -->
+    
+    <!-- SUBTOTAL before spread -->
+    <div class="lit-fields" style="background: rgba(0,0,0,0.03);">
+      <div class="lit-field lit-field-wide"></div>
+      <div class="lit-result-box lit-subtotal-box">
+        <span class="lit-sec-result" id="subtotalResult">—</span>
+      </div>
+    </div>
+
+    <h1 class="lit-sec-title">S P R E A D</h1>
+
+    <div class="lit-fields spread-zone">
+      <div class="lit-field lit-field-full">
+        <p class="lit-explainer-block spread-block">To measure how much litrocity was spread from a given event</p>
+      </div>
+      <div class="lit-field lit-field-full" id="spreadEvents"></div>
+      <div class="lit-field lit-field-full">
+        <button class="lit-add-btn spread-add-btn" onclick="addSpreadEvent()">+ Add Event</button>
+      </div>
+      <div class="lit-spread-minmax">
+        <div class="lit-inline-result spread-result">
+          <span class="lit-result-label">MAX</span>
+          <span class="lit-result-value" id="spreadMax">—</span>
+        </div>
+        <div class="lit-inline-result spread-result">
+          <span class="lit-result-label">MIN</span>
+          <span class="lit-result-value" id="spreadMin">—</span>
+        </div>
+      <div class="lit-result-box">
+        <span class="lit-sec-result" id="spreadAvg">—</span>
+      </div>
+      </div>
+      
+    </div>
+
+    <!-- FINAL TOTAL -->
+    <div class="lit-section-divider final-divider">
+      <span class="lit-sec-num">∑</span>
+      <span class="lit-sec-title final-title">TOTAL LITROCITY</span>
+    </div>
+
+    <div class="lit-final-zone">
+      <div class="lit-final-row"><span>Physical Pain</span><span id="finalPain">—</span></div>
+      <div class="lit-final-row"><span>Psychological</span><span id="finalPsych">—</span></div>
+      <div class="lit-final-row"><span>Loss</span><span id="finalLoss">—</span></div>
+      <div class="lit-final-row"><span>Spread (avg)</span><span id="finalSpread">—</span></div>
+      <div class="lit-final-row lit-final-total-row"><span>TOTAL</span><span id="finalTotal">—</span></div>
+    </div>
+
+    <div style="height:80px"></div>
+
+    <script src="script.js"></script>
+    <script src="litrocity.js"></script>
+  </body>
+</html>
