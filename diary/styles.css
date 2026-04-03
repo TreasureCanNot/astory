@@ -1260,6 +1260,15 @@
   100%  { background: white; }
 }
 
+
+.litrocity{
+  background-color: #920f0f;
+  border: 3px solid #920f0f;
+  border-radius: 10px;
+  padding: 5px;
+  color: #ffb3d9;
+  display: inline-block;
+}
 /* ─── LITROCITY CALCULATOR ─────────────────────────────────── */
 
 
