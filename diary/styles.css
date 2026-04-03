@@ -1261,13 +1261,37 @@
 }
 
 
-.litrocity{
+.litrocity {
   background-color: #920f0f;
-  border: 3px solid #920f0f;
-  border-radius: 10px;
-  padding: 5px;
+  border: 3px solid #ffb3d9;
+  border-radius: 8px;
+  padding: 14px 28px;
+  display: block; /* makes the link fill the entire div */
+  box-shadow: 4px 4px 0px #ffb3d9;
+  transition: 0.15s linear;
   color: #ffb3d9;
-  display: inline-block;
+  text-decoration: none;
+}
+
+.litrocity:hover {
+  box-shadow: 2px 2px 0px #ffb3d9;
+  transform: translate(2px, 2px);
+}
+
+.litrocity:active {
+  box-shadow: none;
+  transform: translate(4px, 4px);
+}
+
+.litrocity h1 {
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.litrocity a {
+  color: #ffb3d9;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 /* ─── LITROCITY CALCULATOR ─────────────────────────────────── */
 
@@ -1280,20 +1304,6 @@
   padding-left: 50px;
   margin: 16px 0 0;
 }
-
-.stupiditymeter {
-  color: rgb(255, 186, 237);
-  background-color: rgb(79, 0, 0);
-  padding: 10px;
-  border-radius: 22px;
-  display: inline-block;
-  margin: 0 auto;
-  margin-top: 19px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.stupiditymeter i { color: rgb(255, 186, 237); }
 
 .vial-row {
   display: flex;
