@@ -920,6 +920,173 @@ function toggleLoss(sectionId, btn) {
   }
 }
 
+// ─── PDF REPORT GENERATOR ─────────────────────────────────────────────
+// ─── PDF REPORT GENERATOR (High-Level + Detailed Events) ─────────────
+function generateLitrocityReport() {
+  const eventName = prompt("Name event!", "Untitled Event");
+  if (eventName === null) return; // user clicked Cancel
 
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  let y = 20;
 
+  // ── TITLE ──
+  doc.setFont("helvetica", "bold");
+  doc.setFontSize(22);
+  doc.text("LITROUS ATROCITY REPORT", 105, y, { align: "center" });
+  y += 12;
+  doc.setFontSize(16);
+  doc.text(eventName, 105, y, { align: "center" });
+  y += 18;
 
+  doc.setFont("helvetica", "normal");
+  doc.setFontSize(11);
+  doc.text(`Generated: ${new Date().toLocaleString()}`, 20, y);
+  y += 25;
+
+  // ── 1. PHYSICAL PAIN ──
+  doc.setFontSize(18);
+  doc.setFont("helvetica", "bold");
+  doc.text("1. PHYSICAL PAIN", 20, y);
+  y += 12;
+  doc.setFontSize(13);
+  doc.text(`Total: ${document.getElementById('painResult').textContent}`, 20, y);
+  y += 15;
+
+  painEvents.forEach((ev, i) => {
+    const hours = parseFloat(ev.hours) || 0;
+    const rank = parseFloat(ev.rank) || 0;
+    const people = parseFloat(ev.people) || 1;
+    const contrib = hours * Math.pow(rank, 2) * FAINT_LITRES_PER_HOUR * people;
+    doc.setFontSize(11);
+    doc.text(`Event ${i+1}: ${hours} hrs × rank²(${rank.toFixed(3)}) × ${people} people = ${contrib.toFixed(6)} L`, 25, y);
+    y += 9;
+    if (y > 270) { doc.addPage(); y = 20; }
+  });
+  y += 12;
+
+  // ── 2. PSYCHOLOGICAL ──
+  doc.setFontSize(18);
+  doc.setFont("helvetica", "bold");
+  doc.text("2. PSYCHOLOGICAL DAMAGE", 20, y);
+  y += 12;
+  doc.setFontSize(13);
+  doc.text(`Total: ${document.getElementById('psychResult').textContent}`, 20, y);
+  y += 15;
+
+  psychEvents.forEach((ev, i) => {
+    const rank = parseFloat(ev.rank) || 0;
+    const people = parseFloat(ev.people) || 1;
+    let cur = rank * BABY_LITROCITY;   // initial
+    doc.setFontSize(11);
+    doc.text(`Event ${i+1}: Rank ${rank.toFixed(3)} × ${people} people`, 25, y);
+    y += 9;
+
+    // phases
+    ev.phases.forEach((phase, p) => {
+      const q = parseFloat(phase.q) || 0;
+      const t = parseFloat(phase.t) || 0;
+      if (t > 0) {
+        doc.text(`   Phase ${p+1}: q = ${q.toFixed(2)}, ${t} days`, 35, y);
+        y += 8;
+      }
+    });
+
+    // final per-person value (re-using the same logic as calcPsych)
+    let finalPerPerson = rank * BABY_LITROCITY;
+    ev.phases.forEach(phase => {
+      const q = parseFloat(phase.q) || 0;
+      const t = parseFloat(phase.t) || 0;
+      if (t > 0) finalPerPerson = psychFormula(finalPerPerson, q, t);
+    });
+    finalPerPerson = Math.min(finalPerPerson, 12.327);
+
+    doc.text(`   → Final per person: ${finalPerPerson.toFixed(6)} L × ${people} = ${(finalPerPerson * people).toFixed(6)} L`, 35, y);
+    y += 12;
+    if (y > 270) { doc.addPage(); y = 20; }
+  });
+  y += 12;
+
+  // ── 3. LOSS ──
+  doc.setFontSize(18);
+  doc.setFont("helvetica", "bold");
+  doc.text("3. LOSS", 20, y);
+  y += 12;
+  doc.setFontSize(13);
+  doc.text(`Total: ${document.getElementById('lossResult').textContent}`, 20, y);
+  y += 15;
+
+  // Freedom
+  freedomLosses.forEach((ev, i) => {
+    const days = parseFloat(ev.days) || 0;
+    const val = days * ML_PER_FREEDOM_DAY / 1000;
+    doc.setFontSize(11);
+    doc.text(`Freedom Loss ${i+1}: ${days} days = ${val.toFixed(6)} L`, 25, y);
+    y += 9;
+  });
+  // Lethal
+  lethalLosses.forEach((ev, i) => {
+    const lives = parseFloat(ev.lives) || 0;
+    const val = lives * BABY_LITROCITY;
+    doc.text(`Lethal Loss ${i+1}: ${lives} lives = ${val.toFixed(6)} L`, 25, y);
+    y += 9;
+  });
+  // Enthalpic
+  enthalpicLosses.forEach((ev, i) => {
+    const mj = parseFloat(ev.mj) || 0;
+    const val = mj / MJ_PER_LITRE;
+    doc.text(`Enthalpic Loss ${i+1}: ${mj} MJ = ${val.toFixed(6)} L`, 25, y);
+    y += 9;
+  });
+  // Other
+  additionalLosses.forEach((ev, i) => {
+    const rank = parseFloat(ev.rank) || 0;
+    const amount = parseFloat(ev.amount) || 0;
+    const val = rank * BABY_LITROCITY * amount;
+    doc.text(`Other Loss ${i+1}: rank ${rank.toFixed(3)} × ${amount} = ${val.toFixed(6)} L`, 25, y);
+    y += 9;
+  });
+  y += 12;
+
+  // ── 4. SPREAD ──
+  doc.setFontSize(18);
+  doc.setFont("helvetica", "bold");
+  doc.text("4. SPREAD DREAD", 20, y);
+  y += 12;
+  doc.setFontSize(13);
+  doc.text(`MAX: ${document.getElementById('spreadMax').textContent}`, 20, y);
+  y += 9;
+  doc.text(`MIN: ${document.getElementById('spreadMin').textContent}`, 20, y);
+  y += 9;
+  doc.text(`Average (used in total): ${document.getElementById('spreadAvg').textContent}`, 20, y);
+  y += 18;
+
+  spreadEvents.forEach((ev, i) => {
+    const lit = parseFloat(ev.litrocity) || 0;
+    const sp = parseFloat(ev.spread) || 0;
+    const iMax = parseFloat(ev.initRepMax) || 0;
+    const iMin = parseFloat(ev.initRepMin) || 0;
+    const cMax = parseFloat(ev.repChangeMax) || 0;
+    const cMin = parseFloat(ev.repChangeMin) || 0;
+    const avgMult = ((iMax + iMin) / 2) + ((cMax + cMin) / 2);
+
+    const contrib = (lit * sp * avgMult) / 100;
+
+    doc.setFontSize(11);
+    doc.text(`Event ${i+1}: ${lit.toFixed(6)} L × ${sp} × avg multiplier ${avgMult.toFixed(3)} / 100 = ${contrib.toFixed(6)} L`, 25, y);
+    y += 12;
+    if (y > 270) { doc.addPage(); y = 20; }
+  });
+
+  // ── FINAL TOTAL ──
+  y += 10;
+  doc.setFontSize(20);
+  doc.setFont("helvetica", "bold");
+  doc.text("FINAL TOTAL LITROCITY", 20, y);
+  y += 15;
+  doc.setFontSize(26);
+  doc.text(document.getElementById('finalTotal').textContent, 20, y);
+
+  // Save
+  doc.save(`Litrous_Atrocity_${eventName.replace(/[^a-z0-9]/gi, '_')}.pdf`);
+}
