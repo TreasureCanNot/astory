@@ -2936,16 +2936,6 @@
     "category": "regular"
   },
   {
-    "word": "Ingrating",
-    "definitions": [
-      {
-        "text": "Intended or adopted in order to gain favor",
-        "type": "definition"
-      }
-    ],
-    "category": "regular"
-  },
-  {
     "word": "Aforementioned",
     "definitions": [
       {
@@ -5319,7 +5309,7 @@
     "word": "Ingratiate",
     "definitions": [
       {
-        "text": "To introduce or commend to the favor of another; to bring into favor; to insinuate; -- used reflexively, and followed by with before the person whose favor is sought",
+        "text": "To introduce or commend to the favour of another; to bring into favour; to insinuate; -- used reflexively, and followed by with before the person whose favour is sought",
         "type": "definition"
       },
       {
@@ -5475,7 +5465,7 @@
     "word": "Propitious",
     "definitions": [
       {
-        "text": "Auspicious; advantageous; benevolent, favorable.",
+        "text": "Auspicious; advantageous; benevolent, favourable.",
         "type": "definition"
       },
       {
@@ -5483,7 +5473,7 @@
         "type": "example"
       }
     ],
-    "category": "regular"
+    "category": "HOMESTUCK"
   },
   {
     "word": "Querulous",
@@ -7498,5 +7488,73 @@
       }
     ],
     "category": "HOMESTUCK"
+  },
+  {
+    "word": "Intrimious",
+    "definitions": [
+      {
+        "text": "Disease spread by Caracols",
+        "type": "definition"
+      },
+      {
+        "text": "Daniel is having an intrimious behaviour",
+        "type": "example"
+      },
+      {
+        "text": "\"Cual es la definicion Mono?\"-Timo /  \"Buena pregunta...\" - Mono",
+        "type": "definition"
+      },
+      {
+        "text": "\"Es una palabra de verdad????\"- Mono",
+        "type": "definition"
+      }
+    ],
+    "category": "use-full"
+  },
+  {
+    "word": "Gurriguluos",
+    "definitions": [
+      {
+        "text": "An individual that is islated from other individuals, rainoserronts",
+        "type": "definition"
+      },
+      {
+        "text": "On wednesdays Ethan tends to be a gurriguluos because he like to interact with others",
+        "type": "example"
+      }
+    ],
+    "category": "use-full"
+  },
+  {
+    "word": "Entriligious",
+    "definitions": [
+      {
+        "text": "Someone that supports mustard companies",
+        "type": "definition"
+      },
+      {
+        "text": "Sebastian wanted to start an intriligious toothpaste company after his succesfull chemist reaction",
+        "type": "example"
+      }
+    ],
+    "category": "use-full"
+  },
+  {
+    "word": "Mantecate",
+    "definitions": [
+      {
+        "text": "Addition of butter or other creamy substances to solid surfaces",
+        "type": "definition"
+      },
+      {
+        "text": "Last Wednesday Sebastian mantecated all over the toilet",
+        "type": "example"
+      },
+      {
+        "text": "\"Los liquidos/cremas no son productos que salen del cuerpo humano\"- Lucas",
+        "type": "definition"
+      }
+    ],
+    "category": "use-full"
   }
 ]

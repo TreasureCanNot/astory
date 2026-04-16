@@ -1,3 +1,31 @@
+
+.anevent{
+  border: 2.5px solid black;
+  padding:9px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.mevent{
+  border: 1px solid black;
+  padding: 9px;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: rgba(245, 245, 220, 0.3);
+  font-size: 23px  ;
+}
+
+
+.entry{
+
+}
+
+
+.entry i{
+  font-size: 25px;
+  text-decoration: wavy;
+}
+
 .news{
   /*background-image: radial-gradient(rgb(255, 182, 182), rgb(255, 182, 182), rgb(255, 182, 182), #920f0f);*/
   background:
@@ -15,8 +43,6 @@
 }
 
 .news i {
-  font-size: 25px;
-  text-decoration: wavy;
   color: #920f0f;
 }
 
@@ -52,7 +78,6 @@
 }
 
 .dream i {
-  font-size: 18.7px;
   text-decoration: wavy;
 }
 
@@ -64,7 +89,7 @@
   padding: 9px;
 }
 .info i {
-  font-size: 18.7px;
+  font-size: 25px;
   color: black;
   text-decoration:wavy;
 }
@@ -76,7 +101,7 @@
   display: inline-block;
 }
 .data i{
-  font-size: 18.7px;
+  font-size: 25px;
   color: black;
   text-decoration:wavy;
 }
@@ -94,7 +119,6 @@
 }
 
 .tube i {
-  font-size: 18.7px;
   text-decoration: wavy;
 }
 
@@ -108,8 +132,7 @@
   padding: 9px;
 }
 
-.paili i {
-  font-size: 18.7px;
+.pauli i {
   text-decoration: wavy;
 }
 
@@ -271,21 +294,6 @@
 }
 
 
-.anevent{
-  border: 2.5px solid black;
-  padding:9px;
-  overflow: auto;
-  box-sizing: border-box;
-}
-
-.mevent{
-  border: 1px solid black;
-  padding: 9px;
-  box-sizing: border-box;
-  overflow: auto;
-  background-color: rgba(245, 245, 220, 0.3);
-  font-size: larger  ;
-}
 
 @media (max-width: 768px) {
   .mevent {
@@ -2271,6 +2279,27 @@
   border: 2px solid #b22d48;
 }
 
+.flash{
+  animation: flash 0.9s infinite alternate;  
+  animation-timing-function: ease-in-out;
+  color: #FFF8E7;
+  background-color:#000718 ;
+  border-color: #FFF8E7;
+  border: 3px solid;
+  padding: 9px;
+  display: inline-block;
+  border-radius: 9px;
+}
+
+@keyframes backFlash {
+  0%   { background-color: #FFF8E7; border-color:#000718 ;}
+  100%  { background-color:FFF8E7 #000718; border-color: #FFF8E7;}
+}
+
+@keyframes flash {
+  0%   { color: #000718; background-color: #FFF8E7; border-color:#000718 ; }
+  100%  { color: #FFF8E7; background-color:FFF8E7 #000718; border-color: #FFF8E7; }
+}
 
 
 @media (max-width: 768px) {
