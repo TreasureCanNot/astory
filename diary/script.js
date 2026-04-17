@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function handleUrlHash() {
     if (location.hash) {
-      var targetId = location.hash.substring(1);
+      var targetId = decodeURIComponent(location.hash.substring(1));
       var box = document.getElementById(targetId);
   
       if (!box) return;
@@ -269,6 +269,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (button) {
         button.textContent = 'Hide';
       }
+
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }
   
