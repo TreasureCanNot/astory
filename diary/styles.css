@@ -2172,6 +2172,56 @@
   color: white;
 }
 
+
+.cosmilk{
+  border: 9px dotted;
+  border-top-color: #F1E7FF;
+  border-left-color: #FFF8E7;
+  border-right-color: #F1E7FF;
+  border-bottom-color: #FFF8E7;
+  border-radius: 20px;
+  Background-origin: border-box;
+  background-image: linear-gradient(#FFF8E7, #F1E7FF);
+  padding: 0 10px 10px 10px; /* top:0, right:10, bottom:10, left:10 */
+  width: 100% !important;
+  margin: 0px !important;
+  box-sizing: border-box;
+  word-wrap: break-word; /* Break long words */
+  overflow: hidden; /* Prevent content from spilling out */
+  height: fit-content; /* Let height adjust to content */
+  max-width: 100%; /* Prevent going off screen */
+  color: 000718;
+  text-shadow: #1e4342;
+}
+
+.cosmilk b{
+ color: #000718;
+}
+
+.cosmilk .wordtog{
+  border: 2px solid #FFF8E7;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #FFF8E7;
+  color: #FFF8E7;
+}
+
+.cosmilk .wordtog:hover{
+  border: 2px solid #F1E7FF;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #F1E7FF;
+  color: #F1E7FF;
+}
+
+.cosmilk .wordtog:active{
+  border: 2px solid #000718;
+  border-radius: 50px;
+  padding: 5px;
+  background-color: #000718;
+  color: #000718;
+}
+
 .searchbar{
   background-color: brown;
   color: #8adbd0;
