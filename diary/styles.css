@@ -627,7 +627,7 @@
 }
 
 .idf{
-  float: none !important;;
+  float: none !important;
 }
 
 .rock {
@@ -1137,6 +1137,7 @@
     width: 100% !important;
     height: auto;
     box-sizing: border-box;
+    float: none !important; 
   }
   .halfphone{
     
@@ -2349,6 +2350,45 @@
 @keyframes flash {
   0%   { color: #000718; background-color: #FFF8E7; border-color:#000718 ; }
   100%  { color: #FFF8E7; background-color:FFF8E7 #000718; border-color: #FFF8E7; }
+}
+
+/*Bigno*/
+
+table.bingo-card {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid #111;
+  background: #fff;
+}
+
+table.bingo-card td {
+  border: 2px solid #111;
+  width: 20%;
+  aspect-ratio: 1 / 1;
+  text-align: center;
+  vertical-align: middle;
+  padding: clamp(4px, 1.5vw, 10px);
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(0.52rem, 1.8vw, 0.78rem);
+  line-height: 1.3;
+  color: #111;
+}
+
+.bingo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 560px;
+}
+
+table.bingo-card td.crost {
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(0.52rem, 1.8vw, 0.78rem);
+  background: #111;
+  color: #fff;
+  letter-spacing: 0.05em;
 }
 
 
