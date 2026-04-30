@@ -2223,14 +2223,50 @@
   color: #000718;
 }
 
-.searchbar{
-  background-color: brown;
-  color: #8adbd0;
-  width:100%;
-  height: 50px;
-  border: 3px solid rgb(255, 124, 124);
-  font-size: 45px;
+.searchbar[type="text"], select {
+  width: 500px;
+  background: rgb(50, 38, 20);
+  border: 2px solid rgb(210, 201, 149);
+  color: rgb(210, 201, 149);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 22px;
+  padding: 13px;
+  margin-bottom: 20px;
+  outline: none;
 }
+
+.searchbar[type="text"]:focus, select:focus {
+  border-color: rgb(255, 200, 100);
+}
+@media (max-width: 768px) {
+  .searchbar[type="text"], select {
+    width: 100%;
+  }
+  
+  .searchbar[type="text"]:focus, select:focus {
+    width: 100%;
+  }
+}
+
+.subtitleW {
+  text-align: center;
+  color: rgb(210, 201, 149);
+  margin-bottom: 40px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.titleW{
+  font-family: 'Playfair Display', serif;
+  color: rgb(210, 201, 149);
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 3px 3px 0px rgb(75, 58, 33);
+}
+
+
 @media (max-width: 768px) {
   #glossary-container {
     grid-template-columns: repeat(1, 1fr);
