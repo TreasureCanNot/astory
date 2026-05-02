@@ -283,8 +283,10 @@ const ML_PER_LIFE_DAY      = (BABY_LITROCITY * 1000) / LIFESPAN_DAYS;
 const MURDER_SENTENCE_DAYS = 25 * 365.25;
 const ML_PER_FREEDOM_DAY   = (BABY_LITROCITY * 1000) / MURDER_SENTENCE_DAYS;
 const FAINT_LITRES_PER_HOUR = BABY_LITROCITY;
-const MJ_PER_LITRE          = 83.68127281577026;
-
+const MJ_PER_LITRE          = 15200.2312;
+/* 83.68127281577026
+9543.3935766L = human life
+*/
 let painEvents       = [];
 let psychEvents      = [];
 let additionalLosses = [];
