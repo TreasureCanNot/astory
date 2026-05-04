@@ -52,6 +52,32 @@
 }
 
 
+.report{
+  /*background-image: radial-gradient(rgb(255, 182, 182), rgb(255, 182, 182), rgb(255, 182, 182), #920f0f);*/
+  background:
+  linear-gradient(to right, #008000, transparent 5%, transparent 95%, #008000),
+  linear-gradient(to bottom, #008000, transparent 5%, transparent 95%, #008000),
+  rgb(182, 255, 187);
+  color: black;
+  border-top: 13px dotted #008000;
+  border-bottom: 13px dotted #008000;
+  margin-left: -9px;
+  margin-right: -9px;
+  margin-bottom: 9px;
+  padding: 80px;
+  overflow:hidden;
+}
+
+.report i {
+  color: #008000;
+}
+
+.report h2 {
+  text-decoration: wavy;
+  color: #008000;
+}
+
+
 
 
 @media (max-width: 768px) {
