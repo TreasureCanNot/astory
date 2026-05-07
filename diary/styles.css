@@ -1,3 +1,9 @@
+:root {
+  --info-colour: #aaaba8;
+  --light-info:#c5c5c5;
+}
+
+
 
 .anevent{
   border: 2.5px solid black;
@@ -110,7 +116,7 @@
 
 
 .info{
-  background-color:rgb(197, 197, 197);
+  background-color:var(--light-info);
   margin:-9px;
   padding: 9px;
 }
@@ -121,7 +127,7 @@
 }
 .data{
   color:rgb(0, 0, 0);
-  background-color: rgb(197, 197, 197);
+  background-color: var(--light-info);
   padding: 10px;
   border-radius: 22px;
   display: inline-block;
@@ -162,7 +168,69 @@
   text-decoration: wavy;
 }
 
+.textbutt{
+  color:black;
+  background-color: white;
+  padding: 9px;
+  display: inline-block;
+  cursor: pointer;
+  width: fit-content;
+}
 
+.textbutt:active{
+  color:white;
+  background: black;
+  padding: 9px; 
+  display: inline-block;
+}
+
+.cosmilu{
+  text-decoration:underline #F1E7FF;
+}
+
+.cafe{
+  color:#4b4539;
+  font-family: 'Segoe Print';
+  
+  font-size: 22px;
+}
+.elkrack{
+  color:#00606b;
+  font-family: 'Comic Neue', cursive;
+}
+.mono{
+  color: #00570d;
+  font-family: 'Bahnschrift';
+}
+
+.nata{
+  color: #2f4b60;
+  font-family: 'Verdana';
+}
+
+.textlog{
+  background-color: #dfdfdf;
+  border: 2px solid var(--light-info);
+  padding-left: 13px;
+  display: none;
+  width: fit-content;
+  max-width: 700px;
+}
+@media (max-width: 768px) {
+.textlog{
+  max-width: 100%;
+}
+
+}
+
+
+
+.logtainer{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  float: left;
+}
 
 .box{
   float: left;
@@ -665,7 +733,7 @@
 
 .title{
   color:rgb(0, 0, 0);
-  background-color: rgb(197, 197, 197);
+  background-color: var(--light-info);
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;

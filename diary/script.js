@@ -1094,3 +1094,15 @@ function generateLitrocityReport() {
   // Save
   doc.save(`Litrous_Atrocity_${eventName.replace(/[^a-z0-9]/gi, '_')}.pdf`);
 }
+
+
+//textlogs
+document.querySelectorAll('.textbutt').forEach(span => {
+  span.addEventListener('click', () => {
+    const log = span.closest('div').querySelector('.textlog');
+    if (log) {
+      const isHidden = log.style.display === 'none' || log.style.display === '';
+      log.style.display = isHidden ? 'block' : 'none';
+    }
+  });
+});
