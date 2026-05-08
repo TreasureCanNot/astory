@@ -188,11 +188,15 @@
   text-decoration:underline #F1E7FF;
 }
 
+@font-face {
+  font-family: 'cafe';
+  src: url('construals/timoKind.ttf') format('truetype');
+}
+
 .cafe{
   color:#4b4539;
-  font-family: 'Segoe Print';
-  
-  font-size: 22px;
+  font-family: 'cafe';
+  font-size: 60px;
 }
 .elkrack{
   color:#00606b;

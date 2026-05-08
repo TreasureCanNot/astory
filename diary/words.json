@@ -6836,20 +6836,6 @@
     "category": "use-full"
   },
   {
-    "word": "Litrous",
-    "definitions": [
-      {
-        "text": "Pertaining to the liters",
-        "type": "definition"
-      },
-      {
-        "text": "This is a very litrous way of measuring fluid",
-        "type": "definition"
-      }
-    ],
-    "category": "cosmilk"
-  },
-  {
     "word": "Rainoserrus",
     "definitions": [
       {
@@ -7553,6 +7539,48 @@
       {
         "text": "\"Los liquidos/cremas no son productos que salen del cuerpo humano\"- Lucas",
         "type": "definition"
+      }
+    ],
+    "category": "use-full"
+  },
+  {
+    "word": "Litrous",
+    "definitions": [
+      {
+        "text": "Of or pertaining to the unit of measurement of \"Liters\" or dm^3",
+        "type": "definition"
+      },
+      {
+        "text": "She measured the mellifluous liquid in a litrous manner",
+        "type": "example"
+      }
+    ],
+    "category": "cosmilk"
+  },
+  {
+    "word": "Flancillium",
+    "definitions": [
+      {
+        "text": "Objetos con capacidad de densidad muy indeterminable",
+        "type": "definition"
+      },
+      {
+        "text": "Los dientes de Amaral, they flancillate every two weeks because of el cafe de mierda que toma",
+        "type": "example"
+      }
+    ],
+    "category": "use-full"
+  },
+  {
+    "word": "rostulate",
+    "definitions": [
+      {
+        "text": "emm, tomar cafe con leche de almendras",
+        "type": "definition"
+      },
+      {
+        "text": "El otro dia, Ethan rostulated someone con su alient",
+        "type": "example"
       }
     ],
     "category": "use-full"
