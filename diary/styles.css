@@ -23,7 +23,7 @@
 
 
 .entry{
-
+  height: fit-content;
 }
 
 
@@ -190,15 +190,29 @@
 
 @font-face {
   font-family: 'cafe';
-  src: url('construals/timoKind.ttf') format('truetype');
+  src: url('reckon/timoKind.ttf') format('truetype');
 }
 
 .cafe{
-  color:#4b4539;
+  color:#eedb9d;
   font-family: 'cafe';
-  font-size: 60px;
+  text-shadow:
+   0px 0px 0.9px #4f0000,
+   0px 0px 1px #4f0000,
+   0px 0px 0.9px #4f0000, 
+   0px 0px 0.9px #4f0000, 
+   0px 0px 0.9px #4f0000, 
+   0px 0px 1px #4f0000, 
+   0px 0px 0.9px #4f0000, 
+   0px 0px 0.9px #4f0000, 
+   0px 0px 0.9px #4f0000;
 }
-.elkrack{
+.tronk{
+  color:#ff0000;
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+
+.elkrack{ 
   color:#00606b;
   font-family: 'Comic Neue', cursive;
 }
@@ -219,6 +233,9 @@
   display: none;
   width: fit-content;
   max-width: 700px;
+  max-height: 300px;
+  position: absolute;
+  overflow-y: scroll;
 }
 @media (max-width: 768px) {
 .textlog{
@@ -230,7 +247,6 @@
 
 
 .logtainer{
-  display: inline-block;
   vertical-align: top;
   margin-right: 10px;
   float: left;
