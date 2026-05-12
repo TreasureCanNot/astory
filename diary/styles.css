@@ -1210,6 +1210,7 @@
 .fifth video {
   width: 20%;
   display: block;
+  object-fit:contain;
 }
 
 .sixth {
