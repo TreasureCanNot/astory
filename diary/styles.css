@@ -190,7 +190,17 @@
 
 @font-face {
   font-family: 'cafe';
-  src: url('reckon/timoKind.ttf') format('truetype');
+  src: url('font/timoKind.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'textact';
+  src: url('font/Homestuck\ Regular\ \(Epilogues\ font\).ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'frogkind';
+  src: url('font/Holy\ Empire\ \(Genesis\ Frog\ album\).ttf') format('truetype');
 }
 
 .cafe{
@@ -198,11 +208,11 @@
   font-family: 'cafe';
   text-shadow:
    0px 0px 0.9px #4f0000,
-   0px 0px 1px #4f0000,
+   0px 0px 0.9px #4f0000,
    0px 0px 0.9px #4f0000, 
    0px 0px 0.9px #4f0000, 
    0px 0px 0.9px #4f0000, 
-   0px 0px 1px #4f0000, 
+   0px 0px 0.9px #4f0000, 
    0px 0px 0.9px #4f0000, 
    0px 0px 0.9px #4f0000, 
    0px 0px 0.9px #4f0000;
@@ -236,10 +246,11 @@
   max-height: 300px;
   position: absolute;
   overflow-y: scroll;
+  font-family: 'textact';
 }
 @media (max-width: 768px) {
 .textlog{
-  max-width: 100%;
+  max-width: 94%;
 }
 
 }
@@ -2063,6 +2074,74 @@
   display: inline-block;
 }
 
+.butom {
+  padding: 10px 24px;
+  font-size: 50px;
+  font-weight: 500;
+  color: #222;
+  background: #fe8ae39e;
+  border: 10px solid #ff00a6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  font-family: 'textact';
+}
+@media (max-width: 768px) {
+  .butom{
+    font-size: 30px;
+    width: 90%;
+    padding: 5px;
+  }
+}
+
+.butom:hover { background: #f5f5f5; }
+.butom:active { transform: scale(0.98); }
+
+
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  gap: 10px;
+  background-color: #acfdba7b;
+  padding: 10px;
+  border: 4px outset #000000;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: 'impact';
+}
+
+.checklist li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #000718;
+  background-color: #F1E7FF;
+  box-sizing: border-box;
+}
+
+.checklist li.tick {
+  color: var(--color-text-secondary, #666);
+  text-decoration: line-through;
+}
+
+.checklist li.tick::before {
+  background: #410028;
+  border-color: #FFF8E7;
+}
+
+
 .unsdi{
   background-color: rgb(155, 200, 216);
   border: 3px solid rgb(0, 30, 80);
@@ -2353,6 +2432,10 @@
 .searchbar[type="text"]:focus, select:focus {
   border-color: rgb(255, 200, 100);
 }
+
+
+
+
 @media (max-width: 768px) {
   .searchbar[type="text"], select {
     width: 100%;
