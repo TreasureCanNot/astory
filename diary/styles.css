@@ -189,7 +189,7 @@
 }
 
 @font-face {
-  font-family: 'cafe';
+  font-family: 'timoKind';
   src: url('font/timoKind.ttf') format('truetype');
 }
 
@@ -203,9 +203,23 @@
   src: url('font/Holy\ Empire\ \(Genesis\ Frog\ album\).ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'lora';
+  src: url('font/Lora-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ryman Eco';
+  src: url('font/RymanEco-Regular.otf') format('opentype');
+}
+
+.eco{
+  font-family: 'Ryman Eco';
+}
+
 .cafe{
   color:#eedb9d;
-  font-family: 'cafe';
+  font-family: 'timoKind';
   text-shadow:
    0px 0px 0.9px #4f0000,
    0px 0px 0.9px #4f0000,
@@ -224,11 +238,11 @@
 
 .elkrack{ 
   color:#00606b;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'lora', cursive;
 }
 .mono{
   color: #00570d;
-  font-family: 'Bahnschrift';
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 .nata{
@@ -236,10 +250,44 @@
   font-family: 'Verdana';
 }
 
+.textlog .msg{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.respond {
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid rgba(255,255,255,0.3);
+  padding-left: 8px;
+  margin: 4px 0;
+}
+
+.resq {
+  font-size: 0.75em;
+  opacity: 0.5;
+  margin: 0 0 2px 0;
+}
+
+.resa {
+  margin: 0;
+}
+
+.resq::before {
+  content: "response to — ";
+  font-family: 'textact';
+  color: black;
+  text-shadow: 0px 0px 0px;;
+  font-size: 0.85em;
+  opacity: 1;
+}
+
 .textlog{
   background-color: #dfdfdf;
   border: 2px solid var(--light-info);
   padding-left: 13px;
+  padding-right: 9;
+  padding-top: 9px;
   display: none;
   width: fit-content;
   max-width: 700px;
@@ -248,6 +296,16 @@
   overflow-y: scroll;
   font-family: 'textact';
 }
+
+
+.connected{
+  background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
+}
+
+.norm{
+  background-color: #dfdfdf;
+}
+
 @media (max-width: 768px) {
 .textlog{
   max-width: 94%;
@@ -261,6 +319,12 @@
   vertical-align: top;
   margin-right: 10px;
   float: left;
+}
+
+.trog{
+  float: none !important; 
+  display: block;
+  margin-bottom: 20px;
 }
 
 .box{
@@ -2103,13 +2167,20 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   background-color: #acfdba7b;
   padding: 10px;
   border: 4px outset #000000;
 }
+
+@media (max-width: 768px) {
+  .checklist{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 
 .checklist li {
   display: flex;
