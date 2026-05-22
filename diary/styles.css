@@ -175,6 +175,7 @@
   display: inline-block;
   cursor: pointer;
   width: fit-content;
+  user-select: none;
 }
 
 .textbutt:active{
@@ -184,8 +185,44 @@
   display: inline-block;
 }
 
+.connecteb{
+  background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
+}
+
+.connecteb:active{
+  color:black;
+  background: linear-gradient(#dfdfdfec), url("other/binary-codes-background.png") !important;
+  filter: invert(1) !important;
+  padding: 9px; 
+  display: inline-block;
+}
+
 .cosmilu{
   text-decoration:underline #F1E7FF;
+}
+
+.sehcret{
+  width: 50px;
+  height: 50px;
+  background-color: #71d7ff1e;  
+}
+
+.sehcret:hover{
+  width: 100%;
+  height: auto;
+  background-color: #ffd77101;  
+  display: block;
+  background-color: #005fbf5e;
+  padding: 7px;
+}
+
+.secret{
+  display: none;
+  
+}
+
+.sehcret:hover .secret{
+  display: block;
 }
 
 @font-face {
@@ -231,6 +268,13 @@
    0px 0px 0.9px #4f0000, 
    0px 0px 0.9px #4f0000;
 }
+
+.cafe .tronk{
+  color:#ff0000;
+  font-family: 'Arial', Helvetica, sans-serif;
+  text-shadow: none;
+}
+
 .tronk{
   color:#ff0000;
   font-family: 'Arial', Helvetica, sans-serif;
@@ -263,10 +307,36 @@
   margin: 4px 0;
 }
 
+.respond img{
+  max-width: 100px !important;
+  width: 25%;
+}
+
+.medial{
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid rgba(255,255,255,0.3);
+  padding-left: 8px;
+  margin: 4px 0;
+}
+
+.medial .medinl{
+  max-width: 19%;
+}
+
+.medial .medile{
+  max-width: 50%;
+}
+
+.medial .medips{
+  max-width: 100%;
+}
+
 .resq {
   font-size: 0.75em;
   opacity: 0.5;
   margin: 0 0 2px 0;
+  text-decoration: none;
 }
 
 .resa {
@@ -297,10 +367,10 @@
   font-family: 'textact';
 }
 
-
 .connected{
   background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
 }
+
 
 .norm{
   background-color: #dfdfdf;
