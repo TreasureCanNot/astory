@@ -207,6 +207,13 @@
   background-color: #71d7ff1e;  
 }
 
+@media (max-width: 768px) {
+  .sehcret{
+    display: none;
+  }
+}
+
+
 .sehcret:hover{
   width: 100%;
   height: auto;
@@ -295,8 +302,6 @@
 }
 
 .textlog .msg{
-  margin-bottom: 0px;
-  margin-top: 0px;
 }
 
 .respond {
@@ -305,6 +310,10 @@
   border-left: 3px solid rgba(0, 0, 0, 0.3);
   padding-left: 8px;
   margin: 4px 0;
+}
+
+.respond p{
+  margin-bottom: 5px;
 }
 
 .respond img{
