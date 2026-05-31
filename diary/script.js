@@ -1106,3 +1106,12 @@ document.querySelectorAll('.textbutt').forEach(span => {
     }
   });
 });
+
+
+
+function toggleEntry(el) {
+  const entry = el.closest('.mevent').querySelector('.antry');
+  entry.classList.toggle('visible');
+  el.classList.toggle('actile');
+  el.classList.toggle('actileA');
+}
