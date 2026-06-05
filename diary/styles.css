@@ -168,23 +168,8 @@
   text-decoration: wavy;
 }
 
-.textbutt{
-  color:black;
-  background-color: white;
-  padding: 9px;
-  display: inline-block;
-  cursor: pointer;
-  width: fit-content;
-  user-select: none;
-}
 
-.textbutt:active{
-  color:white;
-  background: black;
-  padding: 9px; 
-  display: inline-block;
-}
-
+/*
 .connecteb{
   background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
 }
@@ -196,6 +181,44 @@
   padding: 9px; 
   display: inline-block;
 }
+*/
+.connected .textbutt{
+  background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
+}
+
+.connected .textbutt:active{
+  color:black;
+  background: linear-gradient(#dfdfdfec), url("other/binary-codes-background.png") !important;
+  filter: invert(1) !important;
+  padding: 9px; 
+  display: inline-block;
+}
+
+.connected .textlog{
+  background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important
+}
+
+
+.ttg-H .textbutt{
+  background:  url("other/horse-light.png") 
+}
+
+.ttg-H .textbutt:active{
+  color:black;
+  background: url("other/horse-dark.png") ;
+  padding: 9px; 
+  display: inline-block;
+}
+
+.ttg-H .textlog{
+  background:linear-gradient(#ffe79ec1), url("other/horse-light.png") !important;
+  border: 9px dotted blue;
+}
+
+.ttg-H .textlog:active{
+  background:linear-gradient(#ffe79e59), url("other/horse-dark.png") !important;
+}
+
 
 .cosmilu{
   text-decoration:underline #F1E7FF;
@@ -262,13 +285,60 @@
   src: url('font/UniversRegular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Bodoni Moda Italic';
+  src: url('font/BodoniModa-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gunter';
+  src: url('font/gunter.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Average';
+  src: url('font/Average-Regular.ttf') format('truetype');
+}
+
 .eco{
   font-family: 'Ryman Eco';
+}
+
+.textbutt{
+  color:black;
+  background-color: white;
+  padding: 9px;
+  display: inline-block;
+  cursor: pointer;
+  width: fit-content;
+  user-select: none;
+}
+
+.textbutt:active{
+  color:white;
+  background: black;
+  padding: 9px; 
+  display: inline-block;
+}
+
+
+.yungx{
+  font-family: 'Gunter';
+  color: #590016;
+  font-size: 1.1075rem;
+}
+
+.m3Again{
+  font-family: 'Bodoni Moda Italic';
+  font-size: 1.575rem;
+  color: rgb(104, 0, 0);
+  text-shadow: 1.5px 1.5px 0.1px #ced2ff;
 }
 
 .cafe{
   color:#4f0000;
   font-family: 'timoKind';
+  font-size: 1.45rem;
   text-shadow:
    0px 0px 0.7px #eedb9d,
    0px 0px 0.7px #eedb9d,
@@ -281,6 +351,11 @@
    0px 0px 0.7px #eedb9d;
 }
 
+.lupi{
+  color:#252f73;
+  font-family: 'Average';
+}
+
 .lessoul{
   color: #0000009d;
   font-family: 'Univers';
@@ -288,33 +363,33 @@
 
 .cafe .tronk{
   color:#ff0000;
+  font-size: 1.45rem;
   font-family: 'Arial', Helvetica, sans-serif;
   text-shadow: none;
 }
 
 .tronk{
   color:#ff0000;
+  font-size: 1.45rem;
   font-family: 'Arial', Helvetica, sans-serif;
 }
 
 .elkrack{ 
   color:#00606b;
+  font-size: 1.45rem;
   font-family: 'lora', cursive;
 }
 .mono{
   color: #00570d;
+  font-size: 1.45rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 .nata{
   color: #2f4b60;
+  font-size: 1.45rem;
   font-family: 'Verdana';
 }
-
-.textlog .msg{
-}
-
-
 
 .respond {
   display: flex;
@@ -341,15 +416,15 @@
   margin: 4px 0;
 }
 
-.medial .medinl{
+.medial .little{
   max-width: 19%;
 }
 
-.medial .medile{
+.medial .medium{
   max-width: 50%;
 }
 
-.medial .medips{
+.medial .big{
   max-width: 100%;
 }
 
@@ -377,8 +452,7 @@
   background-color: #dfdfdf;
   border: 2px solid var(--light-info);
   padding-left: 13px;
-  padding-right: 9;
-  padding-top: 9px;
+  padding-right: 9px;
   display: none;
   width: fit-content;
   max-width: 700px;
@@ -387,7 +461,19 @@
   overflow-y: scroll;
   font-family: 'textact';
 }
-
+/*
+.textlog .narr{
+  background-color: rgb(91, 91, 91);  or whatever colour you want 
+  margin-top: 0;
+  margin-right: -9px;
+  padding-left: 13px;
+  padding-right: 9px;
+  padding-top:5px;
+  padding-bottom: 5px;
+  padding-bottom: 4px;
+  color: white;
+}
+*/
 .connected{
   background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
 }

@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logue Builder</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+
+  
+@font-face {
+  font-family: 'timoKind';
+  src: url('font/timoKind.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'textact';
+  src: url('font/Homestuck\ Regular\ \(Epilogues\ font\).ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'frogkind';
+  src: url('font/Holy\ Empire\ \(Genesis\ Frog\ album\).ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lora';
+  src: url('font/Lora-Variable.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ryman Eco';
+  src: url('font/RymanEco-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Univers';
+  src: url('font/UniversRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bodoni Moda Italic';
+  src: url('font/BodoniModa-Italic-VariableFont_opsz\,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gunter';
+  src: url('font/gunter.ttf') format('truetype');
+}
+
+.eco{
+  font-family: 'Ryman Eco';
+}
+  body {
+    font-family: 'Courier New', monospace;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    min-height: 100vh;
+    display: flex;
+    gap: 0;
+  }
+
+  /* ── LEFT PANEL ── */
+  #panel {
+    width: 340px;
+    min-width: 340px;
+    background: #111;
+    border-right: 2px solid #333;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 12px;
+    overflow-y: auto;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+  }
+
+  #panel h1 {
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #777;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+  }
+
+  .mode-tabs {
+    display: flex;
+    gap: 4px;
+  }
+
+  .tab {
+    flex: 1;
+    padding: 6px 4px;
+    font-size: 0.7rem;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    color: #777;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .tab:hover { color: #ccc; border-color: #555; }
+  .tab.active { background: #2a2a2a; color: #e0e0e0; border-color: #888; }
+
+  .section { display: flex; flex-direction: column; gap: 8px; }
+  .section.hidden { display: none; }
+
+  label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #666;
+  }
+
+  textarea, select, input[type="text"] {
+    width: 100%;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    padding: 8px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  textarea:focus, select:focus, input[type="text"]:focus {
+    border-color: #666;
+  }
+
+  textarea { min-height: 70px; }
+
+  select option { background: #1e1e1e; }
+
+  .sayer-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+  }
+
+  .sayer-btn {
+    padding: 6px 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.72rem;
+    cursor: pointer;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #999;
+    transition: all 0.12s;
+    text-align: center;
+  }
+
+  .sayer-btn:hover { border-color: #666; color: #ddd; }
+  .sayer-btn.selected { border-color: #aaa; background: #2a2a2a; color: #fff; }
+
+  .action-btn {
+    padding: 9px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid #555;
+    background: #222;
+    color: #ccc;
+    transition: all 0.15s;
+  }
+
+  .action-btn:hover { background: #333; color: #fff; border-color: #888; }
+  .action-btn.primary { border-color: #888; background: #2a2a2a; color: #fff; }
+  .action-btn.primary:hover { background: #3a3a3a; }
+  .action-btn.danger { border-color: #633; color: #f88; }
+  .action-btn.danger:hover { background: #2a1a1a; }
+
+  .divider {
+    border: none;
+    border-top: 1px solid #2a2a2a;
+    margin: 4px 0;
+  }
+
+  /* file upload */
+  .file-drop {
+    border: 1px dashed #444;
+    padding: 16px;
+    text-align: center;
+    color: #666;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    position: relative;
+  }
+  .file-drop:hover { border-color: #777; color: #aaa; }
+  .file-drop input[type="file"] {
+    position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
+  }
+  .file-drop.has-file { border-color: #666; color: #ccc; background: #1e1e1e; }
+
+  .size-opts { display: flex; gap: 6px; }
+  .size-btn {
+    flex: 1; padding: 6px; font-family: 'Courier New', monospace; font-size: 0.72rem;
+    cursor: pointer; border: 1px solid #333; background: #1a1a1a; color: #777;
+    text-transform: uppercase; letter-spacing: 0.05em; transition: all 0.12s;
+  }
+  .size-btn:hover { border-color: #666; color: #ddd; }
+  .size-btn.selected { border-color: #aaa; background: #2a2a2a; color: #fff; }
+
+  /* logtainer options */
+  .logtainer-class-opts { display: flex; gap: 6px; flex-wrap: wrap; }
+  .lc-btn {
+    padding: 5px 10px; font-family: 'Courier New', monospace; font-size: 0.72rem;
+    cursor: pointer; border: 1px solid #333; background: #1a1a1a; color: #777;
+    transition: all 0.12s;
+  }
+  .lc-btn:hover { border-color: #666; color: #ddd; }
+  .lc-btn.selected { border-color: #aaa; background: #2a2a2a; color: #fff; }
+
+  /* ── RIGHT PANEL ── */
+  
+  #preview .narr { color: #333; font-style: italic; margin: 2px 0; display: block; font-size: 1.575rem}
+  #workspace {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #workspace-header {
+    padding: 12px 16px;
+    background: #111;
+    border-bottom: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  #workspace-header span {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #666;
+  }
+
+  .header-btns { display: flex; gap: 8px; }
+
+  /* PREVIEW — styled like actual textlog */
+  #preview-wrap {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #181818;
+  }
+
+  #preview {
+    background-color: #dfdfdf;
+    border: 2px solid #aaa;
+    padding-left: 13px;
+    padding-right: 9px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: fit-content;
+    min-width: 320px;
+    max-width: 700px;
+    font-family: 'textact', 'Courier New', monospace;
+    position: relative;
+  }
+
+  /* actual sayer styles inside preview */
+  #preview .cafe{
+  color:#4f0000;
+  font-family: 'timoKind';
+  font-size: 1.45rem;
+  text-shadow:
+   0px 0px 0.7px #eedb9d,
+   0px 0px 0.7px #eedb9d,
+   0px 0px 0.7px #eedb9d, 
+   0px 0px 0.7px #eedb9d, 
+   0px 0px 0.7px #eedb9d, 
+   0px 0px 0.7px #eedb9d, 
+   0px 0px 0.7px #eedb9d, 
+   0px 0px 0.7px #4f0000, 
+   0px 0px 0.7px #eedb9d;
+}
+  #preview .tronk{
+  color:#ff0000;
+  font-size: 1.45rem;
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+  #preview .elkrack{ 
+  color:#00606b;
+  font-size: 1.45rem;
+  font-family: 'lora', cursive;
+}
+  #preview .mono{
+  color: #00570d;
+  font-size: 1.45rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+  #preview .nata{
+  color: #2f4b60;
+  font-size: 1.45rem;
+  font-family: 'Verdana';
+}
+  #preview .yungx{
+  font-family: 'Gunter';
+  color: #590016;
+  font-size: 1.1075rem;
+}
+  #preview .m3Again{
+  font-family: 'Bodoni Moda Italic';
+  font-size: 1.575rem;
+  color: rgb(104, 0, 0);
+  text-shadow: 1.5px 1.5px 0.1px #ced2ff;
+}
+  #preview .lessoul { color:#0000009d; margin: 2px 0; display: block; }
+
+  #preview .respond {
+    display: flex; flex-direction: column;
+    border-left: 3px solid rgba(0,0,0,0.3);
+    padding-left: 8px; margin: 4px 0;
+  }
+  #preview .respond p { margin-bottom: 3px; }
+  #preview .medial {
+    display: flex; flex-direction: column;
+    border-left: 3px solid rgba(0,0,0,0.3);
+    padding-left: 8px; margin: 4px 0;
+  }
+  #preview .medial img { display: block; }
+  #preview .little { max-width: 19%; }
+  #preview .medium { max-width: 50%; }
+  #preview .big { max-width: 100%; }
+  #preview .resq { font-size: 0.75em; opacity: 0.5; margin: 0 0 2px 0; }
+  #preview .resq::before {
+  content: "response to — ";
+  font-family: 'textact';
+  color: black;
+  text-shadow: 0px 0px 0px;;
+  font-size: 0.85em;
+  opacity: 1;
+}
+
+  /* entry wrapper for hover controls */
+  .entry-wrap {
+    position: relative;
+    padding: 1px 2px;
+  }
+  .entry-wrap:hover { background: rgba(0,0,0,0.06); }
+
+  .entry-controls {
+    display: none;
+    position: absolute;
+    right: 2px;
+    top: -5px;
+    width: 50%;
+    transform: translateY(-50%);
+    gap: 3px;
+    float: right;
+    align-items: center;
+    background: rgba(220,220,220,0.95);
+    border: 1px solid #aaa;
+    padding: 2px 4px;
+    z-index: 10;
+  }
+  .entry-wrap:hover .entry-controls { display: flex; }
+
+  .ec-btn {
+    font-size: 0.6rem;
+    font-family: monospace;
+    padding: 2px 5px;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    background: #eee;
+    color: #333;
+    white-space: nowrap;
+  }
+  .ec-btn:hover { background: #ccc; }
+  .ec-btn.del { color: #900; border-color: #c88; }
+  .ec-btn.del:hover { background: #fdd; }
+
+  /* sayer selector popup */
+  .sayer-popup {
+    position: absolute;
+    background: #111;
+    border: 1px solid #555;
+    z-index: 100;
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+    padding: 4px;
+    right: 0;
+    top: 100%;
+    min-width: 130px;
+  }
+  .sayer-popup.show { display: flex; }
+  .sp-opt {
+    font-family: 'Courier New', monospace;
+    font-size: 0.72rem;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: #ccc;
+    white-space: nowrap;
+  }
+  .sp-opt:hover { background: #333; }
+
+  /* word-span popup for narr */
+  .word-span-popup {
+    position: fixed;
+    background: #111;
+    border: 1px solid #555;
+    z-index: 200;
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+    padding: 4px;
+    min-width: 140px;
+  }
+  .word-span-popup.show { display: flex; }
+  .wsp-title { font-size: 0.62rem; color: #555; padding: 2px 8px; text-transform: uppercase; letter-spacing: 0.1em; }
+  .wsp-opt {
+    font-family: 'Courier New', monospace;
+    font-size: 0.72rem;
+    padding: 4px 8px;
+    cursor: pointer;
+    color: #ccc;
+  }
+  .wsp-opt:hover { background: #333; }
+
+  /* OUTPUT AREA */
+  #output-wrap {
+    border-top: 2px solid #333;
+    background: #111;
+    max-height: 220px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #output-header {
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  #output-header span { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.12em; color: #555; }
+
+  #output {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: #8ec;
+    padding: 10px 14px;
+    overflow-y: auto;
+    white-space: pre;
+    flex: 1;
+    line-height: 1.6;
+  }
+
+  /* tiny copy btn */
+  .copy-btn {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    cursor: pointer;
+    border: 1px solid #444;
+    background: #1a1a1a;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .copy-btn:hover { color: #ccc; border-color: #666; }
+
+  /* narr clickable words */
+  .narr-word {
+    cursor: pointer;
+    text-decoration: underline dotted #aaa;
+    border-radius: 2px;
+    padding: 0 1px;
+  }
+  .narr-word:hover { background: rgba(0,0,0,0.1); }
+  .narr-word.spanned { text-decoration: none; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ LEFT PANEL ═══════════════ -->
+<div id="panel">
+  <h1>Logue Builder</h1>
+
+  <!-- MODE TABS -->
+  <div class="mode-tabs">
+    <button class="tab active" onclick="setMode('normal')" id="tab-normal">Message</button>
+    <button class="tab" onclick="setMode('narr')" id="tab-narr">Narr</button>
+    <button class="tab" onclick="setMode('respond')" id="tab-respond">Respond</button>
+    <button class="tab" onclick="setMode('media')" id="tab-media">Media</button>
+  </div>
+
+  <!-- ── NORMAL MODE ── -->
+  <div class="section" id="sec-normal">
+    <label>Sayer</label>
+    <div class="sayer-select" id="sayer-normal"></div>
+    <label>Message</label>
+    <textarea id="msg-normal" placeholder="Write message…" onkeydown="handleEnter(event,'normal')"></textarea>
+    <button class="action-btn primary" onclick="addNormal()">↵ Add Message</button>
+  </div>
+
+  <!-- ── NARR MODE ── -->
+  <div class="section hidden" id="sec-narr">
+    <label>Narration text</label>
+    <textarea id="msg-narr" placeholder="Write narration… (asterisks added auto)" onkeydown="handleEnter(event,'narr')"></textarea>
+    <button class="action-btn primary" onclick="addNarr()">↵ Add Narration</button>
+    <p style="font-size:0.68rem;color:#555;line-height:1.5;">After adding, click any word in the preview to assign a sayer class to it.</p>
+  </div>
+
+  <!-- ── RESPOND MODE ── -->
+  <div class="section hidden" id="sec-respond">
+    <p style="font-size:0.68rem;color:#666;line-height:1.5;">Click any line in the preview to set it as the "responding to" line, then write the reply below.</p>
+    <label>Responding to</label>
+    <div id="respond-source-display" style="background:#1a1a1a;border:1px solid #333;padding:8px;font-size:0.78rem;color:#777;min-height:36px;font-family:'Courier New',monospace;">(click a line in preview)</div>
+    <label>Reply — Sayer</label>
+    <div class="sayer-select" id="sayer-respond"></div>
+    <label>Reply text</label>
+    <textarea id="msg-respond" placeholder="Write reply…" onkeydown="handleEnter(event,'respond')"></textarea>
+    <button class="action-btn primary" onclick="addRespond()">↵ Add Response</button>
+  </div>
+
+  <!-- ── MEDIA MODE ── -->
+  <div class="section hidden" id="sec-media">
+    <label>Sayer (optional)</label>
+    <div class="sayer-select" id="sayer-media"></div>
+    <label>Caption text (optional)</label>
+    <textarea id="msg-media" placeholder="Write caption…" style="min-height:50px;" onkeydown="handleEnter(event,'media')"></textarea>
+    <label>Image</label>
+    <div class="file-drop" id="file-drop-area">
+      <span id="file-drop-label">click or drop image here</span>
+      <input type="file" accept="image/*" onchange="handleFile(event)">
+    </div>
+    <label>Image size class</label>
+    <div class="size-opts">
+      <button class="size-btn selected" onclick="selectSize('little',this)">little</button>
+      <button class="size-btn" onclick="selectSize('medium',this)">medium</button>
+      <button class="size-btn" onclick="selectSize('big',this)">big</button>
+    </div>
+    <button class="action-btn primary" onclick="addMedia()">↵ Add Media</button>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── LOGTAINER ── -->
+  <div class="section">
+    <label>Logtainer extra class</label>
+    <div class="logtainer-class-opts">
+      <button class="lc-btn" onclick="toggleLC('connected',this)">connected</button>
+      <button class="lc-btn" onclick="toggleLC('tth-H',this)">tth-H</button>
+      <button class="lc-btn" onclick="toggleLC('norm',this)">norm</button>
+    </div>
+    <button class="action-btn primary" onclick="generateLogtainer()">⬡ Create Logtainer</button>
+    <button class="action-btn danger" onclick="clearAll()">✕ Clear all</button>
+  </div>
+</div>
+
+<!-- ═══════════════ RIGHT PANEL ═══════════════ -->
+<div id="workspace">
+  <div id="workspace-header">
+    <span>Preview</span>
+    <div class="header-btns">
+      <button class="copy-btn" onclick="copyOutput()">copy output</button>
+    </div>
+  </div>
+
+  <div id="preview-wrap">
+    <div id="preview">
+      <!-- entries go here -->
+    </div>
+  </div>
+
+  <div id="output-wrap">
+    <div id="output-header">
+      <span>Generated HTML</span>
+      <button class="copy-btn" onclick="copyOutput()">copy</button>
+    </div>
+    <div id="output"></div>
+  </div>
+</div>
+
+<!-- word-span popup -->
+<div class="word-span-popup" id="wsp"></div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  DATA
+// ═══════════════════════════════════════════════════════
+const SAYERS = [
+  { key: 'cafe',    label: 'Timo',   cls: 'cafe'    },
+  { key: 'elkrack', label: 'Raz',    cls: 'elkrack' },
+  { key: 'tronk',   label: 'Dani',   cls: 'tronk'   },
+  { key: 'mono',    label: 'Lucas',  cls: 'mono'    },
+  { key: 'nata',    label: 'Nata',   cls: 'nata'    },
+  { key: 'yungx',   label: 'Sebs',   cls: 'yungx'   },
+  { key: 'm3Again', label: 'megan',  cls: 'm3Again' },
+  { key: 'lessoul', label: 'lessoul',cls: 'lessoul' },  
+  { key: 'mongrel', label: 'mongrel',cls: 'mongrel' },
+];
+
+// entries: array of objects describing each row
+let entries = [];
+let selectedSayers = { normal: null, respond: null, media: null };
+let selectedImgSize = 'little';
+let selectedLCs = new Set();
+let respondSource = null; // { cls, label, text, entryIdx }
+let pendingWordEl = null;
+let uploadedFileName = null;
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+function init() {
+  ['normal','respond','media'].forEach(mode => {
+    const wrap = document.getElementById('sayer-'+mode);
+    SAYERS.forEach(s => {
+      const b = document.createElement('button');
+      b.className = 'sayer-btn';
+      b.textContent = s.label;
+      b.dataset.key = s.key;
+      b.onclick = () => selectSayer(mode, s.key, b);
+      wrap.appendChild(b);
+    });
+  });
+  // close popups on outside click
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#wsp') && !e.target.classList.contains('narr-word')) {
+      document.getElementById('wsp').classList.remove('show');
+    }
+  });
+}
+
+function selectSayer(mode, key, btn) {
+  selectedSayers[mode] = key;
+  document.querySelectorAll('#sayer-'+mode+' .sayer-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function selectSize(sz, btn) {
+  selectedImgSize = sz;
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+function toggleLC(cls, btn) {
+  if (selectedLCs.has(cls)) { selectedLCs.delete(cls); btn.classList.remove('selected'); }
+  else { selectedLCs.add(cls); btn.classList.add('selected'); }
+}
+
+// ═══════════════════════════════════════════════════════
+//  MODE SWITCHING
+// ═══════════════════════════════════════════════════════
+let currentMode = 'normal';
+function setMode(m) {
+  currentMode = m;
+  ['normal','narr','respond','media'].forEach(x => {
+    document.getElementById('sec-'+x).classList.toggle('hidden', x !== m);
+    document.getElementById('tab-'+x).classList.toggle('active', x === m);
+  });
+  // entering respond mode: highlight clickable lines
+  document.querySelectorAll('.entry-wrap[data-mode="normal"]').forEach(el => {
+    el.classList.toggle('respond-pickable', m === 'respond');
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  ENTER KEY
+// ═══════════════════════════════════════════════════════
+function handleEnter(e, mode) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    if (mode === 'normal') addNormal();
+    if (mode === 'narr') addNarr();
+    if (mode === 'respond') addRespond();
+    if (mode === 'media') addMedia();
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+//  ADD ENTRIES
+// ═══════════════════════════════════════════════════════
+function getSayer(mode) {
+  const k = selectedSayers[mode];
+  return k ? SAYERS.find(s => s.key === k) : null;
+}
+
+function addNormal() {
+  const txt = document.getElementById('msg-normal').value.trim();
+  if (!txt) return;
+  const sayer = getSayer('normal');
+  const entry = { type: 'normal', sayer: sayer ? sayer.key : null, text: txt };
+  entries.push(entry);
+  document.getElementById('msg-normal').value = '';
+  renderPreview();
+  updateOutput();
+}
+
+function addNarr() {
+  const txt = document.getElementById('msg-narr').value.trim();
+  if (!txt) return;
+  // spans: array of {word, cls|null}
+  const words = txt.split(/(\s+)/);
+  const entry = { type: 'narr', words: words };
+  entries.push(entry);
+  document.getElementById('msg-narr').value = '';
+  renderPreview();
+  updateOutput();
+}
+
+function addRespond() {
+  const txt = document.getElementById('msg-respond').value.trim();
+  const sayer = getSayer('respond');
+  if (!respondSource) { alert('Click a line in the preview first.'); return; }
+  if (!txt) return;
+  const entry = {
+    type: 'respond',
+    source: { ...respondSource },
+    replySayer: sayer ? sayer.key : null,
+    replyText: txt,
+  };
+  entries.push(entry);
+  document.getElementById('msg-respond').value = '';
+  respondSource = null;
+  document.getElementById('respond-source-display').textContent = '(click a line in preview)';
+  renderPreview();
+  updateOutput();
+}
+
+function addMedia() {
+  const txt = document.getElementById('msg-media').value.trim();
+  const sayer = getSayer('media');
+  const entry = {
+    type: 'media',
+    sayer: sayer ? sayer.key : null,
+    caption: txt,
+    imgSrc: 'diary/' + uploadedFileName,
+    imgSize: selectedImgSize,
+  };
+  entries.push(entry);
+  document.getElementById('msg-media').value = '';
+  document.getElementById('file-drop-label').textContent = 'click or drop image here';
+  document.getElementById('file-drop-area').classList.remove('has-file');
+  uploadedFileName = null;
+  renderPreview();
+  updateOutput();
+}
+
+// ═══════════════════════════════════════════════════════
+//  FILE HANDLING
+// ═══════════════════════════════════════════════════════
+function handleFile(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  uploadedFileName = file.name;
+  document.getElementById('file-drop-label').textContent = file.name;
+  document.getElementById('file-drop-area').classList.add('has-file');
+}
+
+// ═══════════════════════════════════════════════════════
+//  RENDER PREVIEW
+// ═══════════════════════════════════════════════════════
+function renderPreview() {
+  const preview = document.getElementById('preview');
+  preview.innerHTML = '';
+
+  entries.forEach((entry, idx) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'entry-wrap';
+    wrap.dataset.idx = idx;
+
+    if (entry.type === 'normal') {
+      wrap.dataset.mode = 'normal';
+      const sayer = entry.sayer ? SAYERS.find(s => s.key === entry.sayer) : null;
+      const p = document.createElement('p');
+      p.className = (sayer ? sayer.cls : '');
+      p.textContent = (sayer ? sayer.label + ': ' : '') + entry.text;
+      wrap.appendChild(p);
+
+      // controls: change sayer + delete
+      const ctrl = makeControls(idx, ['sayer','delete'], entry);
+      wrap.appendChild(ctrl);
+
+      // click to set as respond source
+      p.addEventListener('click', () => {
+        if (currentMode === 'respond') {
+          respondSource = { cls: sayer ? sayer.cls : '', label: sayer ? sayer.label : '', text: entry.text, entryIdx: idx };
+          document.getElementById('respond-source-display').textContent =
+            (sayer ? sayer.label + ': ' : '') + entry.text;
+        }
+      });
+
+    } else if (entry.type === 'narr') {
+      const p = document.createElement('p');
+      p.className = 'narr';
+      // render words: asterisk + words + asterisk
+      p.innerHTML = '*' + renderNarrWords(entry.words, idx) + '*';
+      // attach click to each narr-word
+      wrap.appendChild(p);
+      const ctrl = makeControls(idx, ['delete'], entry);
+      wrap.appendChild(ctrl);
+
+    } else if (entry.type === 'respond') {
+      const div = document.createElement('div');
+      div.className = 'respond';
+      const src = entry.source;
+      const pSrc = document.createElement('p');
+      pSrc.className = (src.cls ? src.cls + ' ' : '') + 'resq';
+      pSrc.textContent = (src.label ? src.label + ': ' : '') + src.text;
+      div.appendChild(pSrc);
+      const replySayer = entry.replySayer ? SAYERS.find(s => s.key === entry.replySayer) : null;
+      const pReply = document.createElement('p');
+      pReply.className = replySayer ? replySayer.cls : '';
+      pReply.textContent = (replySayer ? replySayer.label + ': ' : '') + entry.replyText;
+      div.appendChild(pReply);
+      wrap.appendChild(div);
+      const ctrl = makeControls(idx, ['delete'], entry);
+      wrap.appendChild(ctrl);
+
+    } else if (entry.type === 'media') {
+      const div = document.createElement('div');
+      div.className = 'medial';
+      if (entry.caption) {
+        const sayer = entry.sayer ? SAYERS.find(s => s.key === entry.sayer) : null;
+        const p = document.createElement('p');
+        p.className = sayer ? sayer.cls : '';
+        p.textContent = (sayer ? sayer.label + ': ' : '') + entry.caption;
+        div.appendChild(p);
+      }
+      const img = document.createElement('img');
+      img.src = '#'; img.alt = entry.imgSrc;
+      img.className = entry.imgSize;
+      img.style.maxWidth = entry.imgSize === 'little' ? '19%' : entry.imgSize === 'medium' ? '50%' : '100%';
+      img.style.background = '#ccc';
+      img.style.display = 'block';
+      img.style.minWidth = '40px'; img.style.minHeight = '30px';
+      // show filename as placeholder
+      const fn = document.createElement('div');
+      fn.style.cssText = 'font-size:0.7rem;color:#888;font-family:monospace;margin-top:2px;';
+      fn.textContent = '📷 ' + entry.imgSrc;
+      div.appendChild(img);
+      div.appendChild(fn);
+      wrap.appendChild(div);
+      const ctrl = makeControls(idx, ['delete'], entry);
+      wrap.appendChild(ctrl);
+    }
+
+    preview.appendChild(wrap);
+  });
+
+  // re-attach narr word click after DOM insert
+  document.querySelectorAll('.narr-word').forEach(el => {
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      showWordPopup(e, el);
+    });
+  });
+
+  // respond-pickable highlight
+  if (currentMode === 'respond') {
+    document.querySelectorAll('.entry-wrap[data-mode="normal"]').forEach(el => {
+      el.classList.add('respond-pickable');
+    });
+  }
+
+  updateOutput();
+}
+
+function renderNarrWords(words, entryIdx) {
+  return words.map((w, wi) => {
+    if (/^\s+$/.test(w)) return w;
+    const spanInfo = w.__spanCls || null; // store on the string object isn't ideal, use entry
+    // words is array of strings or {text, cls}
+    if (typeof w === 'object' && w.cls) {
+      const sayer = SAYERS.find(s => s.key === w.cls);
+      const color = sayer ? getPreviewColor(w.cls) : '';
+      return `<span class="narr-word spanned" data-entry="${entryIdx}" data-word="${wi}" style="color:${color};font-style:normal;">${w.text}</span>`;
+    }
+    const txt = typeof w === 'object' ? w.text : w;
+    return `<span class="narr-word" data-entry="${entryIdx}" data-word="${wi}">${txt}</span>`;
+  }).join('');
+}
+
+function getPreviewColor(cls) {
+  const map = { cafe:'#4f0000', elkrack:'#00606b', tronk:'#ff0000', mono:'#00570d', nata:'#2f4b60', yungx:'#590016', m3Again:'rgb(104,0,0)', lessoul:'rgba(0,0,0,0.6)' };
+  return map[cls] || '#333';
+}
+
+function makeControls(idx, types, entry) {
+  const ctrl = document.createElement('div');
+  ctrl.className = 'entry-controls';
+
+  if (types.includes('sayer')) {
+    const btn = document.createElement('button');
+    btn.className = 'ec-btn';
+    btn.textContent = 'sayer ▾';
+    const popup = document.createElement('div');
+    popup.className = 'sayer-popup';
+    // add "none" option
+    const noneOpt = document.createElement('div');
+    noneOpt.className = 'sp-opt';
+    noneOpt.textContent = '— none —';
+    noneOpt.onclick = (e) => { e.stopPropagation(); entry.sayer = null; popup.classList.remove('show'); renderPreview(); };
+    popup.appendChild(noneOpt);
+    SAYERS.forEach(s => {
+      const opt = document.createElement('div');
+      opt.className = 'sp-opt';
+      opt.textContent = s.label + ' (' + s.cls + ')';
+      opt.onclick = (e) => { e.stopPropagation(); entry.sayer = s.key; popup.classList.remove('show'); renderPreview(); };
+      popup.appendChild(opt);
+    });
+    btn.onclick = (e) => { e.stopPropagation(); popup.classList.toggle('show'); };
+    ctrl.style.position = 'relative';
+    ctrl.appendChild(btn);
+    ctrl.appendChild(popup);
+  }
+
+  if (types.includes('delete')) {
+    const del = document.createElement('button');
+    del.className = 'ec-btn del';
+    del.textContent = '✕';
+    del.onclick = (e) => { e.stopPropagation(); entries.splice(idx, 1); renderPreview(); };
+    ctrl.appendChild(del);
+  }
+
+  return ctrl;
+}
+
+// ═══════════════════════════════════════════════════════
+//  WORD-SPAN POPUP (narr)
+// ═══════════════════════════════════════════════════════
+function showWordPopup(e, el) {
+  const wsp = document.getElementById('wsp');
+  wsp.innerHTML = '';
+  const title = document.createElement('div');
+  title.className = 'wsp-title';
+  title.textContent = 'assign class';
+  wsp.appendChild(title);
+
+  const entryIdx = parseInt(el.dataset.entry);
+  const wordIdx = parseInt(el.dataset.word);
+  const entry = entries[entryIdx];
+
+  // remove span option
+  if (typeof entry.words[wordIdx] === 'object' && entry.words[wordIdx].cls) {
+    const rem = document.createElement('div');
+    rem.className = 'wsp-opt';
+    rem.textContent = '✕ remove span';
+    rem.style.color = '#f88';
+    rem.onclick = () => {
+      entry.words[wordIdx] = entry.words[wordIdx].text;
+      wsp.classList.remove('show');
+      renderPreview();
+    };
+    wsp.appendChild(rem);
+  }
+
+  SAYERS.forEach(s => {
+    const opt = document.createElement('div');
+    opt.className = 'wsp-opt';
+    opt.style.color = getPreviewColor(s.key);
+    opt.textContent = s.label + ' — .' + s.cls;
+    opt.onclick = () => {
+      const txt = typeof entry.words[wordIdx] === 'object' ? entry.words[wordIdx].text : entry.words[wordIdx];
+      entry.words[wordIdx] = { text: txt, cls: s.key };
+      wsp.classList.remove('show');
+      renderPreview();
+    };
+    wsp.appendChild(opt);
+  });
+
+  // position popup near click
+  wsp.style.left = Math.min(e.clientX, window.innerWidth - 160) + 'px';
+  wsp.style.top = (e.clientY + 4) + 'px';
+  wsp.classList.add('show');
+}
+
+// ═══════════════════════════════════════════════════════
+//  GENERATE HTML OUTPUT
+// ═══════════════════════════════════════════════════════
+function updateOutput() {
+  const html = generateHTML();
+  document.getElementById('output').textContent = html;
+}
+
+function generateHTML() {
+  const indent = '  ';
+  let inner = '';
+
+  entries.forEach(entry => {
+    if (entry.type === 'normal') {
+      const sayer = entry.sayer ? SAYERS.find(s => s.key === entry.sayer) : null;
+      const cls = sayer ? sayer.cls : '';
+      const label = sayer ? sayer.label + ': ' : '';
+      inner += indent + `<p class="${cls}">${label}${escHtml(entry.text)}</p>\n`;
+
+    } else if (entry.type === 'narr') {
+      const content = entry.words.map(w => {
+        if (/^\s+$/.test(typeof w === 'string' ? w : w.text)) return typeof w === 'string' ? w : w.text;
+        if (typeof w === 'object' && w.cls) {
+          return `<span class="${w.cls}">${escHtml(w.text)}</span>`;
+        }
+        return escHtml(typeof w === 'string' ? w : w.text);
+      }).join('');
+      inner += indent + `<p class="narr">*${content}*</p>\n`;
+
+    } else if (entry.type === 'respond') {
+      const src = entry.source;
+      const replySayer = entry.replySayer ? SAYERS.find(s => s.key === entry.replySayer) : null;
+      const srcCls = src.cls ? src.cls + ' resq' : 'resq';
+      const srcLabel = src.label ? src.label + ': ' : '';
+      const repCls = replySayer ? replySayer.cls : '';
+      const repLabel = replySayer ? replySayer.label + ': ' : '';
+      inner += indent + `<div class="respond">\n`;
+      inner += indent + indent + `<p class="${srcCls}">${srcLabel}${escHtml(src.text)}</p>\n`;
+      inner += indent + indent + `<p class="${repCls}">${repLabel}${escHtml(entry.replyText)}</p>\n`;
+      inner += indent + `</div>\n`;
+
+    } else if (entry.type === 'media') {
+      const sayer = entry.sayer ? SAYERS.find(s => s.key === entry.sayer) : null;
+      inner += indent + `<div class="medial">\n`;
+      if (entry.caption) {
+        const cls = sayer ? sayer.cls : '';
+        const label = sayer ? sayer.label + ': ' : '';
+        inner += indent + indent + `<p class="${cls}">${label}${escHtml(entry.caption)}</p>\n`;
+      }
+      inner += indent + indent + `<img src="${entry.imgSrc}" class="${entry.imgSize}">\n`;
+      inner += indent + `</div>\n`;
+    }
+  });
+
+  const lcArr = ['logtainer', ...Array.from(selectedLCs)];
+  const lcStr = lcArr.join(' ');
+
+  return (
+`<div class="${lcStr}">
+  <span class="textbutt"><b>TextLog</b></span>
+  <div class="textlog">
+${inner}  </div>
+</div>`
+  );
+}
+
+function escHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function generateLogtainer() {
+  updateOutput();
+  // scroll output into view
+  document.getElementById('output-wrap').scrollIntoView({ behavior: 'smooth' });
+}
+
+function copyOutput() {
+  const txt = document.getElementById('output').textContent;
+  navigator.clipboard.writeText(txt).then(() => {
+    const btns = document.querySelectorAll('.copy-btn');
+    btns.forEach(b => { const old = b.textContent; b.textContent = 'copied!'; setTimeout(() => b.textContent = old, 1200); });
+  });
+}
+
+function clearAll() {
+  if (!confirm('Clear all entries?')) return;
+  entries = [];
+  respondSource = null;
+  document.getElementById('respond-source-display').textContent = '(click a line in preview)';
+  renderPreview();
+  updateOutput();
+}
+
+init();
+</script>
+</body>
+</html>
