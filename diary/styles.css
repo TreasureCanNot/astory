@@ -5,6 +5,136 @@
 
 
 
+body{
+  font-family: 'Perpetua';
+  font-size: 1.2rem;
+}
+/* ==========================================================================
+   Perpetua - Text Font Family
+   ========================================================================== */
+
+/* 1. Regular */
+@font-face {
+    font-family: 'Perpetua';
+    src: url('font/perpetua/Perpetua-Regular.woff2') format('woff2'),
+         url('font/perpetua/Perpetua-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 2. Italic */
+@font-face {
+    font-family: 'Perpetua';
+    src: url('font/perpetua/Perpetua-Italic.woff2') format('woff2'),
+         url('font/perpetua/Perpetua-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* 3. Bold */
+@font-face {
+    font-family: 'Perpetua';
+    src: url('font/perpetua/Perpetua-Bold.woff2') format('woff2'),
+         url('font/perpetua/Perpetua-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 4. Bold Italic */
+@font-face {
+    font-family: 'Perpetua';
+    src: url('font/perpetua/Perpetua-Bold-Italic.woff2') format('woff2'),
+         url('font/perpetua/Perpetua-Bold-Italic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+/* ==========================================================================
+   Perpetua Titling - Display/Heading Font Family
+   ========================================================================== */
+
+/* 5. Titling Light */
+@font-face {
+    font-family: 'Perpetua Titling';
+    src: url('font/perpetua/Perpetua-Titling-Light.woff2') format('woff2'),
+         url('font/perpetua/Perpetua-Titling-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* 6. Titling Regular */
+@font-face {
+    font-family: 'Perpetua Titling';
+    src: url('font/perpetua/Perpetua-Titling-Regular.woff2') format('woff2'),
+         url('font/perpetua/Perpetua-Titling-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 7. Titling Bold */
+@font-face {
+    font-family: 'Perpetua Titling';
+    src: url('font/perpetua/Perpetua-Titling-Bold.woff2') format('woff2'),
+         url('font/perpetua/Perpetua-Titling-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+/* ==========================================================================
+   Playfair Display - Custom Font Setup
+   ========================================================================== */
+
+/* 1. Regular */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('font/playfair/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: 400; /* or 'normal' */
+    font-style: normal;
+}
+
+/* 2. Italic */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('font/playfair/PlayfairDisplay-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* 3. Bold */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('font/playfair/PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: 700; /* or 'bold' */
+    font-style: normal;
+}
+
+/* 4. Bold Italic */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('font/playfair/PlayfairDisplay-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* 5. Black */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('font/playfair/PlayfairDisplay-Black.ttf') format('truetype');
+    font-weight: 900; 
+    font-style: normal;
+}
+
+/* 6. Black Italic */
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('font/playfair/PlayfairDisplay-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+body{
+}
+
 .anevent{
   border: 2.5px solid black;
   padding:9px;
@@ -18,7 +148,7 @@
   box-sizing: border-box;
   overflow: auto;
   background-color: rgba(245, 245, 220, 0.3);
-  font-size: 23px  ;
+  font-size: 27px  ;
 }
 
 
@@ -27,10 +157,6 @@
 }
 
 
-.entry i{
-  font-size: 25px;
-  text-decoration: wavy;
-}
 
 .news{
   /*background-image: radial-gradient(rgb(255, 182, 182), rgb(255, 182, 182), rgb(255, 182, 182), #920f0f);*/
@@ -133,7 +259,7 @@
   display: inline-block;
 }
 .data i{
-  font-size: 25px;
+  font-size: 30px;
   color: black;
   text-decoration:wavy;
 }
@@ -182,6 +308,10 @@
   display: inline-block;
 }
 */
+.connected{
+  background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
+}
+
 .connected .textbutt{
   background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
 }
@@ -196,6 +326,27 @@
 
 .connected .textlog{
   background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important
+}
+
+
+
+.POU{
+}
+
+.POU .textbutt{
+  background: linear-gradient(#dfdfdfb3),  url("other/uruguayan-flag\ \(1\).png") !important;
+}
+
+.POU .textbutt:active{
+  color:black;
+  background: linear-gradient(#dfdfdfb3), url("other/uruguayan-flag\ \(1\).png") !important;
+  filter: invert(1) !important;
+  padding: 9px; 
+  display: inline-block;
+}
+
+.POU .textlog{
+  background: linear-gradient(#ffffffcb),  url("other/uruguay\ people.png") !important
 }
 
 
@@ -304,41 +455,158 @@
   font-family: 'Ryman Eco';
 }
 
-.textbutt{
-  color:black;
-  background-color: white;
-  padding: 9px;
-  display: inline-block;
-  cursor: pointer;
-  width: fit-content;
-  user-select: none;
-}
 
-.textbutt:active{
-  color:white;
-  background: black;
-  padding: 9px; 
-  display: inline-block;
-}
 
 
 .yungx{
   font-family: 'Gunter';
   color: #590016;
-  font-size: 1.1075rem;
+  font-size: 1.4rem;
 }
 
 .m3Again{
   font-family: 'Bodoni Moda Italic';
-  font-size: 1.575rem;
+  font-size: 1.65rem;
   color: rgb(104, 0, 0);
   text-shadow: 1.5px 1.5px 0.1px #ced2ff;
+}
+
+@font-face {
+  font-family: 'Bradleys Hand';
+  src: url('font/bradley-hand-itc.ttf') format('truetype');
+}
+
+/* ==========================================================================
+   Glacial Indifference - Font Family Setup
+   ========================================================================== */
+
+/* 1. Regular */
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('font/glacial/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: 400; /* or 'normal' */
+    font-style: normal;
+}
+
+/* 2. Bold */
+@font-face {
+    font-family: 'Glacial Indifference';
+    src: url('font/glacial/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: 700; /* or 'bold' */
+    font-style: normal;
+}
+
+.Chiara{
+  font-family: 'Glacial Indifference';
+  font-size: 1.75rem;
+  color: pink;
+  text-shadow: 
+  0.1px 0.1px 2.5px rgb(38, 2, 38),
+ -0.1px -0.1px 2.5px rgb(38, 2, 38),
+  0.1px -0.6px 2.5px rgb(38, 2, 38),
+ -0.1px 0.1px 2.5px rgb(38, 2, 38)
+ ;
+}
+
+.react {
+  font-size: 1.0rem;
+  color: #656565;
+  margin-top: -1.5rem; /* Pull up snuggly beneath previous lines */
+  margin-bottom: 1.2rem;
+  display: block;
+  font-family: 'textact', monospace;}
+
+
+@font-face {
+  font-family: 'Indie Flower';
+  src: url('font/IndieFlower-Regular.ttf') format('truetype');
+}
+.mars{
+  font-family: 'Indie Flower';
+  font-size: 1.8rem;
+  color: pink;
+  text-shadow: 
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88,
+  0px 0px 3px #9caf88;
+}
+
+@font-face {
+  font-family: 'Daisy Calligraphy';
+  src: url('font/Daisy\ Calligraphy.ttf') format('truetype');
+}
+/*font of 3.2*/
+
+@font-face {
+  font-family: 'Supera';
+  src: url('font/Supera.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Gear Shift';
+  src: url('font/Gear\ Shift.otf') format('opentype');}
+
+@font-face {
+  font-family: 'Fighter Attack';
+  src: url('font/Fighter\ Attack.ttf') format('truetype');
+}
+.san{
+  color: #000000;
+  font-family: 'Gear Shift';
+  font-size: 1.75rem;
+}
+
+.faz {
+  color: #000000;
+  font-family: 'Daisy Calligraphy';
+  font-size: 3.3rem;
+  display: block;
+  background: linear-gradient(to right, transparent 0%, rgba(135, 206, 235, 0.4) 3%, rgba(135, 206, 235, 0.4) 97%, transparent 100%);
+  padding-right: 20px;  
+  line-height: 1.2;   /* rein in the font's tall metrics */
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+/*
+text-shadow:  
+  0px 0px 12px lightblue,
+  0px 0px 12px lightblue,
+  0px 0px 12px lightblue,
+  0px 0px 12px lightblue,
+  0px 0px 12px lightblue;;
+*/
+.fontext{
+  padding: 10px;
+  border: 2px solid black;
+  background-color: antiquewhite;
+}
+
+.fontext:active{
+  padding: 10px;
+    border: 2px solid antiquewhite;
+    background-color: black;
+}
+
+.negro{
+  color: #0000009d;
+  font-family: 'Univers';
+  font-size: 2.1rem;
 }
 
 .cafe{
   color:#4f0000;
   font-family: 'timoKind';
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   text-shadow:
    0px 0px 0.7px #eedb9d,
    0px 0px 0.7px #eedb9d,
@@ -351,9 +619,44 @@
    0px 0px 0.7px #eedb9d;
 }
 
-.lupi{
+@font-face {
+  font-family: 'Raleway';
+  src: url('font/Raleway-Regular.ttf') format('truetype');
+}
+
+.rototi{
+  font-family: 'Playfair Display';
+  color: purple;
+  background: linear-gradient(45deg, purple, #d35400);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  font-size: 1.6rem;
+}
+
+
+.Lupi{
+  color:#2c58b0;
+  font-family: 'Average';  
+  font-size: 1.8rem;
+}
+
+.nardog{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.65rem;
+  background: linear-gradient(45deg, #404040, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('font/Comfortaa-Regular.ttf') format('truetype');
+}
+
+.Luca{
   color:#252f73;
-  font-family: 'Average';
+  font-family: 'Comfortaa';  
+  font-size: 1.5rem;
 }
 
 .lessoul{
@@ -370,18 +673,18 @@
 
 .tronk{
   color:#ff0000;
-  font-size: 1.45rem;
+  font-size: 1.6rem;
   font-family: 'Arial', Helvetica, sans-serif;
 }
 
 .elkrack{ 
   color:#00606b;
-  font-size: 1.45rem;
+  font-size: 1.6rem;
   font-family: 'lora', cursive;
 }
 .mono{
   color: #00570d;
-  font-size: 1.45rem;
+  font-size: 1.6rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
@@ -398,6 +701,29 @@
   padding-left: 8px;
   margin: 4px 0;
 }
+
+.respond .resq img{
+  max-width: 100px !important;
+  width: 25%;
+}
+
+.react {
+  font-size: 1.0rem !important;
+  color: #0000009c;
+  margin-top: -1.6rem; /* Pull up snuggly beneath previous lines */
+  margin-bottom: 1.2rem;
+  display: block;
+  font-family: 'textact', monospace;
+}
+
+.react span{
+  font-size: 1.0rem !important;
+}
+
+.react .faz {
+  font-size: 2.0rem !important;
+}
+
 
 .respond p{
   margin-bottom: 5px;
@@ -428,11 +754,41 @@
   max-width: 100%;
 }
 
+@media (max-width: 768px) {
+
+  .medial .little{
+    max-width: 35%;
+  }
+
+  .medial .medium{
+    max-width: 65%;
+  }
+
+  .medial .big{
+    max-width: 100%;
+  }
+}
+
+
+
 .resq {
   font-size: 0.75em;
   opacity: 0.5;
   margin: 0 0 2px 0;
   text-decoration: none;
+}
+
+.respond .faz.resq{
+  font-size: 2rem;
+}
+
+.respond .faz.resq::before {
+  content: "response to — ";
+  font-family: 'textact';
+  color: black;
+  text-shadow: 0px 0px 0px;
+  font-size: 1.1rem;
+  opacity: 1;
 }
 
 .resa {
@@ -444,9 +800,16 @@
   font-family: 'textact';
   color: black;
   text-shadow: 0px 0px 0px;;
-  font-size: 0.85em;
+  font-size: 1.1rem;
   opacity: 1;
 }
+
+.logtainer{
+  vertical-align: top;
+  margin-right: 10px;
+  float: left;
+}
+
 
 .textlog{
   background-color: #dfdfdf;
@@ -458,9 +821,33 @@
   max-width: 700px;
   max-height: 300px;
   position: absolute;
+  float: left;
   overflow-y: scroll;
   font-family: 'textact';
 }
+
+@media (max-width: 768px) {
+
+
+}
+
+.textbutt{
+  color:black;
+  background-color: white;
+  padding: 9px;
+  display: inline-block;
+  cursor: pointer;
+  width: fit-content;
+  user-select: none;
+}
+
+.textbutt:active{
+  color:white;
+  background: black;
+  padding: 9px; 
+  display: inline-block;
+}
+
 /*
 .textlog .narr{
   background-color: rgb(91, 91, 91);  or whatever colour you want 
@@ -474,9 +861,7 @@
   color: white;
 }
 */
-.connected{
-  background: linear-gradient(#dfdfdfec),  url("other/binary-codes-background.png") !important;
-}
+
 
 
 .norm{
@@ -486,17 +871,13 @@
 @media (max-width: 768px) {
 .textlog{
   max-width: 94%;
+  left: 3%;
 }
 
 }
 
 
 
-.logtainer{
-  vertical-align: top;
-  margin-right: 10px;
-  float: left;
-}
 
 .trog{
   float: none !important; 
@@ -855,7 +1236,7 @@
   color: black;
   padding: 7px;
   padding-top: 2%;
-  width:360px;
+  width:370px;
   transition: 0.1s linear;
 }
 
@@ -1458,7 +1839,9 @@
 .third video {
   width: 33.3333%;
   display: block;
+  object-fit:contain;
 }
+
 .third iframe {
   width: 33.3333%;
   display: block;
@@ -1620,6 +2003,7 @@
   margin: 0px;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 19px;
 }
 
 .stupiditymeter i { color: rgb(255, 186, 237); }
@@ -1656,7 +2040,7 @@
   float: left;
   height: 100%;
   background: #e75480;
-  border-radius: 0 20px 20px 0; /* only right side rounded */
+  border-radius: 0 1px 1px 0; /* only right side rounded */
   animation: flicker 0.1s infinite alternate;
 }
 
