@@ -51,7 +51,7 @@ function changethatShit(){
     console.log(test);
 }
 
-
+/*
 let chapterSelectOngoing = false;
 function chapterSelect() {
     if (chapterSelectOngoing == true) { return; }
@@ -119,4 +119,4 @@ function chapterSelect() {
         chapterSelectOngoing = false;
     });
 }
-
+*/
