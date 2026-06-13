@@ -1099,7 +1099,7 @@ function generateLitrocityReport() {
 //textlogs
 document.querySelectorAll('.textbutt').forEach(span => {
   span.addEventListener('click', () => {
-    const log = span.closest('div').querySelector('.textlog');
+    const log = span.closest('.logtainer').querySelector('.textlog');
     if (log) {
       const isHidden = log.style.display === 'none' || log.style.display === '';
       log.style.display = isHidden ? 'block' : 'none';

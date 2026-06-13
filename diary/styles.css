@@ -722,6 +722,8 @@ text-shadow:
 
 .react .faz {
   font-size: 2.0rem !important;
+  display: inline;
+  margin-top: 5px;
 }
 
 
@@ -736,11 +738,16 @@ text-shadow:
 
 .medial{
   display: flex;
-  flex-direction: column;
   border-left: 3px solid rgba(255,255,255,0.3);
   padding-left: 8px;
   margin: 4px 0;
 }
+
+.medial img{
+  display: inline;
+}
+
+
 
 .medial .little{
   max-width: 19%;
@@ -779,6 +786,10 @@ text-shadow:
 }
 
 .respond .faz.resq{
+  font-size: 2rem;
+}
+
+#preview .narr .faz{ 
   font-size: 2rem;
 }
 

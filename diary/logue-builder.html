@@ -268,6 +268,10 @@
     display: block; 
     font-size: 1.575rem;
   }
+
+  #preview .narr .faz{ 
+    font-size: 2rem !important; 
+  }
   #preview .narr:last-child {
     margin-bottom: 0;
   }
@@ -848,8 +852,13 @@ function renderBlocks(text, cls, label, isOutput = false) {
       }
       html += `  <li>${escHtml(numericMatch[2])}</li>\n`;
     } else if (trimmed === '') {
-      closeList();
-      closePara();
+      if (lines.length === 1 && line.length > 0) {
+        closeList();
+        currentParaLines.push(escHtml(line));
+      } else {
+        closeList();
+        closePara();
+      }
     } else {
       closeList();
       currentParaLines.push(escHtml(line));
@@ -858,8 +867,8 @@ function renderBlocks(text, cls, label, isOutput = false) {
   closeList();
   closePara();
 
-  if (html === '' && label) {
-    html = `<p class="${cls}${targetCls}">${label}</p>\n`;
+  if (html === '') {
+    html = `<p class="${cls}${targetCls}">${label || ''}&nbsp;</p>\n`;
   }
   return html;
 }
@@ -912,8 +921,13 @@ function parseNarrBlocks(text) {
       }
       currentList.items.push(tokenizeForNarr(numericMatch[2]));
     } else if (trimmed === '') {
-      closeList();
-      closePara();
+      if (lines.length === 1 && line.length > 0) {
+        closeList();
+        currentParaLines.push(line);
+      } else {
+        closeList();
+        closePara();
+      }
     } else {
       closeList();
       currentParaLines.push(line);
@@ -946,7 +960,7 @@ function addNormal() {
   });
 
   const hasMedia = mediaItems.length > 0;
-  if (!txt.trim() && !hasMedia) return;
+  if (txt === '' && !hasMedia) return;
   const sayer = getSayer('normal');
   
   let entry = {
@@ -960,10 +974,10 @@ function addNormal() {
     entry.replyText = txt;
     if (hasMedia) entry.media = mediaItems;
     clearResponseMode();
-  } else if (hasMedia && !txt.trim()) {
+  } else if (hasMedia && txt === '') {
     entry.type = 'media';
     entry.media = mediaItems;
-  } else if (hasMedia && txt.trim()) {
+  } else if (hasMedia && txt !== '') {
     entry.type = 'media';
     entry.caption = txt;
     entry.media = mediaItems;
@@ -981,7 +995,7 @@ function addNormal() {
 
 function addNarr() {
   const txt = document.getElementById('msg-narr').value;
-  if (!txt.trim()) return;
+  if (txt === '') return;
   const blocks = parseNarrBlocks(txt);
   const entry = { type: 'narr', blocks: blocks };
   entries.push(entry);
@@ -992,7 +1006,7 @@ function addNarr() {
 
 function addReact() {
   const txt = document.getElementById('msg-react').value;
-  if (!txt.trim()) return;
+  if (txt === '') return;
   const words = tokenizeForNarr(txt);
   const entry = { type: 'react', text: txt, words: words };
   entries.push(entry);
@@ -1139,14 +1153,10 @@ function renderPreview() {
 
     } else if (entry.type === 'react') {
       const p = document.createElement('p');
-      p.className = 'react pickable-target';
+      p.className = 'react';
       if (!entry.words) entry.words = tokenizeForNarr(entry.text);
       p.innerHTML = renderNarrWordsStructured(entry.words, idx, 0, 'line', 0);
       wrap.appendChild(p);
-
-      p.addEventListener('click', () => {
-        activateResponseMode({ cls: 'react', label: '', text: entry.text, entryIdx: idx });
-      });
 
       const delBtn = document.createElement('button');
       delBtn.className = 'ec-btn del';
@@ -1623,7 +1633,7 @@ function generateHTML() {
         }
       }
       
-      if (entry.replyText && entry.replyText.trim()) {
+      if (entry.replyText && entry.replyText !== '') {
         const replyBlocksHtml = renderBlocks(entry.replyText, repCls, repLabel, true);
         const indentedReply = replyBlocksHtml.split('\n').filter(l => l.trim() !== '').map(l => indent + indent + l).join('\n') + '\n';
         inner += indentedReply;
