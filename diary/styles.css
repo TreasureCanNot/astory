@@ -349,6 +349,25 @@ body{
   background: linear-gradient(#ffffffcb),  url("other/uruguay\ people.png") !important
 }
 
+.POU{
+}
+
+.chuds .textbutt {
+  background:linear-gradient(#00ffdd3b), url("other/detonate.jpg") center center / cover no-repeat !important;
+}   
+
+.chuds .textbutt:active{
+  color:black;
+  background:linear-gradient(#00ffdd3b), url("other/detonate.jpg") center center / cover no-repeat !important;
+  filter: invert(1) !important;
+  padding: 9px; 
+  display: inline-block;
+}
+
+.chuds .textlog{
+  background: linear-gradient(#ffffffcb),  url("other/Palestine_Gaza-Jabalia-refugee-camp-destroyed_@Omar-Al-Qattaa-AFP.webp") !important
+}
+
 
 .ttg-H .textbutt{
   background:  url("other/horse-light.png") 
@@ -511,6 +530,7 @@ body{
 .react {
   font-size: 1.0rem;
   color: #656565;
+  margin-left: 1rem;
   margin-top: -1.5rem; /* Pull up snuggly beneath previous lines */
   margin-bottom: 1.2rem;
   display: block;
@@ -620,8 +640,8 @@ text-shadow:
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('font/Raleway-Regular.ttf') format('truetype');
+  font-family: 'EB Garmond';
+  src: url('font/EBGaramond-VariableFont_wght.ttf') format('truetype');
 }
 
 .rototi{
@@ -638,6 +658,12 @@ text-shadow:
   color:#2c58b0;
   font-family: 'Average';  
   font-size: 1.8rem;
+}
+
+.dFan{
+  color:#0008ff;
+  font-family: 'EB Garmond';  
+  font-size: 1.9rem;
 }
 
 .nardog{
@@ -700,7 +726,9 @@ text-shadow:
   border-left: 3px solid rgba(0, 0, 0, 0.3);
   padding-left: 8px;
   margin: 4px 0;
+  margin-bottom: 15px;
 }
+
 
 .respond .resq img{
   max-width: 100px !important;
@@ -789,8 +817,9 @@ text-shadow:
   font-size: 2rem;
 }
 
-#preview .narr .faz{ 
-  font-size: 2rem;
+.narr .faz{ 
+  font-size: 3.3rem;
+  display: inline;
 }
 
 .respond .faz.resq::before {
@@ -821,6 +850,9 @@ text-shadow:
   float: left;
 }
 
+.a4{
+  aspect-ratio: 1 / 1.4142;
+}
 
 .textlog{
   background-color: #dfdfdf;
@@ -1057,6 +1089,7 @@ text-shadow:
   .mevent {
       border: 1px solid black;
       padding: 9px;
+      width: 100%;
       box-sizing: border-box;
       overflow: auto;
       background-color: rgba(245, 245, 220, 0.3);
@@ -1811,6 +1844,14 @@ text-shadow:
   object-fit: contain;
   display: block;
 }
+
+.half embed {
+  width: 50%;  
+  object-fit: contain;
+  display: block;
+}
+
+
 @media (max-width: 768px) {
   .indep {
     display: flex;

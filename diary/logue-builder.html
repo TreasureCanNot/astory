@@ -353,6 +353,13 @@
     color:#4f0000; font-family: 'timoKind'; font-size: 1.45rem;
     text-shadow: 0px 0px 0.7px #eedb9d, 0px 0px 0.7px #eedb9d, 0px 0px 0.7px #eedb9d, 0px 0px 0.7px #eedb9d, 0px 0px 0.7px #eedb9d, 0px 0px 0.7px #eedb9d, 0px 0px 0.7px #eedb9d, 0px 0px 0.7px #4f0000, 0px 0px 0.7px #eedb9d;
   }
+
+  #preview .dFan{
+  color:#0008ff;
+  font-family: 'EB Garmond';  
+  font-size: 2rem;
+}
+
   #preview .tronk{ color:#ff0000; font-size: 1.45rem; font-family: 'Arial', Helvetica, sans-serif; }
   #preview .elkrack{ color:#00606b; font-size: 1.45rem; font-family: 'lora', cursive; }
   #preview .mono{ color: #00570d; font-size: 1.45rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif }
@@ -528,6 +535,7 @@
       <button class="lc-btn" onclick="toggleLC('ttg-H',this)">ttg-H</button>
       <button class="lc-btn" onclick="toggleLC('norm',this)">norm</button>
       <button class="lc-btn" onclick="toggleLC('POU',this)">POU</button>
+      <button class="lc-btn" onclick="toggleLC('chuds',this)">chuds</button>
     </div>
     <button class="action-btn primary" onclick="generateLogtainer()">⬡ Create Logtainer</button>
     <button class="action-btn danger" onclick="clearAll()">✕ Clear all</button>
@@ -564,6 +572,7 @@
 // ═══════════════════════════════════════════════════════
 const SAYERS = [
   { key: 'cafe',    label: 'Timo',   cls: 'cafe'},
+  { key: 'dFan',    label: 'Chad',   cls: 'dFan'},
   { key: 'Chiara',    label: 'Chiara',   cls: 'Chiara'},
   { key: 'faz',    label: 'Fabri',   cls: 'faz'},
   { key: 'mars',    label: 'martina',   cls: 'mars'},
