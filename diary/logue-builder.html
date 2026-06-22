@@ -287,9 +287,6 @@
     font-family: 'textact', monospace;
   }
 
-  #preview .react .faz {
-    font-size: 2.0rem !important;
-  }
 
   #preview .react:last-child {
     margin-bottom: 0;
@@ -325,12 +322,40 @@
   #preview .rototi{ font-family: 'Times New Roman'; color: purple; background: linear-gradient(45deg, purple, #d35400); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 1.575rem; }
   #preview .nardog{ font-family: 'Courier New', Courier, monospace; font-size: 1.65rem; background: linear-gradient(45deg, #404040, black); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-  #preview .faz{
-    color: #0000009d;
-    font-family: 'Daisy Calligraphy';
-    font-size: 3.2rem;
-    display: inline-block;
+    #preview .faz {
+    color: #000000;
+    font-family: 'Elegant Sans';
+    font-size: 3rem;
+    display: block;
     background: linear-gradient(to right, transparent 0%, rgba(135, 206, 235, 0.4) 3%, rgba(135, 206, 235, 0.4) 97%, transparent 100%);
+    padding-right: 20px;  
+    line-height: 1.2;    
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  #preview .react .faz {
+    font-size: 2.0rem !important;
+    display: inline;
+    margin-top: 5px;
+  }
+
+  #preview .respond .faz.resq{
+    font-size: 2rem;
+  }
+
+  #preview .narr .faz{ 
+    font-size: 3.3rem;
+    display: inline;
+  }
+
+  #preview .respond .faz.resq::before {
+    content: "response to — ";
+    font-family: 'textact';
+    color: black;
+    text-shadow: 0px 0px 0px;
+    font-size: 1.1rem;
+    opacity: 1;
   }
   #preview .Chiara{
     font-family: 'Glacial Indifference';
@@ -363,7 +388,22 @@
   #preview .tronk{ color:#ff0000; font-size: 1.45rem; font-family: 'Arial', Helvetica, sans-serif; }
   #preview .elkrack{ color:#00606b; font-size: 1.45rem; font-family: 'lora', cursive; }
   #preview .mono{ color: #00570d; font-size: 1.45rem; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif }
-  #preview .nata{ color: #2f4b60; font-size: 1.45rem; font-family: 'Verdana'; }
+  #preview .nata{
+  color: #000000;
+  font-size: 2rem;
+  font-family: 'Arthein';
+  text-shadow: 
+  0px 0px 1px #B695C0,
+  0px 0px 1px #B695C0,
+  0px 0px 1px #B695C0,
+  0px 0px 1px #B695C0,
+  0px 0px 1px #B695C0,
+  0px 0px 10px #B695C0,
+  0px 0px 1px #B695C0;
+  line-height: 1.2;    
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+}
   #preview .yungx{ font-family: 'Gunter'; color: #590016; font-size: 1.1075rem; }
   #preview .m3Again{ font-family: 'Bodoni Moda Italic'; font-size: 1.575rem; color: rgb(104, 0, 0); text-shadow: 1.5px 1.5px 0.1px #ced2ff; }
   #preview .lessoul { color:#0000009d; margin: 2px 0 1.2rem 0; display: block; }

@@ -352,11 +352,11 @@ body{
 .POU{
 }
 
-.chuds .textbutt {
+.Chuds .textbutt {
   background:linear-gradient(#00ffdd3b), url("other/detonate.jpg") center center / cover no-repeat !important;
 }   
 
-.chuds .textbutt:active{
+.Chuds .textbutt:active{
   color:black;
   background:linear-gradient(#00ffdd3b), url("other/detonate.jpg") center center / cover no-repeat !important;
   filter: invert(1) !important;
@@ -364,7 +364,7 @@ body{
   display: inline-block;
 }
 
-.chuds .textlog{
+.Chuds .textlog{
   background: linear-gradient(#ffffffcb),  url("other/Palestine_Gaza-Jabalia-refugee-camp-destroyed_@Omar-Al-Qattaa-AFP.webp") !important
 }
 
@@ -585,19 +585,71 @@ body{
   font-size: 1.75rem;
 }
 
+@font-face {
+  font-family: 'Saudary';
+  src: url('font/Saudary\ Demo.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Peach Club Script';
+  src: url('font/Peach\ Club\ Script\ TTF.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Amperzand';
+  src: url('font/Amperzand.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Elegant Sans';
+  src: url('font/Elegant\ Sans\ Semibold\ Italic.ttf') format('truetype');
+}
+
 .faz {
   color: #000000;
-  font-family: 'Daisy Calligraphy';
-  font-size: 3.3rem;
+  font-family: 'Elegant Sans';
+  font-size: 3rem;
   display: block;
   background: linear-gradient(to right, transparent 0%, rgba(135, 206, 235, 0.4) 3%, rgba(135, 206, 235, 0.4) 97%, transparent 100%);
   padding-right: 20px;  
-  line-height: 1.2;   /* rein in the font's tall metrics */
+  line-height: 1.2;    
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
 }
 
+
+.respond img.little {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.react .faz {
+  font-size: 2.0rem !important;
+  display: inline;
+  margin-top: 5px;
+}
+
+.respond .faz.resq{
+  font-size: 2rem;
+}
+
+.narr .faz{ 
+  font-size: 3.3rem;
+  display: inline;
+}
+
+.respond .faz.resq::before {
+  content: "response to — ";
+  font-family: 'textact';
+  color: black;
+  text-shadow: 0px 0px 0px;
+  font-size: 1.1rem;
+  opacity: 1;
+}
+
 /*
+
+  
+
 text-shadow:  
   0px 0px 12px lightblue,
   0px 0px 12px lightblue,
@@ -714,10 +766,26 @@ text-shadow:
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
+@font-face {
+  font-family: 'Arthein';
+  src: url('font/arthein-almr.otf') format('truetype');
+}
+
 .nata{
-  color: #2f4b60;
-  font-size: 1.45rem;
-  font-family: 'Verdana';
+  color: #000000;
+  font-size: 2rem;
+  font-family: 'Arthein';
+  text-shadow: 
+  0px 0px 1px #B695C0,
+  0px 0px 1px #B695C0,
+  0px 0px 1px #B695C0,
+  0px 0px 1px #B695C0,
+  0px 0px 1px #B695C0,
+  0px 0px 10px #B695C0,
+  0px 0px 1px #B695C0;
+  line-height: 1.2;    
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .respond {
@@ -728,6 +796,8 @@ text-shadow:
   margin: 4px 0;
   margin-bottom: 15px;
 }
+
+
 
 
 .respond .resq img{
@@ -748,11 +818,7 @@ text-shadow:
   font-size: 1.0rem !important;
 }
 
-.react .faz {
-  font-size: 2.0rem !important;
-  display: inline;
-  margin-top: 5px;
-}
+
 
 
 .respond p{
@@ -811,25 +877,10 @@ text-shadow:
   opacity: 0.5;
   margin: 0 0 2px 0;
   text-decoration: none;
+  width: 100%;
 }
 
-.respond .faz.resq{
-  font-size: 2rem;
-}
 
-.narr .faz{ 
-  font-size: 3.3rem;
-  display: inline;
-}
-
-.respond .faz.resq::before {
-  content: "response to — ";
-  font-family: 'textact';
-  color: black;
-  text-shadow: 0px 0px 0px;
-  font-size: 1.1rem;
-  opacity: 1;
-}
 
 .resa {
   margin: 0;
