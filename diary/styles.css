@@ -132,8 +132,6 @@ body{
     font-style: italic;
 }
 
-body{
-}
 
 .anevent{
   border: 2.5px solid black;
@@ -364,8 +362,8 @@ body{
   display: inline-block;
 }
 
-.Chuds .textlog{
-  background: linear-gradient(#ffffffcb),  url("other/Palestine_Gaza-Jabalia-refugee-camp-destroyed_@Omar-Al-Qattaa-AFP.webp") !important
+.Chuds .textlog {
+  background: linear-gradient(#ffffffcb), url("other/chuds.png") center / cover no-repeat !important;
 }
 
 
